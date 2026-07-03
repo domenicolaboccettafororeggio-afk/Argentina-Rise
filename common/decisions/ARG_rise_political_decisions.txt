@@ -1,0 +1,320 @@
+generic_coalition_politics_decisions = {
+	ARG_rise_finance_civilian_industrial_district = {
+		icon = generic_industry
+
+		allowed = {
+			original_tag = ARG
+		}
+
+		visible = {
+			original_tag = ARG
+		}
+
+		available = {
+			check_variable = { treasury > 9.99 }
+			any_owned_state = {
+				is_core_of = ARG
+				is_in_home_area = yes
+				NOT = { has_state_category = state_inhospitable }
+				NOT = { has_state_category = state_military_base }
+			}
+		}
+
+		cost = 100
+		fire_only_once = no
+		days_remove = 30
+		days_re_enable = 30
+
+		modifier = {
+			civilian_factory_use = 5
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ARG_rise_finance_civilian_industrial_district"
+
+			set_temp_variable = { treasury_change = -10.00 }
+			modify_treasury_effect = yes
+		}
+
+		remove_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ARG
+					is_in_home_area = yes
+					NOT = { has_state_category = state_inhospitable }
+					NOT = { has_state_category = state_military_base }
+				}
+
+				add_extra_state_shared_building_slots = 1
+
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			ingame_update_setup = yes
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	ARG_rise_expand_military_industry = {
+		icon = generic_industry
+
+		allowed = {
+			original_tag = ARG
+		}
+
+		visible = {
+			original_tag = ARG
+		}
+
+		available = {
+			check_variable = { treasury > 14.99 }
+			any_owned_state = {
+				is_core_of = ARG
+				is_in_home_area = yes
+				NOT = { has_state_category = state_inhospitable }
+				NOT = { has_state_category = state_military_base }
+			}
+		}
+
+		cost = 150
+		fire_only_once = no
+		days_remove = 30
+		days_re_enable = 30
+
+		modifier = {
+			civilian_factory_use = 5
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ARG_rise_expand_military_industry"
+
+			set_temp_variable = { treasury_change = -15.00 }
+			modify_treasury_effect = yes
+		}
+
+		remove_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ARG
+					is_in_home_area = yes
+					NOT = { has_state_category = state_inhospitable }
+					NOT = { has_state_category = state_military_base }
+				}
+
+				add_extra_state_shared_building_slots = 1
+
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			ingame_update_setup = yes
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	ARG_rise_expand_naval_industry = {
+		icon = generic_industry
+
+		allowed = {
+			original_tag = ARG
+		}
+
+		visible = {
+			original_tag = ARG
+		}
+
+		available = {
+			check_variable = { treasury > 14.99 }
+			any_owned_state = {
+				is_core_of = ARG
+				is_in_home_area = yes
+				is_coastal = yes
+				NOT = { has_state_category = state_inhospitable }
+				NOT = { has_state_category = state_military_base }
+			}
+		}
+
+		cost = 150
+		fire_only_once = no
+		days_remove = 30
+		days_re_enable = 30
+
+		modifier = {
+			civilian_factory_use = 5
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ARG_rise_expand_naval_industry"
+
+			set_temp_variable = { treasury_change = -15.00 }
+			modify_treasury_effect = yes
+		}
+
+		remove_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ARG
+					is_in_home_area = yes
+					is_coastal = yes
+					NOT = { has_state_category = state_inhospitable }
+					NOT = { has_state_category = state_military_base }
+				}
+
+				add_extra_state_shared_building_slots = 1
+
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			ingame_update_setup = yes
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+
+	ARG_rise_expand_office_sector = {
+		icon = generic_industry
+
+		allowed = {
+			original_tag = ARG
+		}
+
+		visible = {
+			original_tag = ARG
+		}
+
+		available = {
+			has_completed_focus = ARG_rise_the_pampas_engine
+			check_variable = { treasury > 19.99 }
+			any_owned_state = {
+				is_core_of = ARG
+				is_in_home_area = yes
+				NOT = { has_state_category = state_inhospitable }
+				NOT = { has_state_category = state_military_base }
+			}
+		}
+
+		cost = 200
+		fire_only_once = no
+		days_remove = 30
+		days_re_enable = 180
+
+		modifier = {
+			civilian_factory_use = 5
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ARG_rise_expand_office_sector"
+
+			set_temp_variable = { treasury_change = -20.00 }
+			modify_treasury_effect = yes
+		}
+
+		remove_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ARG
+					is_in_home_area = yes
+					NOT = { has_state_category = state_inhospitable }
+					NOT = { has_state_category = state_military_base }
+				}
+
+				add_extra_state_shared_building_slots = 1
+
+				add_building_construction = {
+					type = offices
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			ingame_update_setup = yes
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	ARG_rise_build_commercial_agriculture_district = {
+		icon = generic_industry
+
+		allowed = {
+			original_tag = ARG
+		}
+
+		visible = {
+			original_tag = ARG
+		}
+
+		available = {
+			check_variable = { treasury > 4.99 }
+			any_owned_state = {
+				is_core_of = ARG
+				is_in_home_area = yes
+				NOT = { has_state_category = state_inhospitable }
+				NOT = { has_state_category = state_military_base }
+			}
+		}
+
+		cost = 50
+		fire_only_once = no
+		days_remove = 30
+		days_re_enable = 30
+
+		modifier = {
+			civilian_factory_use = 5
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ARG_rise_build_commercial_agriculture_district"
+
+			set_temp_variable = { treasury_change = -5.00 }
+			modify_treasury_effect = yes
+		}
+
+		remove_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ARG
+					is_in_home_area = yes
+					NOT = { has_state_category = state_inhospitable }
+					NOT = { has_state_category = state_military_base }
+				}
+
+				add_extra_state_shared_building_slots = 1
+
+				add_building_construction = {
+					type = agriculture_district
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			ingame_update_setup = yes
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

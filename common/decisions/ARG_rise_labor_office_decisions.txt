@@ -1,0 +1,244 @@
+ARG_rise_argentine_labor_office_decisions = {
+	ARG_rise_programa_inmigracion_italiana = {
+		icon = GFX_decision_migration_central_asia
+		allowed = {
+			original_tag = ARG
+		}
+		visible = {
+			original_tag = ARG
+		}
+		available = {
+			has_completed_focus = ARG_rise_pan_y_acero
+			NOT = { has_country_flag = ARGriseItalianMigrationInProgress }
+		}
+		cost = 100
+		days_remove = 60
+		days_re_enable = 7
+		complete_effect = {
+			set_country_flag = ARGriseItalianMigrationInProgress
+			add_stability = -0.0005
+		}
+		remove_effect = {
+			capital_scope = {
+				add_manpower = 100000
+			}
+			clr_country_flag = ARGriseItalianMigrationInProgress
+		}
+	}
+
+	ARG_rise_programa_inmigracion_espanola = {
+		icon = GFX_decision_migration_central_asia
+		allowed = {
+			original_tag = ARG
+		}
+		visible = {
+			original_tag = ARG
+		}
+		available = {
+			has_completed_focus = ARG_rise_pan_y_acero
+			NOT = { has_country_flag = ARGriseSpanishMigrationInProgress }
+		}
+		cost = 100
+		days_remove = 60
+		days_re_enable = 7
+		complete_effect = {
+			set_country_flag = ARGriseSpanishMigrationInProgress
+			add_stability = -0.0005
+		}
+		remove_effect = {
+			capital_scope = {
+				add_manpower = 100000
+			}
+			clr_country_flag = ARGriseSpanishMigrationInProgress
+		}
+	}
+
+	ARG_rise_programa_inmigracion_griega = {
+		icon = GFX_decision_migration_central_asia
+		allowed = {
+			original_tag = ARG
+		}
+		visible = {
+			original_tag = ARG
+		}
+		available = {
+			has_completed_focus = ARG_rise_pan_y_acero
+			NOT = { has_country_flag = ARGriseGreekMigrationInProgress }
+		}
+		cost = 80
+		days_remove = 60
+		days_re_enable = 7
+		complete_effect = {
+			set_country_flag = ARGriseGreekMigrationInProgress
+			add_stability = -0.0005
+		}
+		remove_effect = {
+			capital_scope = {
+				add_manpower = 80000
+			}
+			clr_country_flag = ARGriseGreekMigrationInProgress
+		}
+	}
+
+	ARG_rise_programa_inmigracion_polaca = {
+		icon = GFX_decision_migration_central_asia
+		allowed = {
+			original_tag = ARG
+		}
+		visible = {
+			original_tag = ARG
+		}
+		available = {
+			has_completed_focus = ARG_rise_pan_y_acero
+			NOT = { has_country_flag = ARGrisePolishMigrationInProgress }
+		}
+		cost = 120
+		days_remove = 60
+		days_re_enable = 7
+		complete_effect = {
+			set_country_flag = ARGrisePolishMigrationInProgress
+			add_stability = -0.0008
+		}
+		remove_effect = {
+			capital_scope = {
+				add_manpower = 120000
+			}
+			clr_country_flag = ARGrisePolishMigrationInProgress
+		}
+	}
+
+	ARG_rise_programa_inmigracion_alemana = {
+		icon = GFX_decision_migration_central_asia
+		allowed = {
+			original_tag = ARG
+		}
+		visible = {
+			original_tag = ARG
+		}
+		available = {
+			has_completed_focus = ARG_rise_pan_y_acero
+			NOT = { has_country_flag = ARGriseGermanMigrationInProgress }
+		}
+		cost = 150
+		days_remove = 60
+		days_re_enable = 7
+		complete_effect = {
+			set_country_flag = ARGriseGermanMigrationInProgress
+			add_stability = -0.0010
+		}
+		remove_effect = {
+			capital_scope = {
+				add_manpower = 150000
+			}
+			clr_country_flag = ARGriseGermanMigrationInProgress
+		}
+	}
+
+	ARG_rise_programa_inmigracion_britanica = {
+		icon = GFX_decision_migration_central_asia
+		allowed = {
+			original_tag = ARG
+		}
+		visible = {
+			original_tag = ARG
+		}
+		available = {
+			has_completed_focus = ARG_rise_pan_y_acero
+			NOT = { has_country_flag = ARGriseBritishMigrationInProgress }
+		}
+		cost = 120
+		days_remove = 60
+		days_re_enable = 7
+		complete_effect = {
+			set_country_flag = ARGriseBritishMigrationInProgress
+			add_stability = -0.0008
+		}
+		remove_effect = {
+			capital_scope = {
+				add_manpower = 120000
+			}
+			clr_country_flag = ARGriseBritishMigrationInProgress
+		}
+	}
+
+	ARG_rise_programa_inmigracion_rusa = {
+		icon = GFX_decision_migration_central_asia
+		allowed = {
+			original_tag = ARG
+		}
+		visible = {
+			original_tag = ARG
+		}
+		available = {
+			has_completed_focus = ARG_rise_pan_y_acero
+			NOT = { has_country_flag = ARGriseRussianMigrationInProgress }
+		}
+		cost = 160
+		days_remove = 60
+		days_re_enable = 7
+		complete_effect = {
+			set_country_flag = ARGriseRussianMigrationInProgress
+			add_stability = -0.0010
+		}
+		remove_effect = {
+			capital_scope = {
+				add_manpower = 160000
+			}
+			clr_country_flag = ARGriseRussianMigrationInProgress
+		}
+	}
+
+	ARG_rise_programa_inmigracion_india = {
+		icon = GFX_decision_migration_central_asia
+		allowed = {
+			original_tag = ARG
+		}
+		visible = {
+			original_tag = ARG
+		}
+		available = {
+			has_completed_focus = ARG_rise_pan_y_acero
+			NOT = { has_country_flag = ARGriseIndianMigrationInProgress }
+		}
+		cost = 250
+		days_remove = 60
+		days_re_enable = 7
+		complete_effect = {
+			set_country_flag = ARGriseIndianMigrationInProgress
+			add_stability = -0.0015
+		}
+		remove_effect = {
+			capital_scope = {
+				add_manpower = 250000
+			}
+			clr_country_flag = ARGriseIndianMigrationInProgress
+		}
+	}
+
+	ARG_rise_programa_inmigracion_china = {
+		icon = GFX_decision_migration_central_asia
+		allowed = {
+			original_tag = ARG
+		}
+		visible = {
+			original_tag = ARG
+		}
+		available = {
+			has_completed_focus = ARG_rise_pan_y_acero
+			NOT = { has_country_flag = ARGriseChineseMigrationInProgress }
+		}
+		cost = 300
+		days_remove = 60
+		days_re_enable = 7
+		complete_effect = {
+			set_country_flag = ARGriseChineseMigrationInProgress
+			add_stability = -0.0020
+		}
+		remove_effect = {
+			capital_scope = {
+				add_manpower = 300000
+			}
+			clr_country_flag = ARGriseChineseMigrationInProgress
+		}
+	}
+}

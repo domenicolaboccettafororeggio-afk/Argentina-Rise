@@ -1,0 +1,3327 @@
+ideas = {
+	country = {
+		ARG_rise_montana_meat = {
+			name = ARG_rise_montana_meat
+			picture = agriculture
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_montana_meat"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				agriculture_tax_modifier = 0.08
+				agricolture_productivity_modifier = 0.06
+				agriculture_district_income_tax_modifier = 0.05
+				resource_export_multiplier_modifier = 0.05
+				corporate_tax_income_multiplier_modifier = 0.03
+				tax_gain_multiplier_modifier = 0.02
+			}
+		}
+		ARG_rise_resource_export_magnet = {
+			name = ARG_rise_resource_export_magnet
+			picture = resource_production
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_resource_export_magnet"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				resource_export_multiplier_modifier = 0.10
+			}
+		}
+		ARG_rise_soy_revolution_spirit = {
+			name = ARG_rise_soy_revolution_spirit
+			picture = agriculture
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_soy_revolution_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				monthly_population = 0.005
+				agriculture_tax_modifier = 0.01
+			
+				# ARG_RISE_SOY_BRANCH_MIGRATION_PATCH
+				migration_rate_value_factor = 0.001
+			}
+		}
+		ARG_rise_hereford_standard_spirit = {
+			name = ARG_rise_hereford_standard_spirit
+			picture = agriculture
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_hereford_standard_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				agriculture_tax_modifier = 0.03
+				agricolture_productivity_modifier = 0.08
+				agriculture_district_worker_requirement_modifier = -0.05
+				resource_export_multiplier_modifier = 0.03
+				monthly_population = 0.01
+			
+				# ARG_RISE_SOY_BRANCH_MIGRATION_PATCH
+				migration_rate_value_factor = 0.001
+			}
+		}
+		ARG_rise_recovery_plan_spirit = {
+			name = ARG_rise_recovery_plan_spirit
+			picture = economic_increase
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_recovery_plan_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				interest_rate_multiplier_modifier = -1.00
+				tax_gain_multiplier_modifier = 0.05
+				country_productivity_growth_modifier = 0.02
+				stability_factor = 0.03
+				political_power_gain = 0.05
+				migration_rate_value_factor = 0.001
+			}
+		}
+		ARG_rise_arranque_productivo_spirit = {
+			name = ARG_rise_arranque_productivo_spirit
+			picture = economic_increase
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_arranque_productivo_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				total_workforce_modifier = 0.04
+				country_productivity_growth_modifier = 0.04
+				migration_rate_value_factor = 0.041
+				monthly_population = 0.01
+				stability_factor = 0.02
+			}
+		}
+		ARG_rise_re_industrializacion_spirit = {
+			name = ARG_rise_re_industrializacion_spirit
+			picture = construction
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_re_industrializacion_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				production_speed_buildings_factor = 0.07
+				production_speed_industrial_complex_factor = 0.13
+				civilian_industry_tax_modifier = 0.04
+				country_productivity_growth_modifier = 0.06
+			
+				}
+		}
+		ARG_rise_technician_generation_spirit = {
+			name = ARG_rise_technician_generation_spirit
+			picture = generic_research_bonus
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_technician_generation_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				production_speed_offices_factor = 0.09
+				offices_productivity = 0.05
+				country_productivity_growth_modifier = 0.05
+				total_workforce_modifier = 0.02
+			
+				}
+		}
+		ARG_rise_trabajo_y_amor_spirit = {
+			name = ARG_rise_trabajo_y_amor_spirit
+			picture = economic_increase
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_trabajo_y_amor_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				offices_worker_requirement_modifier = -0.10
+				production_speed_offices_factor = 0.16
+				offices_productivity = 0.04
+				office_park_income_tax_modifier = 0.04
+				monthly_population = 0.05
+				migration_rate_value_factor = 0.08
+			
+				}
+		}
+		ARG_rise_new_triumph_pressure_1 = {
+			name = ARG_rise_new_triumph_pressure_1
+			picture = nationalist_outlook
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_new_triumph_pressure_1"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				nationalist_drift = 0.05
+				democratic_drift = -0.02
+				neutrality_drift = -0.02
+				communism_drift = -0.02
+			}
+		}
+		ARG_rise_new_triumph_pressure_2 = {
+			name = ARG_rise_new_triumph_pressure_2
+			picture = nationalist_outlook
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_new_triumph_pressure_2"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				nationalist_drift = 0.05
+				democratic_drift = -0.02
+				neutrality_drift = -0.02
+				communism_drift = -0.02
+				stability_factor = 0.01
+			}
+		}
+		ARG_rise_new_triumph_pressure_3 = {
+			name = ARG_rise_new_triumph_pressure_3
+			picture = nationalist_outlook
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_new_triumph_pressure_3"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				nationalist_drift = 0.05
+				democratic_drift = -0.02
+				neutrality_drift = -0.02
+				communism_drift = -0.02
+				political_power_gain = 0.03
+				production_speed_offices_factor = 0.01
+			}
+		}
+		ARG_rise_new_triumph_pressure_4 = {
+			name = ARG_rise_new_triumph_pressure_4
+			picture = nationalist_outlook
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_new_triumph_pressure_4"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				nationalist_drift = 0.05
+				democratic_drift = -0.02
+				neutrality_drift = -0.02
+				communism_drift = -0.02
+				drift_defence_factor = 0.10
+			}
+		}
+		ARG_rise_new_triumph_pressure_5 = {
+			name = ARG_rise_new_triumph_pressure_5
+			picture = nationalist_outlook
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_new_triumph_pressure_5"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				nationalist_drift = 0.05
+				democratic_drift = -0.02
+				neutrality_drift = -0.02
+				communism_drift = -0.02
+				foreign_influence_defense_modifier = 0.04
+			}
+		}
+		ARG_rise_new_triumph_pressure_6 = {
+			name = ARG_rise_new_triumph_pressure_6
+			picture = nationalist_outlook
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_new_triumph_pressure_6"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				nationalist_drift = 0.05
+				democratic_drift = -0.02
+				neutrality_drift = -0.02
+				communism_drift = -0.02
+				political_power_gain = 0.04
+				stability_factor = 0.01
+			}
+		}
+		ARG_rise_new_triumph_pressure_7 = {
+			name = ARG_rise_new_triumph_pressure_7
+			picture = nationalist_outlook
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_new_triumph_pressure_7"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				nationalist_drift = 0.05
+				democratic_drift = -0.02
+				neutrality_drift = -0.02
+				communism_drift = -0.02
+				foreign_influence_modifier = 0.03
+			}
+		}
+		ARG_rise_new_triumph_inquebrantable_will = {
+			name = ARG_rise_new_triumph_inquebrantable_will
+			picture = nationalist_outlook
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_new_triumph_inquebrantable_will"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				nationalist_drift = 0.20
+				democratic_drift = -0.06
+				neutrality_drift = -0.06
+				communism_drift = -0.06
+				drift_defence_factor = 0.75
+				foreign_influence_defense_modifier = 0.50
+				foreign_subversive_activites = -0.35
+				stability_factor = 0.10
+				political_power_gain = 0.35
+			}
+		}
+		ARG_rise_renewable_energy_drive_1 = {
+			name = ARG_rise_renewable_energy_drive_1
+			picture = construction
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_renewable_energy_drive_1"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				production_speed_synthetic_refinery_factor = 0.04
+				renewable_energy_gain_multiplier = 0.02
+			}
+		}
+		ARG_rise_renewable_energy_drive_2 = {
+			name = ARG_rise_renewable_energy_drive_2
+			picture = construction
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_renewable_energy_drive_2"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				production_speed_synthetic_refinery_factor = 0.06
+				renewable_energy_gain_multiplier = 0.03
+			}
+		}
+		ARG_rise_renewable_energy_drive_3 = {
+			name = ARG_rise_renewable_energy_drive_3
+			picture = construction
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_renewable_energy_drive_3"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				production_speed_synthetic_refinery_factor = 0.08
+				renewable_energy_gain_multiplier = 0.04
+			}
+		}
+		ARG_rise_renewable_energy_drive_4 = {
+			name = ARG_rise_renewable_energy_drive_4
+			picture = construction
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_renewable_energy_drive_4"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				production_speed_synthetic_refinery_factor = 0.10
+				renewable_energy_gain_multiplier = 0.05
+			}
+		}
+		ARG_rise_renewable_energy_drive_5 = {
+			name = ARG_rise_renewable_energy_drive_5
+			picture = construction
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_renewable_energy_drive_5"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				production_speed_synthetic_refinery_factor = 0.12
+				renewable_energy_gain_multiplier = 0.06
+			}
+		}
+		ARG_rise_nuclear_energy_program_1 = {
+			name = ARG_rise_nuclear_energy_program_1
+			picture = construction
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_nuclear_energy_program_1"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				production_speed_nuclear_reactor_factor = 0.05
+				nuclear_energy_generation_modifier = 0.02
+			}
+		}
+		ARG_rise_nuclear_energy_program_2 = {
+			name = ARG_rise_nuclear_energy_program_2
+			picture = construction
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_nuclear_energy_program_2"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				production_speed_nuclear_reactor_factor = 0.07
+				nuclear_energy_generation_modifier = 0.03
+			}
+		}
+		ARG_rise_nuclear_energy_program_3 = {
+			name = ARG_rise_nuclear_energy_program_3
+			picture = construction
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_nuclear_energy_program_3"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				production_speed_nuclear_reactor_factor = 0.09
+				nuclear_energy_generation_modifier = 0.04
+				energy_gain_multiplier = 0.01
+			}
+		}
+		ARG_rise_nuclear_energy_program_4 = {
+			name = ARG_rise_nuclear_energy_program_4
+			picture = construction
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_nuclear_energy_program_4"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				production_speed_nuclear_reactor_factor = 0.12
+				nuclear_energy_generation_modifier = 0.05
+				energy_gain_multiplier = 0.01
+			}
+		}
+		ARG_rise_nuclear_energy_program_5 = {
+			name = ARG_rise_nuclear_energy_program_5
+			picture = construction
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_nuclear_energy_program_5"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				production_speed_nuclear_reactor_factor = 0.15
+				nuclear_energy_generation_modifier = 0.08
+				energy_gain_multiplier = 0.02
+			}
+		}
+		ARG_rise_hydroelectric_power_1 = {
+			name = ARG_rise_hydroelectric_power_1
+			picture = construction
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_hydroelectric_power_1"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				energy_gain = 15
+			}
+		}
+		ARG_rise_hydroelectric_power_2 = {
+			name = ARG_rise_hydroelectric_power_2
+			picture = construction
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_hydroelectric_power_2"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				energy_gain = 15
+			}
+		}
+		ARG_rise_hydroelectric_power_3 = {
+			name = ARG_rise_hydroelectric_power_3
+			picture = construction
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_hydroelectric_power_3"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				energy_gain = 15
+			}
+		}
+		ARG_rise_hydroelectric_power_4 = {
+			name = ARG_rise_hydroelectric_power_4
+			picture = construction
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_hydroelectric_power_4"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				energy_gain = 15
+			}
+		}
+		ARG_rise_hydroelectric_power_5 = {
+			name = ARG_rise_hydroelectric_power_5
+			picture = construction
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_hydroelectric_power_5"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				energy_gain = 15
+			}
+		}
+		ARG_rise_state_perseverance_doctrine = {
+			name = ARG_rise_state_perseverance_doctrine
+			picture = generic_political_reform
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_state_perseverance_doctrine"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				bureaucracy_cost_multiplier_modifier = -0.03
+				education_cost_multiplier_modifier = -0.03
+				health_cost_multiplier_modifier = -0.03
+				social_cost_multiplier_modifier = -0.03
+				tax_gain_multiplier_modifier = 0.03
+				stability_factor = 0.02
+				political_power_gain = 0.05
+			}
+		}
+		ARG_rise_education_discipline_1 = {
+			name = ARG_rise_education_discipline_1
+			picture = generic_research_bonus
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_education_discipline_1"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				education_cost_multiplier_modifier = -0.02
+				country_productivity_growth_modifier = 0.01
+				research_speed_factor = 0.001
+			}
+		}
+		ARG_rise_education_discipline_2 = {
+			name = ARG_rise_education_discipline_2
+			picture = generic_research_bonus
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_education_discipline_2"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				education_cost_multiplier_modifier = -0.02
+				literacy_rate_education_modifier = 0.01
+				research_speed_factor = 0.002
+			}
+		}
+		ARG_rise_education_discipline_3 = {
+			name = ARG_rise_education_discipline_3
+			picture = generic_research_bonus
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_education_discipline_3"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				education_cost_multiplier_modifier = -0.02
+				country_productivity_growth_modifier = 0.015
+				research_speed_factor = 0.003
+			}
+		}
+		ARG_rise_education_discipline_4 = {
+			name = ARG_rise_education_discipline_4
+			picture = generic_research_bonus
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_education_discipline_4"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				education_cost_multiplier_modifier = -0.02
+				total_workforce_modifier = 0.01
+				research_speed_factor = 0.004
+			}
+		}
+		ARG_rise_education_discipline_5 = {
+			name = ARG_rise_education_discipline_5
+			picture = generic_research_bonus
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_education_discipline_5"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				education_cost_multiplier_modifier = -0.02
+				country_productivity_growth_modifier = 0.02
+				research_speed_factor = 0.005
+			}
+		}
+		ARG_rise_education_discipline_6 = {
+			name = ARG_rise_education_discipline_6
+			picture = generic_research_bonus
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_education_discipline_6"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				education_cost_multiplier_modifier = -0.03
+				literacy_rate_education_modifier = 0.02
+				country_productivity_growth_modifier = 0.02
+				research_speed_factor = 0.04
+			}
+		}
+        ARG_rise_health_discipline_1 = {
+            name = ARG_rise_health_discipline_1
+            picture = generic_healthcare
+
+            on_add = {
+                log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_health_discipline_1"
+                ingame_update_setup = yes
+            }
+
+            modifier = {
+                health_cost_multiplier_modifier = -0.02
+                stability_factor = 0.01
+                monthly_population = 0.001
+                recruitable_population_factor = 0.005
+            }
+        }
+        ARG_rise_health_discipline_2 = {
+            name = ARG_rise_health_discipline_2
+            picture = generic_healthcare
+
+            on_add = {
+                log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_health_discipline_2"
+                ingame_update_setup = yes
+            }
+
+            modifier = {
+                health_cost_multiplier_modifier = -0.02
+                monthly_population = 0.002
+                stability_factor = 0.005
+                recruitable_population_factor = 0.005
+            }
+        }
+        ARG_rise_health_discipline_3 = {
+            name = ARG_rise_health_discipline_3
+            picture = generic_healthcare
+
+            on_add = {
+                log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_health_discipline_3"
+                ingame_update_setup = yes
+            }
+
+            modifier = {
+                health_cost_multiplier_modifier = -0.02
+                tax_gain_multiplier_modifier = 0.01
+                bureaucracy_cost_multiplier_modifier = -0.005
+                recruitable_population_factor = 0.0075
+            }
+        }
+        ARG_rise_health_discipline_4 = {
+            name = ARG_rise_health_discipline_4
+            picture = generic_healthcare
+
+            on_add = {
+                log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_health_discipline_4"
+                ingame_update_setup = yes
+            }
+
+            modifier = {
+                health_cost_multiplier_modifier = -0.02
+                total_workforce_modifier = 0.01
+                country_productivity_growth_modifier = 0.005
+                recruitable_population_factor = 0.0075
+            }
+        }
+        ARG_rise_health_discipline_5 = {
+            name = ARG_rise_health_discipline_5
+            picture = generic_healthcare
+
+            on_add = {
+                log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_health_discipline_5"
+                ingame_update_setup = yes
+            }
+
+            modifier = {
+                health_cost_multiplier_modifier = -0.02
+                monthly_population = 0.003
+                total_workforce_modifier = 0.005
+                recruitable_population_factor = 0.01
+            }
+        }
+        ARG_rise_health_discipline_6 = {
+            name = ARG_rise_health_discipline_6
+            picture = generic_healthcare
+
+            on_add = {
+                log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_health_discipline_6"
+                ingame_update_setup = yes
+            }
+
+            modifier = {
+                health_cost_multiplier_modifier = -0.03
+                stability_factor = 0.025
+                monthly_population = 0.012
+                total_workforce_modifier = 0.015
+                country_productivity_growth_modifier = 0.005
+                recruitable_population_factor = 0.015
+            }
+        }
+        ARG_rise_social_discipline_1 = {
+            name = ARG_rise_social_discipline_1
+            picture = welfare
+
+            on_add = {
+                log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_social_discipline_1"
+                ingame_update_setup = yes
+            }
+
+            modifier = {
+                social_cost_multiplier_modifier = -0.02
+                total_workforce_modifier = 0.01
+                agriculture_district_worker_requirement_modifier = -0.01
+                production_speed_infrastructure_factor = 0.005
+            }
+        }
+        ARG_rise_social_discipline_2 = {
+            name = ARG_rise_social_discipline_2
+            picture = welfare
+
+            on_add = {
+                log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_social_discipline_2"
+                ingame_update_setup = yes
+            }
+
+            modifier = {
+                social_cost_multiplier_modifier = -0.02
+                tax_gain_multiplier_modifier = 0.01
+                offices_worker_requirement_modifier = -0.01
+                production_speed_rail_way_factor = 0.005
+            }
+        }
+        ARG_rise_social_discipline_3 = {
+            name = ARG_rise_social_discipline_3
+            picture = welfare
+
+            on_add = {
+                log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_social_discipline_3"
+                ingame_update_setup = yes
+            }
+
+            modifier = {
+                social_cost_multiplier_modifier = -0.02
+                total_workforce_modifier = 0.015
+                civ_facs_worker_requirement_modifier = -0.015
+                production_speed_supply_node_factor = 0.005
+            }
+        }
+        ARG_rise_social_discipline_4 = {
+            name = ARG_rise_social_discipline_4
+            picture = welfare
+
+            on_add = {
+                log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_social_discipline_4"
+                ingame_update_setup = yes
+            }
+
+            modifier = {
+                social_cost_multiplier_modifier = -0.02
+                stability_factor = 0.01
+                mil_facs_worker_requirement_modifier = -0.015
+                production_speed_infrastructure_factor = 0.005
+            }
+        }
+        ARG_rise_social_discipline_5 = {
+            name = ARG_rise_social_discipline_5
+            picture = welfare
+
+            on_add = {
+                log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_social_discipline_5"
+                ingame_update_setup = yes
+            }
+
+            modifier = {
+                social_cost_multiplier_modifier = -0.02
+                country_productivity_growth_modifier = 0.02
+                buildings_worker_requirement_modifier = -0.015
+                production_speed_industrial_complex_factor = 0.01
+                production_speed_offices_factor = 0.01
+            }
+        }
+        ARG_rise_social_discipline_6 = {
+            name = ARG_rise_social_discipline_6
+            picture = welfare
+
+            on_add = {
+                log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_social_discipline_6"
+                ingame_update_setup = yes
+            }
+
+            modifier = {
+                social_cost_multiplier_modifier = -0.03
+                total_workforce_modifier = 0.03
+                stability_factor = 0.02
+                tax_gain_multiplier_modifier = 0.015
+                buildings_worker_requirement_modifier = -0.025
+                civ_facs_worker_requirement_modifier = -0.01
+                mil_facs_worker_requirement_modifier = -0.01
+                production_speed_infrastructure_factor = 0.01
+                production_speed_rail_way_factor = 0.01
+                production_speed_supply_node_factor = 0.01
+            }
+        }
+		ARG_rise_administration_discipline_1 = {
+			name = ARG_rise_administration_discipline_1
+			picture = bureaucracy
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_administration_discipline_1"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				bureaucracy_cost_multiplier_modifier = -0.02
+				corruption_cost_factor = -0.05
+			}
+		}
+		ARG_rise_administration_discipline_2 = {
+			name = ARG_rise_administration_discipline_2
+			picture = bureaucracy
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_administration_discipline_2"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				bureaucracy_cost_multiplier_modifier = -0.02
+				political_power_gain = 0.03
+				production_speed_offices_factor = 0.01
+			}
+		}
+		ARG_rise_administration_discipline_3 = {
+			name = ARG_rise_administration_discipline_3
+			picture = bureaucracy
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_administration_discipline_3"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				bureaucracy_cost_multiplier_modifier = -0.02
+				internal_investments_pp_cost_modifier = -0.03
+			}
+		}
+		ARG_rise_administration_discipline_4 = {
+			name = ARG_rise_administration_discipline_4
+			picture = bureaucracy
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_administration_discipline_4"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				bureaucracy_cost_multiplier_modifier = -0.02
+				tax_gain_multiplier_modifier = 0.02
+				corruption_cost_factor = -0.05
+			}
+		}
+		ARG_rise_administration_discipline_5 = {
+			name = ARG_rise_administration_discipline_5
+			picture = bureaucracy
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_administration_discipline_5"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				bureaucracy_cost_multiplier_modifier = -0.02
+				internal_investments_money_cost_modifier = -0.03
+			}
+		}
+		ARG_rise_administration_discipline_6 = {
+			name = ARG_rise_administration_discipline_6
+			picture = bureaucracy
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_administration_discipline_6"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				bureaucracy_cost_multiplier_modifier = -0.03
+				tax_gain_multiplier_modifier = 0.03
+				political_power_gain = 0.08
+				corruption_cost_factor = -0.05
+				internal_investments_money_cost_modifier = -0.05
+			}
+		}
+		ARG_rise_security_state_foundation = {
+			name = ARG_rise_security_state_foundation
+			picture = idea_generic_secret_police
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_security_state_foundation"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				police_cost_multiplier_modifier = -0.02
+				crime_fighting_cost_factor = -0.03
+				corruption_cost_factor = -0.03
+				foreign_influence_defense_modifier = 0.02
+				stability_factor = 0.01
+			}
+		}
+		ARG_rise_legal_precision_code = {
+			name = ARG_rise_legal_precision_code
+			picture = bureaucracy
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_legal_precision_code"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				corruption_cost_factor = -0.03
+				political_power_gain = 0.02
+			}
+		}
+		ARG_rise_integrity_tribunals = {
+			name = ARG_rise_integrity_tribunals
+			picture = generic_western_police
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_integrity_tribunals"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				corruption_cost_factor = -0.04
+				stability_factor = 0.005
+			}
+		}
+		ARG_rise_high_performance_prosecutors = {
+			name = ARG_rise_high_performance_prosecutors
+			picture = bureaucracy
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_high_performance_prosecutors"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				corruption_cost_factor = -0.04
+				crime_fighting_cost_factor = -0.02
+			}
+		}
+		ARG_rise_state_sentence = {
+			name = ARG_rise_state_sentence
+			picture = generic_western_police
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_state_sentence"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				corruption_cost_factor = -0.05
+				stability_factor = 0.01
+				political_power_gain = 0.02
+			}
+		}
+		ARG_rise_federal_security_command = {
+			name = ARG_rise_federal_security_command
+			picture = generic_western_police
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_federal_security_command"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				police_cost_multiplier_modifier = -0.02
+				crime_fighting_cost_factor = -0.03
+			}
+		}
+		ARG_rise_controlled_cities = {
+			name = ARG_rise_controlled_cities
+			picture = generic_western_police
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_controlled_cities"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				crime_fighting_cost_factor = -0.03
+				stability_factor = 0.005
+			}
+		}
+		ARG_rise_internal_corridor_control = {
+			name = ARG_rise_internal_corridor_control
+			picture = generic_western_police
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_internal_corridor_control"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				police_cost_multiplier_modifier = -0.02
+				root_out_resistance_effectiveness_factor = 0.05
+			}
+		}
+		ARG_rise_civil_steel_peace = {
+			name = ARG_rise_civil_steel_peace
+			picture = generic_western_police
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_civil_steel_peace"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				crime_fighting_cost_factor = -0.04
+				stability_factor = 0.01
+			}
+		}
+		ARG_rise_organized_crime_office = {
+			name = ARG_rise_organized_crime_office
+			picture = idea_generic_secret_police
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_organized_crime_office"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				crime_fighting_cost_factor = -0.03
+				corruption_cost_factor = -0.03
+			}
+		}
+		ARG_rise_gray_routes_crackdown = {
+			name = ARG_rise_gray_routes_crackdown
+			picture = generic_western_police
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_gray_routes_crackdown"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				crime_fighting_cost_factor = -0.04
+				root_out_resistance_effectiveness_factor = 0.05
+			}
+		}
+		ARG_rise_dirty_money_closure = {
+			name = ARG_rise_dirty_money_closure
+			picture = bureaucracy
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_dirty_money_closure"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				corruption_cost_factor = -0.05
+				tax_gain_multiplier_modifier = 0.01
+			}
+		}
+		ARG_rise_cartel_extinction_doctrine = {
+			name = ARG_rise_cartel_extinction_doctrine
+			picture = generic_western_police
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_cartel_extinction_doctrine"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				crime_fighting_cost_factor = -0.05
+				stability_factor = 0.01
+				foreign_influence_defense_modifier = 0.02
+			}
+		}
+		ARG_rise_national_surveillance_grid = {
+			name = ARG_rise_national_surveillance_grid
+			picture = idea_generic_intelligence_exchange
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_national_surveillance_grid"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				enemy_operative_detection_chance_factor = 0.05
+				agency_upgrade_time = -0.03
+			}
+		}
+		ARG_rise_critical_infrastructure_custody = {
+			name = ARG_rise_critical_infrastructure_custody
+			picture = idea_generic_intelligence_exchange
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_critical_infrastructure_custody"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				root_out_resistance_effectiveness_factor = 0.05
+				foreign_influence_defense_modifier = 0.03
+			}
+		}
+		ARG_rise_domestic_counterintelligence = {
+			name = ARG_rise_domestic_counterintelligence
+			picture = idea_generic_intelligence_exchange
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_domestic_counterintelligence"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				enemy_operative_capture_chance_factor = 0.05
+				enemy_operative_detection_chance_factor = 0.05
+			}
+		}
+		ARG_rise_impermeable_state = {
+			name = ARG_rise_impermeable_state
+			picture = idea_generic_intelligence_exchange
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_impermeable_state"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				foreign_influence_defense_modifier = 0.05
+				enemy_operative_capture_chance_factor = 0.05
+				agency_upgrade_time = -0.03
+			}
+		}
+		ARG_rise_impregnable_republic = {
+			name = ARG_rise_impregnable_republic
+			picture = idea_generic_secret_police
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_impregnable_republic"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				operative_slot = 1
+				foreign_influence_defense_modifier = 0.05
+				crime_fighting_cost_factor = -0.05
+				corruption_cost_factor = -0.05
+				stability_factor = 0.02
+			}
+		}
+		ARG_rise_new_paradise_opportunities_spirit = {
+			name = ARG_rise_new_paradise_opportunities_spirit
+			picture = population_growth
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_new_paradise_opportunities_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				migration_rate_value_factor = 0.05
+				monthly_population = 0.02
+				stability_factor = 0.01
+			
+				buildings_worker_requirement_modifier = -0.005
+}
+		}
+		ARG_rise_open_doors_work_spirit = {
+			name = ARG_rise_open_doors_work_spirit
+			picture = population_growth
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_open_doors_work_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				migration_rate_value_factor = 0.05
+				total_workforce_modifier = 0.005
+			}
+		}
+		ARG_rise_new_homeland_visas_spirit = {
+			name = ARG_rise_new_homeland_visas_spirit
+			picture = population_growth
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_new_homeland_visas_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				migration_rate_value_factor = 0.05
+				monthly_population = 0.01
+			}
+		}
+		ARG_rise_plata_corridors_spirit = {
+			name = ARG_rise_plata_corridors_spirit
+			picture = population_growth
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_plata_corridors_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				migration_rate_value_factor = 0.05
+				population_tax_income_multiplier_modifier = 0.01
+				production_speed_offices_factor = 0.01
+			
+				agriculture_district_worker_requirement_modifier = -0.01
+}
+		}
+		ARG_rise_frontier_families_spirit = {
+			name = ARG_rise_frontier_families_spirit
+			picture = population_growth
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_frontier_families_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				monthly_population = 0.02
+				stability_factor = 0.005
+			
+				agriculture_district_worker_requirement_modifier = -0.01
+}
+		}
+		ARG_rise_call_of_the_south_spirit = {
+			name = ARG_rise_call_of_the_south_spirit
+			picture = population_growth
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_call_of_the_south_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				migration_rate_value_factor = 0.10
+				monthly_population = 0.02
+			}
+		}
+		ARG_rise_roofs_for_millions_spirit = {
+			name = ARG_rise_roofs_for_millions_spirit
+			picture = construction
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_roofs_for_millions_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				high_unemployment_threshold_modifier = 0.01
+				monthly_population = 0.01
+			
+				buildings_worker_requirement_modifier = -0.005
+}
+		}
+		ARG_rise_neighborhoods_of_future_spirit = {
+			name = ARG_rise_neighborhoods_of_future_spirit
+			picture = construction
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_neighborhoods_of_future_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				total_workforce_modifier = 0.005
+				stability_factor = 0.005
+			}
+		}
+		ARG_rise_new_cities_spirit = {
+			name = ARG_rise_new_cities_spirit
+			picture = construction
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_new_cities_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				monthly_population = 0.02
+				population_tax_income_multiplier_modifier = 0.01
+				production_speed_offices_factor = 0.01
+			
+				buildings_worker_requirement_modifier = -0.005
+}
+		}
+		ARG_rise_growth_avenues_spirit = {
+			name = ARG_rise_growth_avenues_spirit
+			picture = construction
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_growth_avenues_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				production_speed_offices_factor = 0.05
+				stability_factor = 0.005
+			}
+		}
+		ARG_rise_great_austral_metropolis_spirit = {
+			name = ARG_rise_great_austral_metropolis_spirit
+			picture = construction
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_great_austral_metropolis_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				monthly_population = 0.03
+				migration_rate_value_factor = 0.05
+				stability_factor = 0.01
+			
+				buildings_worker_requirement_modifier = -0.01
+}
+		}
+		ARG_rise_desks_of_progress_spirit = {
+			name = ARG_rise_desks_of_progress_spirit
+			picture = economic_increase
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_desks_of_progress_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				offices_productivity = 0.03
+			
+				offices_worker_requirement_modifier = -0.01
+}
+		}
+		ARG_rise_high_value_services_spirit = {
+			name = ARG_rise_high_value_services_spirit
+			picture = economic_increase
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_high_value_services_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				offices_productivity = 0.03
+				office_park_income_tax_modifier = 0.02
+			
+				offices_worker_requirement_modifier = -0.01
+}
+		}
+		ARG_rise_plata_offices_spirit = {
+			name = ARG_rise_plata_offices_spirit
+			picture = economic_increase
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_plata_offices_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				production_speed_offices_factor = 0.08
+				offices_productivity = 0.03
+			
+				offices_worker_requirement_modifier = -0.015
+}
+		}
+		ARG_rise_market_administrators_spirit = {
+			name = ARG_rise_market_administrators_spirit
+			picture = economic_increase
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_market_administrators_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				office_park_income_tax_modifier = 0.03
+				tax_gain_multiplier_modifier = 0.01
+			
+				offices_worker_requirement_modifier = -0.015
+}
+		}
+		ARG_rise_salaried_class_spirit = {
+			name = ARG_rise_salaried_class_spirit
+			picture = economic_increase
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_salaried_class_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				offices_productivity = 0.05
+				offices_worker_requirement_modifier = -0.07
+				total_workforce_modifier = 0.01
+			}
+		}
+		ARG_rise_hands_to_factory_spirit = {
+			name = ARG_rise_hands_to_factory_spirit
+			picture = construction
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_hands_to_factory_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				industrial_capacity_factory = 0.03
+				high_unemployment_threshold_modifier = 0.01
+			
+				civ_facs_worker_requirement_modifier = -0.01
+}
+		}
+		ARG_rise_production_shifts_spirit = {
+			name = ARG_rise_production_shifts_spirit
+			picture = construction
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_production_shifts_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				civilian_factories_productivity = 0.03
+			
+				civ_facs_worker_requirement_modifier = -0.01
+}
+		}
+		ARG_rise_employment_parks_spirit = {
+			name = ARG_rise_employment_parks_spirit
+			picture = construction
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_employment_parks_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				total_workforce_modifier = 0.01
+				high_unemployment_threshold_modifier = 0.01
+			
+				mil_facs_worker_requirement_modifier = -0.01
+}
+		}
+		ARG_rise_national_productive_contract_spirit = {
+			name = ARG_rise_national_productive_contract_spirit
+			picture = economic_increase
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_national_productive_contract_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				country_productivity_growth_modifier = 0.02
+				stability_factor = 0.005
+			
+				mil_facs_worker_requirement_modifier = -0.01
+				civ_facs_worker_requirement_modifier = -0.01
+}
+		}
+		ARG_rise_working_nation_spirit = {
+			name = ARG_rise_working_nation_spirit
+			picture = construction
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_working_nation_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				industrial_capacity_factory = 0.05
+				total_workforce_modifier = 0.01
+				stability_factor = 0.01
+			
+				buildings_worker_requirement_modifier = -0.015
+}
+		}
+		ARG_rise_first_civic_oath_spirit = {
+			name = ARG_rise_first_civic_oath_spirit
+			picture = population_growth
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_first_civic_oath_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				stability_factor = 0.005
+				migration_rate_value_factor = 0.02
+			}
+		}
+		ARG_rise_language_and_trade_spirit = {
+			name = ARG_rise_language_and_trade_spirit
+			picture = economic_increase
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_language_and_trade_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				total_workforce_modifier = 0.005
+				country_productivity_growth_modifier = 0.01
+			}
+		}
+		ARG_rise_integration_schools_spirit = {
+			name = ARG_rise_integration_schools_spirit
+			picture = population_growth
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_integration_schools_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				total_workforce_modifier = 0.005
+				monthly_population = 0.01
+			}
+		}
+		ARG_rise_shared_discipline_spirit = {
+			name = ARG_rise_shared_discipline_spirit
+			picture = economic_increase
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_shared_discipline_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				stability_factor = 0.01
+				tax_gain_multiplier_modifier = 0.01
+			}
+		}
+		ARG_rise_one_productive_people_spirit = {
+			name = ARG_rise_one_productive_people_spirit
+			picture = population_growth
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_one_productive_people_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				monthly_population = 0.02
+				migration_rate_value_factor = 0.03
+				total_workforce_modifier = 0.01
+				stability_factor = 0.01
+			
+				buildings_worker_requirement_modifier = -0.01
+}
+		}
+		ARG_rise_southern_gravity_spirit = {
+			name = ARG_rise_southern_gravity_spirit
+			picture = international_treaty
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_southern_gravity_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				foreign_influence_modifier = 0.03
+				foreign_influence_defense_modifier = 0.03
+				trade_opinion_factor = 0.03
+			
+				resource_sector_workers_modifier = -0.005
+}
+		}
+		ARG_rise_buenos_aires_meridian_spirit = {
+			name = ARG_rise_buenos_aires_meridian_spirit
+			picture = international_treaty
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_buenos_aires_meridian_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				foreign_influence_home_continent_modifier = 0.04
+				political_power_gain = 0.03
+				production_speed_offices_factor = 0.01
+			}
+		}
+		ARG_rise_productive_embassies_spirit = {
+			name = ARG_rise_productive_embassies_spirit
+			picture = economic_increase
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_productive_embassies_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				investment_cost_modifier = -0.03
+				trade_opinion_factor = 0.03
+				return_on_investment_modifier = 0.01
+			}
+		}
+		ARG_rise_southern_cone_voice_spirit = {
+			name = ARG_rise_southern_cone_voice_spirit
+			picture = national_unity
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_southern_cone_voice_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				foreign_influence_continent_modifier = 0.04
+				stability_factor = 0.005
+			}
+		}
+		ARG_rise_prestige_of_stability_spirit = {
+			name = ARG_rise_prestige_of_stability_spirit
+			picture = national_unity
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_prestige_of_stability_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				foreign_influence_modifier = 0.03
+				foreign_influence_defense_modifier = 0.03
+				stability_factor = 0.01
+			}
+		}
+		ARG_rise_plata_doctrine_spirit = {
+			name = ARG_rise_plata_doctrine_spirit
+			picture = international_treaty
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_plata_doctrine_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				foreign_influence_home_continent_modifier = 0.05
+				foreign_influence_continent_modifier = 0.03
+				political_power_gain = 0.04
+			}
+		}
+		ARG_rise_plata_table_spirit = {
+			name = ARG_rise_plata_table_spirit
+			picture = international_treaty
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_plata_table_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				trade_opinion_factor = 0.04
+				investment_duration_modifier = -0.03
+			}
+		}
+		ARG_rise_mercosur_corridors_spirit = {
+			name = ARG_rise_mercosur_corridors_spirit
+			picture = tower_investment
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_mercosur_corridors_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				investment_cost_modifier = -0.04
+				return_on_investment_modifier = 0.01
+			}
+		}
+		ARG_rise_austral_stability_credit_spirit = {
+			name = ARG_rise_austral_stability_credit_spirit
+			picture = tower_investment
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_austral_stability_credit_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				investment_cost_modifier = -0.05
+				return_on_investment_modifier = 0.02
+				foreign_influence_modifier = 0.02
+			}
+		}
+		ARG_rise_ports_under_our_shadow_spirit = {
+			name = ARG_rise_ports_under_our_shadow_spirit
+			picture = resource_production
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_ports_under_our_shadow_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				trade_opinion_factor = 0.05
+				resource_export_multiplier_modifier = 0.045
+			}
+		}
+		ARG_rise_dependency_belt_spirit = {
+			name = ARG_rise_dependency_belt_spirit
+			picture = tower_investment
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_dependency_belt_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				foreign_influence_modifier = 0.05
+				foreign_influence_continent_modifier = 0.04
+				trade_opinion_factor = 0.03
+			
+				gdp_from_resource_sector_modifier = 0.01
+}
+		}
+		ARG_rise_steel_and_light_diplomacy_spirit = {
+			name = ARG_rise_steel_and_light_diplomacy_spirit
+			picture = resource_production
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_steel_and_light_diplomacy_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				resource_export_multiplier_modifier = 0.05
+				foreign_influence_modifier = 0.02
+			}
+		}
+		ARG_rise_vaca_muerta_continental_gaze_spirit = {
+			name = ARG_rise_vaca_muerta_continental_gaze_spirit
+			picture = resource_production
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_vaca_muerta_continental_gaze_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				oil_export_multiplier_modifier = 0.06
+				trade_opinion_factor = 0.03
+			
+				local_resources_factor = 0.02
+				resource_sector_workers_modifier = -0.02
+}
+		}
+		ARG_rise_minerals_for_region_spirit = {
+			name = ARG_rise_minerals_for_region_spirit
+			picture = resource_production
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_minerals_for_region_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				steel_export_multiplier_modifier = 0.03
+				aluminium_export_multiplier_modifier = 0.03
+				tungsten_export_multiplier_modifier = 0.02
+				chromium_export_multiplier_modifier = 0.02
+			
+				local_resources_factor = 0.02
+				resource_sector_workers_modifier = -0.02
+}
+		}
+		ARG_rise_austral_oil_routes_spirit = {
+			name = ARG_rise_austral_oil_routes_spirit
+			picture = resource_production
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_austral_oil_routes_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				oil_export_multiplier_modifier = 0.05
+				investment_duration_modifier = -0.03
+				trade_opinion_factor = 0.03
+			
+				resource_export_multiplier_modifier = 0.015
+				resource_sector_workers_modifier = -0.015
+}
+		}
+		ARG_rise_price_of_sovereignty_spirit = {
+			name = ARG_rise_price_of_sovereignty_spirit
+			picture = resource_production
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_price_of_sovereignty_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				foreign_influence_modifier = 0.04
+				resource_export_multiplier_modifier = 0.05
+				foreign_influence_defense_modifier = 0.03
+			
+				gdp_from_resource_sector_modifier = 0.01
+}
+		}
+		ARG_rise_continental_office_spirit = {
+			name = ARG_rise_continental_office_spirit
+			picture = intel_bonus
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_continental_office_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				agency_upgrade_time = -0.05
+				foreign_influence_modifier = 0.02
+			}
+		}
+		ARG_rise_loyalty_networks_spirit = {
+			name = ARG_rise_loyalty_networks_spirit
+			picture = intel_bonus
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_loyalty_networks_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				foreign_influence_modifier = 0.03
+				influence_coup_modifier = 0.03
+			}
+		}
+		ARG_rise_press_of_order_spirit = {
+			name = ARG_rise_press_of_order_spirit
+			picture = propaganda
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_press_of_order_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				foreign_influence_modifier = 0.03
+				trade_opinion_factor = 0.03
+			}
+		}
+		ARG_rise_permanent_interests_spirit = {
+			name = ARG_rise_permanent_interests_spirit
+			picture = intel_bonus
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_permanent_interests_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				foreign_influence_continent_modifier = 0.04
+				enemy_operative_detection_chance_factor = 0.03
+			}
+		}
+		ARG_rise_administrative_shadow_spirit = {
+			name = ARG_rise_administrative_shadow_spirit
+			picture = intel_bonus
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_administrative_shadow_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				operative_slot = 1
+				agency_upgrade_time = -0.05
+				foreign_influence_modifier = 0.04
+			}
+		}
+		ARG_rise_continental_atlas_spirit = {
+			name = ARG_rise_continental_atlas_spirit
+			picture = international_treaty
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_continental_atlas_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				foreign_influence_defense_modifier = 0.03
+				political_power_gain = 0.03
+				production_speed_offices_factor = 0.01
+			
+				local_resources_factor = 0.015
+}
+		}
+		ARG_rise_security_frontier_spirit = {
+			name = ARG_rise_security_frontier_spirit
+			picture = intel_bonus
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_security_frontier_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				enemy_operative_detection_chance_factor = 0.04
+				foreign_influence_defense_modifier = 0.03
+			}
+		}
+		ARG_rise_america_command_preparation_spirit = {
+			name = ARG_rise_america_command_preparation_spirit
+			picture = intel_bonus
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_america_command_preparation_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				agency_upgrade_time = -0.05
+				foreign_influence_continent_modifier = 0.03
+			}
+		}
+		ARG_rise_southern_ultimatum_spirit = {
+			name = ARG_rise_southern_ultimatum_spirit
+			picture = international_treaty
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_southern_ultimatum_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				foreign_influence_modifier = 0.05
+				influence_coup_modifier = 0.05
+				stability_factor = 0.005
+			}
+		}
+		ARG_rise_american_hour_spirit = {
+			name = ARG_rise_american_hour_spirit
+			picture = national_unity
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_american_hour_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				foreign_influence_modifier = 0.06
+				foreign_influence_continent_modifier = 0.06
+				foreign_influence_defense_modifier = 0.05
+				political_power_gain = 0.05
+			
+				gdp_from_resource_sector_modifier = 0.01
+				resource_sector_workers_modifier = -0.01
+}
+		}
+		ARG_rise_silos_del_parana_spirit = {
+			name = ARG_rise_silos_del_parana_spirit
+			picture = agriculture
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_silos_del_parana_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				agricolture_productivity_modifier = 0.04
+				agriculture_tax_modifier = 0.015
+				agriculture_district_worker_requirement_modifier = -0.02
+			
+				# ARG_RISE_SOY_BRANCH_MIGRATION_PATCH
+				migration_rate_value_factor = 0.001
+			}
+		}
+		ARG_rise_puertos_del_grano_spirit = {
+			name = ARG_rise_puertos_del_grano_spirit
+			picture = agriculture
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_puertos_del_grano_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				resource_export_multiplier_modifier = 0.03
+				agriculture_district_income_tax_modifier = 0.02
+				corporate_tax_income_multiplier_modifier = 0.01
+			
+				# ARG_RISE_SOY_BRANCH_MIGRATION_PATCH
+				migration_rate_value_factor = 0.001
+			}
+		}
+		ARG_rise_frigorificos_nacionales_spirit = {
+			name = ARG_rise_frigorificos_nacionales_spirit
+			picture = agriculture
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_frigorificos_nacionales_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				agricolture_productivity_modifier = 0.04
+				resource_export_multiplier_modifier = 0.02
+				corporate_tax_income_multiplier_modifier = 0.015
+			
+				# ARG_RISE_SOY_BRANCH_MIGRATION_PATCH
+				migration_rate_value_factor = 0.001
+			}
+		}
+		ARG_rise_marca_argentina_de_exportacion_spirit = {
+			name = ARG_rise_marca_argentina_de_exportacion_spirit
+			picture = economic_increase
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_marca_argentina_de_exportacion_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				resource_export_multiplier_modifier = 0.04
+				agriculture_district_income_tax_modifier = 0.025
+				stability_factor = 0.005
+			
+				# ARG_RISE_SOY_BRANCH_MIGRATION_PATCH
+				migration_rate_value_factor = 0.001
+			}
+		}
+		ARG_rise_talleres_abiertos_spirit = {
+			name = ARG_rise_talleres_abiertos_spirit
+			picture = construction
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_talleres_abiertos_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				production_speed_buildings_factor = 0.03
+				production_speed_industrial_complex_factor = 0.04
+				total_workforce_modifier = 0.005
+				migration_rate_value_factor = 0.001
+			}
+		}
+		ARG_rise_credito_para_producir_spirit = {
+			name = ARG_rise_credito_para_producir_spirit
+			picture = economic_increase
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_credito_para_producir_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				interest_rate_multiplier_modifier = -0.25
+				tax_gain_multiplier_modifier = 0.015
+				country_productivity_growth_modifier = 0.01
+				migration_rate_value_factor = 0.001
+			}
+		}
+		ARG_rise_obras_de_emergencia_spirit = {
+			name = ARG_rise_obras_de_emergencia_spirit
+			picture = construction
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_obras_de_emergencia_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				production_speed_buildings_factor = 0.04
+				high_unemployment_threshold_modifier = 0.01
+				stability_factor = 0.005
+				migration_rate_value_factor = 0.001
+			}
+		}
+		ARG_rise_el_pulso_del_empleo_spirit = {
+			name = ARG_rise_el_pulso_del_empleo_spirit
+			picture = economic_increase
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_el_pulso_del_empleo_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				total_workforce_modifier = 0.015
+				country_productivity_growth_modifier = 0.015
+				migration_rate_value_factor = 0.021
+			}
+		}
+		ARG_rise_parques_industriales_ligeros_spirit = {
+			name = ARG_rise_parques_industriales_ligeros_spirit
+			picture = construction
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_parques_industriales_ligeros_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				production_speed_industrial_complex_factor = 0.075
+				industrial_capacity_factory = 0.02
+			
+				}
+		}
+		ARG_rise_maquinas_para_la_recuperacion_spirit = {
+			name = ARG_rise_maquinas_para_la_recuperacion_spirit
+			picture = construction
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_maquinas_para_la_recuperacion_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				industrial_capacity_factory = 0.035
+				civilian_factories_productivity = 0.02
+				production_speed_industrial_complex_factor = 0.01
+			}
+		}
+		ARG_rise_proveedores_nacionales_spirit = {
+			name = ARG_rise_proveedores_nacionales_spirit
+			picture = economic_increase
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_proveedores_nacionales_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				corporate_tax_income_multiplier_modifier = 0.02
+				country_productivity_growth_modifier = 0.015
+				industrial_capacity_factory = 0.02
+				production_speed_industrial_complex_factor = 0.01
+			}
+		}
+		ARG_rise_la_fabrica_ordenada_spirit = {
+			name = ARG_rise_la_fabrica_ordenada_spirit
+			picture = construction
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_la_fabrica_ordenada_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				production_speed_industrial_complex_factor = 0.065
+				civilian_factories_productivity = 0.02
+				stability_factor = 0.005
+			
+				}
+		}
+		ARG_rise_distritos_de_oficina_spirit = {
+			name = ARG_rise_distritos_de_oficina_spirit
+			picture = economic_increase
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_distritos_de_oficina_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				production_speed_offices_factor = 0.06
+				offices_productivity = 0.025
+			
+				}
+		}
+		ARG_rise_contabilidad_del_crecimiento_spirit = {
+			name = ARG_rise_contabilidad_del_crecimiento_spirit
+			picture = economic_increase
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_contabilidad_del_crecimiento_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				office_park_income_tax_modifier = 0.025
+				tax_gain_multiplier_modifier = 0.015
+				population_tax_income_multiplier_modifier = 0.01
+				production_speed_offices_factor = 0.01
+			}
+		}
+		ARG_rise_ciudades_productivas_spirit = {
+			name = ARG_rise_ciudades_productivas_spirit
+			picture = construction
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_ciudades_productivas_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				production_speed_offices_factor = 0.05
+				monthly_population = 0.01
+				migration_rate_value_factor = 0.02
+			
+				}
+		}
+		ARG_rise_administracion_productiva_spirit = {
+			name = ARG_rise_administracion_productiva_spirit
+			picture = economic_increase
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_administracion_productiva_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				tax_gain_multiplier_modifier = 0.025
+				offices_productivity = 0.025
+				political_power_gain = 0.03
+				production_speed_offices_factor = 0.01
+			}
+		}
+		ARG_rise_energy_surplus_commercialization = {
+			name = ARG_rise_energy_surplus_commercialization
+			picture = economic_increase
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_energy_surplus_commercialization"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				corporate_tax_income_multiplier_modifier = 0.015
+				tax_gain_multiplier_modifier = 0.01
+				resource_export_multiplier_modifier = 0.015
+			}
+		}
+		ARG_rise_mercosur_power_export_contract = {
+			name = ARG_rise_mercosur_power_export_contract
+			picture = economic_increase
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_mercosur_power_export_contract"
+				ingame_update_setup = yes
+			}
+
+			on_remove = {
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				energy_use = 10
+				resource_export_multiplier_modifier = 0.02
+				tax_gain_multiplier_modifier = 0.01
+			}
+		}
+		ARG_rise_electroindustrial_power_contracts = {
+			name = ARG_rise_electroindustrial_power_contracts
+			picture = construction
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_electroindustrial_power_contracts"
+				ingame_update_setup = yes
+			}
+
+			on_remove = {
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				energy_use = 18
+				corporate_tax_income_multiplier_modifier = 0.025
+				office_park_income_tax_modifier = 0.015
+				civilian_factories_productivity = 0.015
+			}
+		}
+		ARG_rise_continental_grid_services = {
+			name = ARG_rise_continental_grid_services
+			picture = economic_increase
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_continental_grid_services"
+				ingame_update_setup = yes
+			}
+
+			on_remove = {
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				energy_use = 30
+				resource_export_multiplier_modifier = 0.03
+				corporate_tax_income_multiplier_modifier = 0.02
+				tax_gain_multiplier_modifier = 0.015
+			}
+		}
+		ARG_rise_crisis_de_ceniza_spirit = {
+			name = ARG_rise_crisis_de_ceniza_spirit
+			picture = economic_increase
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_crisis_de_ceniza_spirit"
+				ingame_update_setup = yes
+			}
+			modifier = {
+				tax_gain_multiplier_modifier = -0.06
+				bureaucracy_cost_multiplier_modifier = 0.05
+				social_cost_multiplier_modifier = 0.05
+				health_cost_multiplier_modifier = 0.04
+				education_cost_multiplier_modifier = 0.04
+				stability_factor = -0.07
+				democratic_drift = -0.03
+				nationalist_drift = 0.02
+			}
+		}
+		ARG_rise_cuentas_al_borde_spirit = {
+			name = ARG_rise_cuentas_al_borde_spirit
+			picture = economic_increase
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_cuentas_al_borde_spirit"
+				ingame_update_setup = yes
+			}
+			modifier = {
+				tax_gain_multiplier_modifier = -0.05
+				bureaucracy_cost_multiplier_modifier = 0.03
+				political_power_gain = -0.05
+				stability_factor = -0.05
+			}
+		}
+		ARG_rise_ajuste_inevitable_spirit = {
+			name = ARG_rise_ajuste_inevitable_spirit
+			picture = welfare
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_ajuste_inevitable_spirit"
+				ingame_update_setup = yes
+			}
+			modifier = {
+				social_cost_multiplier_modifier = -0.06
+				health_cost_multiplier_modifier = -0.03
+				education_cost_multiplier_modifier = -0.03
+				bureaucracy_cost_multiplier_modifier = -0.02
+				tax_gain_multiplier_modifier = -0.03
+				stability_factor = -0.08
+				democratic_drift = -0.015
+				nationalist_drift = 0.025
+			}
+		}
+		ARG_rise_respirar_con_deuda_spirit = {
+			name = ARG_rise_respirar_con_deuda_spirit
+			picture = economic_increase
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_respirar_con_deuda_spirit"
+				ingame_update_setup = yes
+			}
+			modifier = {
+				interest_rate_multiplier_modifier = 0.10
+				tax_gain_multiplier_modifier = -0.03
+				stability_factor = -0.04
+				political_power_gain = -0.03
+			}
+		}
+		ARG_rise_moneda_herida_spirit = {
+			name = ARG_rise_moneda_herida_spirit
+			picture = economic_increase
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_moneda_herida_spirit"
+				ingame_update_setup = yes
+			}
+			modifier = {
+				tax_gain_multiplier_modifier = -0.08
+				migration_rate_value_factor = -0.04
+				stability_factor = -0.06
+				democratic_drift = -0.025
+				nationalist_drift = 0.03
+			}
+		}
+		ARG_rise_pan_trabajo_emergencia_spirit = {
+			name = ARG_rise_pan_trabajo_emergencia_spirit
+			picture = welfare
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_pan_trabajo_emergencia_spirit"
+				ingame_update_setup = yes
+			}
+			modifier = {
+				high_unemployment_threshold_modifier = 0.02
+				social_cost_multiplier_modifier = 0.04
+				tax_gain_multiplier_modifier = -0.03
+				stability_factor = -0.05
+				political_power_gain = -0.03
+			}
+		}
+		ARG_rise_talleres_supervivencia_spirit = {
+			name = ARG_rise_talleres_supervivencia_spirit
+			picture = economic_increase
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_talleres_supervivencia_spirit"
+				ingame_update_setup = yes
+			}
+			modifier = {
+				production_speed_industrial_complex_factor = 0.01
+				civilian_factories_productivity = 0.005
+				country_productivity_growth_modifier = 0.003
+				tax_gain_multiplier_modifier = -0.02
+				stability_factor = -0.03
+			}
+		}
+		ARG_rise_mercados_ultima_hora_spirit = {
+			name = ARG_rise_mercados_ultima_hora_spirit
+			picture = economic_increase
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_mercados_ultima_hora_spirit"
+				ingame_update_setup = yes
+			}
+			modifier = {
+				resource_export_multiplier_modifier = 0.02
+				corruption_cost_factor = 0.08
+				tax_gain_multiplier_modifier = -0.04
+				stability_factor = -0.05
+			}
+		}
+		ARG_rise_economia_resiste_spirit = {
+			name = ARG_rise_economia_resiste_spirit
+			picture = economic_increase
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_economia_resiste_spirit"
+				ingame_update_setup = yes
+			}
+			modifier = {
+				country_productivity_growth_modifier = 0.006
+				high_unemployment_threshold_modifier = 0.01
+				tax_gain_multiplier_modifier = -0.02
+				stability_factor = -0.03
+			}
+		}
+		ARG_rise_barriles_emergencia_spirit = {
+			name = ARG_rise_barriles_emergencia_spirit
+			picture = oil_profits
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_barriles_emergencia_spirit"
+				ingame_update_setup = yes
+			}
+			modifier = {
+				oil_export_multiplier_modifier = 0.03
+				resource_export_multiplier_modifier = 0.01
+				corruption_cost_factor = 0.10
+				tax_gain_multiplier_modifier = -0.03
+				stability_factor = -0.05
+			}
+		}
+		ARG_rise_luz_para_invierno_spirit = {
+			name = ARG_rise_luz_para_invierno_spirit
+			picture = oil_profits
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_luz_para_invierno_spirit"
+				ingame_update_setup = yes
+			}
+			modifier = {
+				production_speed_fossil_powerplant_factor = 0.03
+				energy_gain_multiplier = 0.005
+				corruption_cost_factor = 0.12
+				tax_gain_multiplier_modifier = -0.02
+				bureaucracy_cost_multiplier_modifier = 0.02
+				stability_factor = -0.05
+			}
+		}
+		ARG_rise_reservas_dia_siguiente_spirit = {
+			name = ARG_rise_reservas_dia_siguiente_spirit
+			picture = oil_profits
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_reservas_dia_siguiente_spirit"
+				ingame_update_setup = yes
+			}
+			modifier = {
+				production_speed_fossil_powerplant_factor = 0.04
+				oil_export_multiplier_modifier = 0.04
+				energy_gain_multiplier = 0.005
+				corruption_cost_factor = 0.15
+				tax_gain_multiplier_modifier = -0.03
+				stability_factor = -0.06
+			}
+		}
+		ARG_rise_exportar_para_sobrevivir_spirit = {
+			name = ARG_rise_exportar_para_sobrevivir_spirit
+			picture = oil_profits
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_exportar_para_sobrevivir_spirit"
+				ingame_update_setup = yes
+			}
+			modifier = {
+				resource_export_multiplier_modifier = 0.05
+				oil_export_multiplier_modifier = 0.06
+				tax_gain_multiplier_modifier = -0.04
+				corruption_cost_factor = 0.18
+				stability_factor = -0.06
+			}
+		}
+		ARG_rise_transicion_funesta_spirit = {
+			name = ARG_rise_transicion_funesta_spirit
+			picture = nationalist_outlook
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_transicion_funesta_spirit"
+				ingame_update_setup = yes
+			}
+			modifier = {
+				bureaucracy_cost_multiplier_modifier = -0.04
+				social_cost_multiplier_modifier = -0.06
+				health_cost_multiplier_modifier = -0.05
+				education_cost_multiplier_modifier = -0.05
+				tax_gain_multiplier_modifier = -0.06
+				corruption_cost_factor = 0.10
+				democratic_drift = -0.05
+				nationalist_drift = 0.05
+				stability_factor = -0.10
+			}
+		}
+		ARG_rise_democracia_exhausta_spirit = {
+			name = ARG_rise_democracia_exhausta_spirit
+			picture = nationalist_outlook
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_democracia_exhausta_spirit"
+				ingame_update_setup = yes
+			}
+			modifier = {
+				democratic_drift = -0.06
+				nationalist_drift = 0.08
+				drift_defence_factor = -0.15
+				political_power_gain = 0.03
+				production_speed_offices_factor = 0.01
+				tax_gain_multiplier_modifier = -0.03
+				stability_factor = -0.08
+			}
+		}
+		ARG_rise_ultimo_prestamo_spirit = {
+			name = ARG_rise_ultimo_prestamo_spirit
+			picture = economic_deterioration
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_ultimo_prestamo_spirit"
+				ingame_update_setup = yes
+			}
+			modifier = {
+				interest_rate_multiplier_modifier = 3.00
+				political_power_gain = -0.10
+			}
+		}
+		ARG_rise_pan_y_acero_mobilization = {
+			name = ARG_rise_pan_y_acero_mobilization
+			picture = industrial_focus
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_pan_y_acero_mobilization"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				stability_factor = -0.10
+				war_support_factor = 0.05
+				production_speed_arms_factory_factor = 0.10
+			}
+		}
+		ARG_rise_ejercito_logistica_profunda = {
+			name = ARG_rise_ejercito_logistica_profunda
+			picture = army_war_college
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_ejercito_logistica_profunda"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				supply_consumption_factor = -0.04
+				out_of_supply_factor = -0.03
+				planning_speed = 0.05
+			}
+		}
+		ARG_rise_ejercito_cuerpo_mecanizado = {
+			name = ARG_rise_ejercito_cuerpo_mecanizado
+			picture = tank_industry
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_ejercito_cuerpo_mecanizado"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				breakthrough_factor = 0.03
+				army_speed_factor = 0.03
+				army_fuel_consumption_factor = -0.04
+			}
+		}
+		ARG_rise_ejercito_comando_continental = {
+			name = ARG_rise_ejercito_comando_continental
+			picture = army_good_officer
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_ejercito_comando_continental"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				army_attack_factor = 0.03
+				army_defence_factor = 0.03
+				breakthrough_factor = 0.03
+				supply_consumption_factor = -0.03
+				experience_gain_army = 0.02
+				production_speed_arms_factory_factor = 0.05
+				army_org_factor = 0.02
+				max_planning_factor = 0.05
+				planning_speed = 0.05
+				land_reinforce_rate = 0.02
+				industrial_capacity_factory = 0.03
+				production_factory_efficiency_gain_factor = 0.03
+			}
+		}
+		ARG_rise_fuerza_aerea_red_integrada = {
+			name = ARG_rise_fuerza_aerea_red_integrada
+			picture = air_research
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_fuerza_aerea_red_integrada"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				air_detection = 0.05
+				air_mission_efficiency = 0.03
+				air_accidents_factor = -0.03
+			}
+		}
+		ARG_rise_fuerza_aerea_superioridad_austral = {
+			name = ARG_rise_fuerza_aerea_superioridad_austral
+			picture = air_bonus
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_fuerza_aerea_superioridad_austral"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				air_superiority_efficiency = 0.05
+				air_agility_factor = 0.03
+				air_attack_factor = 0.03
+			}
+		}
+		ARG_rise_fuerza_aerea_comando_aeroespacial = {
+			name = ARG_rise_fuerza_aerea_comando_aeroespacial
+			picture = air_support
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_fuerza_aerea_comando_aeroespacial"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				air_superiority_efficiency = 0.04
+				air_mission_efficiency = 0.04
+				air_detection = 0.07
+				air_accidents_factor = -0.05
+				experience_gain_air = 0.02
+				production_speed_air_base_factor = 0.05
+				production_speed_radar_station_factor = 0.05
+				air_agility_factor = 0.02
+				industrial_capacity_factory = 0.02
+				production_factory_efficiency_gain_factor = 0.02
+			}
+		}
+		ARG_rise_armada_astilleros_atlantico = {
+			name = ARG_rise_armada_astilleros_atlantico
+			picture = industrial_focus
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_armada_astilleros_atlantico"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				industrial_capacity_dockyard = 0.06
+				dockyard_productivity = 0.05
+				production_speed_naval_base_factor = 0.05
+			}
+		}
+		ARG_rise_armada_patrulla_submarina = {
+			name = ARG_rise_armada_patrulla_submarina
+			picture = coastal_navy
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_armada_patrulla_submarina"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				naval_detection = 0.04
+				positioning = 0.03
+				naval_accidents_chance = -0.03
+			}
+		}
+		ARG_rise_armada_muralla_azul = {
+			name = ARG_rise_armada_muralla_azul
+			picture = navy_bonus
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_armada_muralla_azul"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				naval_detection = 0.04
+				positioning = 0.03
+				naval_coordination = 0.05
+				convoy_escort_efficiency = 0.05
+				experience_gain_navy = 0.02
+				industrial_capacity_dockyard = 0.05
+				dockyard_productivity = 0.05
+			}
+		}
+		ARG_rise_tierra_infrastructure_program_1 = {
+			name = ARG_rise_tierra_infrastructure_program_1
+			picture = construction
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_tierra_infrastructure_program_1"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				production_speed_infrastructure_factor = 0.01
+				production_speed_supply_node_factor = 0.01
+				production_speed_rail_way_factor = 0.01
+			}
+		}
+		ARG_rise_tierra_infrastructure_program_2 = {
+			name = ARG_rise_tierra_infrastructure_program_2
+			picture = construction
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_tierra_infrastructure_program_2"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				production_speed_infrastructure_factor = 0.02
+				production_speed_supply_node_factor = 0.02
+				production_speed_rail_way_factor = 0.02
+			}
+		}
+		ARG_rise_tierra_infrastructure_program_3 = {
+			name = ARG_rise_tierra_infrastructure_program_3
+			picture = construction
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_tierra_infrastructure_program_3"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				production_speed_infrastructure_factor = 0.03
+				production_speed_supply_node_factor = 0.03
+				production_speed_rail_way_factor = 0.03
+			}
+		}
+		ARG_rise_tierra_infrastructure_program_4 = {
+			name = ARG_rise_tierra_infrastructure_program_4
+			picture = construction
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_tierra_infrastructure_program_4"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				production_speed_infrastructure_factor = 0.04
+				production_speed_supply_node_factor = 0.04
+				production_speed_rail_way_factor = 0.04
+			}
+		}
+		ARG_rise_tierra_infrastructure_program_5 = {
+			name = ARG_rise_tierra_infrastructure_program_5
+			picture = construction
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_tierra_infrastructure_program_5"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				production_speed_infrastructure_factor = 0.05
+				production_speed_supply_node_factor = 0.05
+				production_speed_rail_way_factor = 0.05
+			}
+		}
+		ARG_rise_tierra_infrastructure_program_6 = {
+			name = ARG_rise_tierra_infrastructure_program_6
+			picture = construction
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_tierra_infrastructure_program_6"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				production_speed_infrastructure_factor = 0.06
+				production_speed_supply_node_factor = 0.06
+				production_speed_rail_way_factor = 0.06
+			}
+		}
+		ARG_rise_tierra_infrastructure_program_7 = {
+			name = ARG_rise_tierra_infrastructure_program_7
+			picture = construction
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_tierra_infrastructure_program_7"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				production_speed_infrastructure_factor = 0.07
+				production_speed_supply_node_factor = 0.07
+				production_speed_rail_way_factor = 0.07
+			}
+		}
+		ARG_rise_tierra_infrastructure_program_8 = {
+			name = ARG_rise_tierra_infrastructure_program_8
+			picture = construction
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_tierra_infrastructure_program_8"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				production_speed_infrastructure_factor = 0.08
+				production_speed_supply_node_factor = 0.08
+				production_speed_rail_way_factor = 0.08
+			}
+		}
+		ARG_rise_tierra_infrastructure_program_9 = {
+			name = ARG_rise_tierra_infrastructure_program_9
+			picture = construction
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_tierra_infrastructure_program_9"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				production_speed_infrastructure_factor = 0.10
+				production_speed_supply_node_factor = 0.09
+				production_speed_rail_way_factor = 0.09
+			}
+		}
+		ARG_rise_tierra_infrastructure_program_10 = {
+			name = ARG_rise_tierra_infrastructure_program_10
+			picture = construction
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_tierra_infrastructure_program_10"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				production_speed_infrastructure_factor = 0.12
+				production_speed_supply_node_factor = 0.10
+				production_speed_rail_way_factor = 0.10
+			}
+		}
+		ARG_rise_tierra_infrastructure_program_11 = {
+			name = ARG_rise_tierra_infrastructure_program_11
+			picture = construction
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_tierra_infrastructure_program_11"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				production_speed_infrastructure_factor = 0.14
+				production_speed_supply_node_factor = 0.12
+				production_speed_rail_way_factor = 0.12
+			}
+		}
+		ARG_rise_tierra_infrastructure_program_12 = {
+			name = ARG_rise_tierra_infrastructure_program_12
+			picture = construction
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_tierra_infrastructure_program_12"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				production_speed_infrastructure_factor = 0.17
+				production_speed_supply_node_factor = 0.15
+				production_speed_rail_way_factor = 0.15
+			}
+		}
+		ARG_rise_naval_innovation_facility_spirit = {
+			name = ARG_rise_naval_innovation_facility_spirit
+			picture = research_bonus
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_naval_innovation_facility_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				research_speed_factor = 0.02
+				special_project_speed_factor = 0.03
+			}
+		}
+		ARG_rise_land_warfare_facility_spirit = {
+			name = ARG_rise_land_warfare_facility_spirit
+			picture = research_bonus
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_land_warfare_facility_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				research_speed_factor = 0.02
+				special_project_speed_factor = 0.03
+			}
+		}
+		ARG_rise_aeroespacial_facility_spirit = {
+			name = ARG_rise_aeroespacial_facility_spirit
+			picture = research_bonus
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_aeroespacial_facility_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				research_speed_factor = 0.02
+				special_project_speed_factor = 0.03
+			}
+		}
+		ARG_rise_civilian_rd_facility_spirit = {
+			name = ARG_rise_civilian_rd_facility_spirit
+			picture = research_bonus
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_civilian_rd_facility_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				research_speed_factor = 0.04
+				special_project_speed_factor = 0.04
+			}
+		}
+
+		ARG_rise_space_horizon_austral_spirit = {
+			name = ARG_rise_space_horizon_austral_spirit
+			picture = research_bonus
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_space_horizon_austral_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				research_speed_factor = 0.005
+				special_project_speed_factor = 0.03
+			}
+		}
+		ARG_rise_conae_del_futuro_spirit = {
+			name = ARG_rise_conae_del_futuro_spirit
+			picture = research_bonus
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_conae_del_futuro_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				special_project_speed_factor = 0.015
+			}
+		}
+		ARG_rise_ingenieria_aeroespacial_spirit = {
+			name = ARG_rise_ingenieria_aeroespacial_spirit
+			picture = research_bonus
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_ingenieria_aeroespacial_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				special_project_speed_factor = 0.015
+			}
+		}
+		ARG_rise_cielo_tecnocratico_spirit = {
+			name = ARG_rise_cielo_tecnocratico_spirit
+			picture = research_bonus
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_cielo_tecnocratico_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				research_speed_factor = 0.005
+				special_project_speed_factor = 0.04
+			}
+		}
+		ARG_rise_programa_misiles_guiados_spirit = {
+			name = ARG_rise_programa_misiles_guiados_spirit
+			picture = research_bonus
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_programa_misiles_guiados_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				special_project_speed_factor = 0.03
+			}
+		}
+		ARG_rise_doctrina_precision_austral_spirit = {
+			name = ARG_rise_doctrina_precision_austral_spirit
+			picture = research_bonus
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_doctrina_precision_austral_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				special_project_speed_factor = 0.02
+				production_speed_rocket_site_factor = 0.05
+			}
+		}
+		ARG_rise_lanza_del_sur_spirit = {
+			name = ARG_rise_lanza_del_sur_spirit
+			picture = research_bonus
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_lanza_del_sur_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				special_project_speed_factor = 0.04
+				production_speed_rocket_site_factor = 0.10
+				production_speed_air_facility_factor = 0.05
+			}
+		}
+	ARG_rise_bond_redistribution_emergency = {
+		name = ARG_rise_bond_redistribution_emergency
+		picture = economic_increase
+		modifier = {
+			stability_factor = 0.005
+			population_tax_income_multiplier_modifier = 0.005
+		}
+	}
+		ARG_rise_intelligence_strategic_directorate = {
+			name = ARG_rise_intelligence_strategic_directorate
+			picture = intel_bonus
+			modifier = {
+				civilian_intel_factor = 0.10
+				army_intel_factor = 0.08
+				navy_intel_factor = 0.08
+				airforce_intel_factor = 0.08
+				intel_network_gain_factor = 0.10
+				decryption = 2
+				agency_upgrade_time = -0.10
+				encryption = 1
+				intelligence_agency_defense = 0.05
+			}
+		}
+		ARG_rise_intelligence_continental_office = {
+			name = ARG_rise_intelligence_continental_office
+			picture = intel_bonus
+			modifier = {
+				civilian_intel_factor = 0.15
+				intel_network_gain_factor = 0.15
+				operation_cost = -0.05
+				operative_slot = 1
+				enemy_operative_detection_chance_factor = 0.05
+				intelligence_agency_defense = 0.05
+			}
+		}
+		ARG_rise_intelligence_regional_order_maps = {
+			name = ARG_rise_intelligence_regional_order_maps
+			picture = intel_bonus
+			modifier = {
+				army_intel_factor = 0.18
+				airforce_intel_factor = 0.10
+				civilian_intel_factor = 0.05
+				decryption = 2
+				encryption = 1
+				enemy_operative_capture_chance_factor = 0.03
+			}
+		}
+		ARG_rise_intelligence_atlantic_signals = {
+			name = ARG_rise_intelligence_atlantic_signals
+			picture = intel_bonus
+			modifier = {
+				navy_intel_factor = 0.20
+				airforce_intel_factor = 0.08
+				intel_network_gain_factor = 0.10
+				decryption = 2
+				encryption = 1
+				enemy_operative_detection_chance_factor = 0.04
+			}
+		}
+		ARG_rise_intelligence_human_networks = {
+			name = ARG_rise_intelligence_human_networks
+			picture = intel_bonus
+			modifier = {
+				operative_slot = 1
+				intel_network_gain_factor = 0.20
+				civilian_intel_factor = 0.10
+				army_intel_factor = 0.05
+				operation_cost = -0.10
+				enemy_operative_detection_chance_factor = 0.05
+				enemy_operative_capture_chance_factor = 0.05
+			}
+		}
+		ARG_rise_intelligence_national_cryptology = {
+			name = ARG_rise_intelligence_national_cryptology
+			picture = intel_bonus
+			modifier = {
+				decryption = 5
+				encryption = 3
+				agency_upgrade_time = -0.10
+				intel_network_gain_factor = 0.10
+				intelligence_agency_defense = 0.10
+				enemy_operative_detection_chance_factor = 0.05
+			}
+		}
+		ARG_rise_intelligence_austral_eye = {
+			name = ARG_rise_intelligence_austral_eye
+			picture = intel_bonus
+			modifier = {
+				civilian_intel_factor = 0.15
+				army_intel_factor = 0.15
+				navy_intel_factor = 0.15
+				airforce_intel_factor = 0.15
+				intel_network_gain_factor = 0.25
+				decryption = 5
+				encryption = 3
+				operative_slot = 1
+				agency_upgrade_time = -0.15
+				operation_cost = -0.10
+				enemy_operative_detection_chance_factor = 0.10
+				enemy_operative_capture_chance_factor = 0.10
+				intelligence_agency_defense = 0.15
+			}
+		}
+
+	ARG_rise_bond_redistribution_reconstruction = {
+		name = ARG_rise_bond_redistribution_reconstruction
+		picture = economic_increase
+		modifier = {
+			stability_factor = 0.0075
+			population_tax_income_multiplier_modifier = 0.0075
+			civilian_factories_productivity = 0.005
+		}
+	}
+
+	ARG_rise_bond_redistribution_development = {
+		name = ARG_rise_bond_redistribution_development
+		picture = economic_increase
+		modifier = {
+			stability_factor = 0.01
+			population_tax_income_multiplier_modifier = 0.01
+			corporate_tax_income_multiplier_modifier = 0.005
+			civilian_factories_productivity = 0.01
+			internal_investments_money_cost_modifier = -0.01
+		}
+	}
+
+	ARG_rise_bond_redistribution_industrialization = {
+		name = ARG_rise_bond_redistribution_industrialization
+		picture = economic_increase
+		modifier = {
+			stability_factor = 0.015
+			population_tax_income_multiplier_modifier = 0.015
+			corporate_tax_income_multiplier_modifier = 0.01
+			civilian_factories_productivity = 0.015
+			country_productivity_growth_modifier = 0.005
+			internal_investments_money_cost_modifier = -0.015
+		}
+	}
+
+	ARG_rise_bond_redistribution_sovereignty = {
+		name = ARG_rise_bond_redistribution_sovereignty
+		picture = economic_increase
+		modifier = {
+			stability_factor = 0.02
+			population_tax_income_multiplier_modifier = 0.02
+			corporate_tax_income_multiplier_modifier = 0.015
+			civilian_factories_productivity = 0.02
+			country_productivity_growth_modifier = 0.0075
+			internal_investments_money_cost_modifier = -0.02
+		}
+	}
+
+		ARG_rise_cultura_del_esfuerzo_final_spirit = {
+
+					name = ARG_rise_cultura_del_esfuerzo_final_spirit
+
+					allowed = { always = no }
+
+					picture = GFX_idea_ARG_rise_working_nation
+
+					modifier = {
+
+						industrial_capacity_factory = 0.10
+
+						stability_factor = 0.05
+
+						political_power_gain = -0.05
+
+						country_productivity_growth_modifier = 0.01
+
+						total_workforce_modifier = 0.02
+
+					}
+
+				}
+
+
+
+				ARG_rise_bienestar_total_spirit = {
+
+					name = ARG_rise_bienestar_total_spirit
+
+					allowed = { always = no }
+
+					picture = GFX_idea_generic_welfare_state
+
+					modifier = {
+
+						consumer_goods_factor = -0.08
+
+						migration_rate_value_factor = 0.10
+
+						monthly_population = 0.015
+
+						stability_factor = 0.03
+
+						production_factory_max_efficiency_factor = -0.05
+
+						population_tax_income_multiplier_modifier = 0.02
+
+					}
+
+				}
+
+
+
+				ARG_rise_pax_australis_spirit = {
+
+					name = ARG_rise_pax_australis_spirit
+
+					allowed = { always = no }
+
+					picture = GFX_idea_generic_national_unity
+
+					modifier = {
+
+						stability_factor = 0.15
+
+						war_support_factor = -0.10
+
+						consumer_goods_factor = -0.03
+
+						foreign_influence_defense_modifier = 0.10
+
+					}
+
+				}
+
+
+
+				ARG_rise_destino_manifiesto_spirit = {
+
+					name = ARG_rise_destino_manifiesto_spirit
+
+					allowed = { always = no }
+
+					picture = GFX_idea_ARG_rise_lanza_del_sur
+
+					modifier = {
+
+						justify_war_goal_time = -0.35
+				generate_wargoal_tension = -1.00
+
+						army_org_factor = 0.10
+
+						war_support_factor = 0.05
+
+						stability_factor = -0.10
+
+						foreign_influence_modifier = 0.10
+
+					}
+
+				}
+}
+}

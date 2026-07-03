@@ -1,0 +1,57 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			ARG = {
+				if = {
+					limit = {
+						original_tag = ARG
+						NOT = { has_country_flag = ARG_rise_intro_seen }
+					}
+					country_event = { id = ARG_rise.3 days = 1 }
+				}
+			}
+		}
+	}
+	on_daily = {
+		effect = {
+			ARG = {
+				if = {
+					limit = {
+						has_country_flag = ARG_rise_proyecto_nacional_started
+						is_in_array = { ruling_party = 6 }
+						NOT = { has_country_flag = ARG_rise_nestor_kirchner_installed }
+					}
+					country_event = { id = ARG_rise.9 }
+				}
+			}
+		}
+	}
+
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					original_tag = ARG
+					has_civil_war = no
+					has_completed_focus = ARG_rise_la_democracia_exhausta
+					is_in_array = { ruling_party = 3 }
+					check_variable = { party_pop_array^3 < 0.20 }
+					NOT = { has_country_flag = ARG_rise_fiducia_spezzata }
+					NOT = { has_government = nationalist }
+				}
+				country_event = { id = ARG_rise.2 days = 1 }
+			}
+		}
+	}
+
+	on_civil_war_end = {
+		effect = {
+			if = {
+				limit = {
+					original_tag = ARG
+				}
+				ARG_rise_restore_completed_focus_ideas_effect = yes
+			}
+		}
+	}
+}

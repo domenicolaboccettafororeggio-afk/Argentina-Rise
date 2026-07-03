@@ -1,0 +1,79 @@
+ARG_rise_energy_surplus_decisions = {
+	ARG_rise_export_energy_to_mercosur = {
+		icon = generic_industry
+		allowed = { original_tag = ARG }
+		visible = { has_country_flag = ARG_rise_energy_surplus_contracts_unlocked }
+		available = {
+			check_variable = { energy_balance > 10 }
+			NOT = { has_idea = ARG_rise_mercosur_power_export_contract }
+		}
+		cost = 25
+		fire_only_once = no
+		days_re_enable = 180
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ARG_rise_export_energy_to_mercosur"
+			add_timed_idea = {
+				idea = ARG_rise_mercosur_power_export_contract
+				days = 180
+			}
+			set_temp_variable = { treasury_change = 4.00 }
+			modify_treasury_effect = yes
+			ingame_update_setup = yes
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	ARG_rise_sign_electroindustrial_contracts = {
+		icon = generic_industry
+		allowed = { original_tag = ARG }
+		visible = { has_country_flag = ARG_rise_energy_surplus_contracts_unlocked }
+		available = {
+			check_variable = { energy_balance > 20 }
+			NOT = { has_idea = ARG_rise_electroindustrial_power_contracts }
+		}
+		cost = 50
+		fire_only_once = no
+		days_re_enable = 240
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ARG_rise_sign_electroindustrial_contracts"
+			add_timed_idea = {
+				idea = ARG_rise_electroindustrial_power_contracts
+				days = 240
+			}
+			set_temp_variable = { treasury_change = 6.00 }
+			modify_treasury_effect = yes
+			ingame_update_setup = yes
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	ARG_rise_sell_grid_services_to_the_continent = {
+		icon = generic_industry
+		allowed = { original_tag = ARG }
+		visible = { has_country_flag = ARG_rise_energy_surplus_contracts_unlocked }
+		available = {
+			check_variable = { energy_balance > 35 }
+			NOT = { has_idea = ARG_rise_continental_grid_services }
+		}
+		cost = 75
+		fire_only_once = no
+		days_re_enable = 365
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ARG_rise_sell_grid_services_to_the_continent"
+			add_timed_idea = {
+				idea = ARG_rise_continental_grid_services
+				days = 365
+			}
+			set_temp_variable = { treasury_change = 9.00 }
+			modify_treasury_effect = yes
+			ingame_update_setup = yes
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+}

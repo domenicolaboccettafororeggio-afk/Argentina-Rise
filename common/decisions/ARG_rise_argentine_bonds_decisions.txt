@@ -1,0 +1,222 @@
+ARG_rise_argentine_bonds_decisions = {
+	ARG_rise_bono_de_emergencia = {
+		icon = GFX_decision_money_dec
+
+		allowed = {
+			original_tag = ARG
+		}
+
+		visible = {
+			original_tag = ARG
+		}
+
+		cost = 30
+		fire_only_once = no
+		days_remove = 100
+		days_re_enable = 7
+
+		modifier = {
+			stability_factor = -0.001
+			interest_rate_multiplier_modifier = 0.10
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ARG_rise_bono_de_emergencia"
+
+			set_temp_variable = { treasury_change = 100.00 }
+			modify_treasury_effect = yes
+		}
+
+		remove_effect = {
+			set_temp_variable = { treasury_change = -120.00 }
+			modify_treasury_effect = yes
+
+			add_timed_idea = {
+				idea = ARG_rise_bond_redistribution_emergency
+				days = 90
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	ARG_rise_bono_de_reconstruccion = {
+		icon = GFX_decision_money_dec
+
+		allowed = {
+			original_tag = ARG
+		}
+
+		visible = {
+			original_tag = ARG
+		}
+
+		cost = 55
+		fire_only_once = no
+		days_remove = 200
+		days_re_enable = 7
+
+		modifier = {
+			stability_factor = -0.002
+			interest_rate_multiplier_modifier = 0.20
+			tax_gain_multiplier_modifier = -0.02
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ARG_rise_bono_de_reconstruccion"
+
+			set_temp_variable = { treasury_change = 250.00 }
+			modify_treasury_effect = yes
+		}
+
+		remove_effect = {
+			set_temp_variable = { treasury_change = -280.00 }
+			modify_treasury_effect = yes
+
+			add_timed_idea = {
+				idea = ARG_rise_bond_redistribution_reconstruction
+				days = 120
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	ARG_rise_bono_de_desarrollo_nacional = {
+		icon = GFX_decision_money_dec
+
+		allowed = {
+			original_tag = ARG
+		}
+
+		visible = {
+			original_tag = ARG
+		}
+
+		cost = 75
+		fire_only_once = no
+		days_remove = 270
+		days_re_enable = 7
+
+		modifier = {
+			stability_factor = -0.003
+			interest_rate_multiplier_modifier = 0.30
+			tax_gain_multiplier_modifier = -0.03
+			consumer_goods_factor = 0.02
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ARG_rise_bono_de_desarrollo_nacional"
+
+			set_temp_variable = { treasury_change = 500.00 }
+			modify_treasury_effect = yes
+		}
+
+		remove_effect = {
+			set_temp_variable = { treasury_change = -600.00 }
+			modify_treasury_effect = yes
+
+			add_timed_idea = {
+				idea = ARG_rise_bond_redistribution_development
+				days = 150
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	ARG_rise_bono_de_industrializacion_nacional = {
+		icon = GFX_decision_money_dec
+
+		allowed = {
+			original_tag = ARG
+		}
+
+		visible = {
+			original_tag = ARG
+		}
+
+		cost = 90
+		fire_only_once = no
+		days_remove = 365
+		days_re_enable = 7
+
+		modifier = {
+			stability_factor = -0.005
+			interest_rate_multiplier_modifier = 0.50
+			tax_gain_multiplier_modifier = -0.05
+			consumer_goods_factor = 0.03
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ARG_rise_bono_de_industrializacion_nacional"
+
+			set_temp_variable = { treasury_change = 1000.00 }
+			modify_treasury_effect = yes
+		}
+
+		remove_effect = {
+			set_temp_variable = { treasury_change = -1250.00 }
+			modify_treasury_effect = yes
+
+			add_timed_idea = {
+				idea = ARG_rise_bond_redistribution_industrialization
+				days = 180
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	ARG_rise_bono_de_soberania_nacional = {
+		icon = GFX_decision_money_dec
+
+		allowed = {
+			original_tag = ARG
+		}
+
+		visible = {
+			original_tag = ARG
+		}
+
+		cost = 110
+		fire_only_once = no
+		days_remove = 540
+		days_re_enable = 7
+
+		modifier = {
+			stability_factor = -0.0075
+			interest_rate_multiplier_modifier = 0.60
+			tax_gain_multiplier_modifier = -0.06
+			consumer_goods_factor = 0.04
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ARG_rise_bono_de_soberania_nacional"
+
+			set_temp_variable = { treasury_change = 1500.00 }
+			modify_treasury_effect = yes
+		}
+
+		remove_effect = {
+			set_temp_variable = { treasury_change = -1900.00 }
+			modify_treasury_effect = yes
+
+			add_timed_idea = {
+				idea = ARG_rise_bond_redistribution_sovereignty
+				days = 210
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

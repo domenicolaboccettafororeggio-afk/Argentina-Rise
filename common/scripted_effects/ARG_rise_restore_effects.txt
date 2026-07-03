@@ -1,0 +1,1468 @@
+# Argentina Rise - post-civil-war focus spirit restore
+# Reapplies permanent focus ideas if MD civil-war tag handling drops them.
+# Generated from ARG_rise_focus_tree.txt add_ideas/remove_ideas; no timed ideas or one-shot effects are restored.
+
+ARG_rise_restore_completed_focus_ideas_effect = {
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_the_pampas_engine
+			NOT = { has_idea = ARG_rise_montana_meat }
+		}
+		add_ideas = ARG_rise_montana_meat
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_los_anos_de_ceniza
+			NOT = { has_idea = ARG_rise_crisis_de_ceniza_spirit }
+			NOT = { has_completed_focus = ARG_rise_the_pampas_engine }
+			NOT = { has_completed_focus = ARG_rise_cultura_del_esfuerzo_final }
+			NOT = { has_completed_focus = ARG_rise_bienestar_total }
+			NOT = { has_completed_focus = ARG_rise_pax_australis }
+		}
+		add_ideas = ARG_rise_crisis_de_ceniza_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_cuentas_al_borde_del_abismo
+			NOT = { has_idea = ARG_rise_cuentas_al_borde_spirit }
+			NOT = { has_completed_focus = ARG_rise_the_pampas_engine }
+			NOT = { has_completed_focus = ARG_rise_cultura_del_esfuerzo_final }
+			NOT = { has_completed_focus = ARG_rise_bienestar_total }
+			NOT = { has_completed_focus = ARG_rise_pax_australis }
+		}
+		add_ideas = ARG_rise_cuentas_al_borde_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_el_ajuste_inevitable
+			NOT = { has_idea = ARG_rise_ajuste_inevitable_spirit }
+			NOT = { has_completed_focus = ARG_rise_the_pampas_engine }
+			NOT = { has_completed_focus = ARG_rise_cultura_del_esfuerzo_final }
+			NOT = { has_completed_focus = ARG_rise_bienestar_total }
+			NOT = { has_completed_focus = ARG_rise_pax_australis }
+		}
+		add_ideas = ARG_rise_ajuste_inevitable_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_respirar_con_deuda
+			NOT = { has_idea = ARG_rise_respirar_con_deuda_spirit }
+			NOT = { has_completed_focus = ARG_rise_the_pampas_engine }
+			NOT = { has_completed_focus = ARG_rise_cultura_del_esfuerzo_final }
+			NOT = { has_completed_focus = ARG_rise_bienestar_total }
+			NOT = { has_completed_focus = ARG_rise_pax_australis }
+		}
+		add_ideas = ARG_rise_respirar_con_deuda_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_la_moneda_herida
+			NOT = { has_idea = ARG_rise_moneda_herida_spirit }
+			NOT = { has_completed_focus = ARG_rise_la_voluntad_inquebrantable }
+			NOT = { has_completed_focus = ARG_rise_cultura_del_esfuerzo_final }
+			NOT = { has_completed_focus = ARG_rise_bienestar_total }
+			NOT = { has_completed_focus = ARG_rise_pax_australis }
+		}
+		add_ideas = ARG_rise_moneda_herida_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_pan_trabajo_y_emergencia
+			NOT = { has_idea = ARG_rise_pan_trabajo_emergencia_spirit }
+			NOT = { has_completed_focus = ARG_rise_the_pampas_engine }
+		}
+		add_ideas = ARG_rise_pan_trabajo_emergencia_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_talleres_de_supervivencia
+			NOT = { has_idea = ARG_rise_talleres_supervivencia_spirit }
+			NOT = { has_completed_focus = ARG_rise_the_pampas_engine }
+		}
+		add_ideas = ARG_rise_talleres_supervivencia_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_mercados_de_ultima_hora
+			NOT = { has_idea = ARG_rise_mercados_ultima_hora_spirit }
+			NOT = { has_completed_focus = ARG_rise_estado_de_precision }
+		}
+		add_ideas = ARG_rise_mercados_ultima_hora_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_la_economia_resiste
+			NOT = { has_idea = ARG_rise_economia_resiste_spirit }
+			NOT = { has_completed_focus = ARG_rise_the_pampas_engine }
+		}
+		add_ideas = ARG_rise_economia_resiste_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_barriles_de_emergencia
+			NOT = { has_idea = ARG_rise_barriles_emergencia_spirit }
+			NOT = { has_completed_focus = ARG_rise_la_justicia_del_orden_nuevo }
+		}
+		add_ideas = ARG_rise_barriles_emergencia_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_luz_para_el_invierno
+			NOT = { has_idea = ARG_rise_luz_para_invierno_spirit }
+			NOT = { has_completed_focus = ARG_rise_la_justicia_del_orden_nuevo }
+		}
+		add_ideas = ARG_rise_luz_para_invierno_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_las_reservas_del_dia_siguiente
+			NOT = { has_idea = ARG_rise_reservas_dia_siguiente_spirit }
+			NOT = { has_completed_focus = ARG_rise_la_justicia_del_orden_nuevo }
+		}
+		add_ideas = ARG_rise_reservas_dia_siguiente_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_exportar_para_sobrevivir
+			NOT = { has_idea = ARG_rise_exportar_para_sobrevivir_spirit }
+			NOT = { has_completed_focus = ARG_rise_la_justicia_del_orden_nuevo }
+		}
+		add_ideas = ARG_rise_exportar_para_sobrevivir_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_la_transicion_funesta
+			NOT = { has_idea = ARG_rise_transicion_funesta_spirit }
+			NOT = { has_completed_focus = ARG_rise_el_nuevo_triunfo }
+			NOT = { has_completed_focus = ARG_rise_cultura_del_esfuerzo_final }
+			NOT = { has_completed_focus = ARG_rise_bienestar_total }
+			NOT = { has_completed_focus = ARG_rise_pax_australis }
+		}
+		add_ideas = ARG_rise_transicion_funesta_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_la_democracia_exhausta
+			NOT = { has_idea = ARG_rise_democracia_exhausta_spirit }
+			NOT = { has_completed_focus = ARG_rise_la_voluntad_inquebrantable }
+			NOT = { has_completed_focus = ARG_rise_cultura_del_esfuerzo_final }
+			NOT = { has_completed_focus = ARG_rise_bienestar_total }
+			NOT = { has_completed_focus = ARG_rise_pax_australis }
+		}
+		add_ideas = ARG_rise_democracia_exhausta_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_the_soy_revolution
+			NOT = { has_idea = ARG_rise_soy_revolution_spirit }
+		}
+		add_ideas = ARG_rise_soy_revolution_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_the_hereford_standard
+			NOT = { has_idea = ARG_rise_hereford_standard_spirit }
+		}
+		add_ideas = ARG_rise_hereford_standard_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_the_recovery_plan
+			NOT = { has_idea = ARG_rise_recovery_plan_spirit }
+		}
+		add_ideas = ARG_rise_recovery_plan_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_arranque_productivo
+			NOT = { has_idea = ARG_rise_arranque_productivo_spirit }
+		}
+		add_ideas = ARG_rise_arranque_productivo_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_re_industrializacion
+			NOT = { has_idea = ARG_rise_re_industrializacion_spirit }
+		}
+		add_ideas = ARG_rise_re_industrializacion_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_technician_generation
+			NOT = { has_idea = ARG_rise_technician_generation_spirit }
+		}
+		add_ideas = ARG_rise_technician_generation_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_trabajo_y_amor
+			NOT = { has_idea = ARG_rise_trabajo_y_amor_spirit }
+		}
+		add_ideas = ARG_rise_trabajo_y_amor_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_silos_del_parana
+			NOT = { has_idea = ARG_rise_silos_del_parana_spirit }
+		}
+		add_ideas = ARG_rise_silos_del_parana_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_puertos_del_grano
+			NOT = { has_idea = ARG_rise_puertos_del_grano_spirit }
+		}
+		add_ideas = ARG_rise_puertos_del_grano_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_frigorificos_nacionales
+			NOT = { has_idea = ARG_rise_frigorificos_nacionales_spirit }
+		}
+		add_ideas = ARG_rise_frigorificos_nacionales_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_marca_argentina_de_exportacion
+			NOT = { has_idea = ARG_rise_marca_argentina_de_exportacion_spirit }
+		}
+		add_ideas = ARG_rise_marca_argentina_de_exportacion_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_talleres_abiertos
+			NOT = { has_idea = ARG_rise_talleres_abiertos_spirit }
+		}
+		add_ideas = ARG_rise_talleres_abiertos_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_credito_para_producir
+			NOT = { has_idea = ARG_rise_credito_para_producir_spirit }
+		}
+		add_ideas = ARG_rise_credito_para_producir_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_obras_de_emergencia
+			NOT = { has_idea = ARG_rise_obras_de_emergencia_spirit }
+		}
+		add_ideas = ARG_rise_obras_de_emergencia_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_el_pulso_del_empleo
+			NOT = { has_idea = ARG_rise_el_pulso_del_empleo_spirit }
+		}
+		add_ideas = ARG_rise_el_pulso_del_empleo_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_parques_industriales_ligeros
+			NOT = { has_idea = ARG_rise_parques_industriales_ligeros_spirit }
+		}
+		add_ideas = ARG_rise_parques_industriales_ligeros_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_maquinas_para_la_recuperacion
+			NOT = { has_idea = ARG_rise_maquinas_para_la_recuperacion_spirit }
+		}
+		add_ideas = ARG_rise_maquinas_para_la_recuperacion_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_proveedores_nacionales
+			NOT = { has_idea = ARG_rise_proveedores_nacionales_spirit }
+		}
+		add_ideas = ARG_rise_proveedores_nacionales_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_la_fabrica_ordenada
+			NOT = { has_idea = ARG_rise_la_fabrica_ordenada_spirit }
+		}
+		add_ideas = ARG_rise_la_fabrica_ordenada_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_distritos_de_oficina
+			NOT = { has_idea = ARG_rise_distritos_de_oficina_spirit }
+		}
+		add_ideas = ARG_rise_distritos_de_oficina_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_contabilidad_del_crecimiento
+			NOT = { has_idea = ARG_rise_contabilidad_del_crecimiento_spirit }
+		}
+		add_ideas = ARG_rise_contabilidad_del_crecimiento_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_ciudades_productivas
+			NOT = { has_idea = ARG_rise_ciudades_productivas_spirit }
+		}
+		add_ideas = ARG_rise_ciudades_productivas_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_administracion_productiva
+			NOT = { has_idea = ARG_rise_administracion_productiva_spirit }
+		}
+		add_ideas = ARG_rise_administracion_productiva_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_la_riqueza_de_la_virginidad
+			NOT = { has_idea = ARG_rise_resource_export_magnet }
+		}
+		add_ideas = ARG_rise_resource_export_magnet
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_el_nuevo_sol_levante
+			NOT = { has_idea = ARG_rise_renewable_energy_drive_1 }
+		}
+		add_ideas = ARG_rise_renewable_energy_drive_1
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_el_nuevo_sol_en_la_tierra
+			NOT = { has_idea = ARG_rise_nuclear_energy_program_1 }
+		}
+		add_ideas = ARG_rise_nuclear_energy_program_1
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_la_potencia_del_rio
+			NOT = { has_idea = ARG_rise_hydroelectric_power_1 }
+		}
+		add_ideas = ARG_rise_hydroelectric_power_1
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_el_diablo_de_la_tierra
+			NOT = { has_idea = ARG_rise_tierra_infrastructure_program_1 }
+			NOT = { has_completed_focus = ARG_rise_el_arado_de_cronos }
+		}
+		add_ideas = ARG_rise_tierra_infrastructure_program_1
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_el_arado_de_cronos
+			NOT = { has_idea = ARG_rise_tierra_infrastructure_program_2 }
+			NOT = { has_completed_focus = ARG_rise_las_mandibulas_de_gaia }
+		}
+		add_ideas = ARG_rise_tierra_infrastructure_program_2
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_las_mandibulas_de_gaia
+			NOT = { has_idea = ARG_rise_tierra_infrastructure_program_3 }
+			NOT = { has_completed_focus = ARG_rise_el_yunque_de_rea }
+		}
+		add_ideas = ARG_rise_tierra_infrastructure_program_3
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_el_yunque_de_rea
+			NOT = { has_idea = ARG_rise_tierra_infrastructure_program_4 }
+			NOT = { has_completed_focus = ARG_rise_cimientos_de_oceano }
+		}
+		add_ideas = ARG_rise_tierra_infrastructure_program_4
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_cimientos_de_oceano
+			NOT = { has_idea = ARG_rise_tierra_infrastructure_program_5 }
+			NOT = { has_completed_focus = ARG_rise_la_columna_de_hiperion }
+		}
+		add_ideas = ARG_rise_tierra_infrastructure_program_5
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_la_columna_de_hiperion
+			NOT = { has_idea = ARG_rise_tierra_infrastructure_program_6 }
+			NOT = { has_completed_focus = ARG_rise_la_herida_de_iapeto }
+		}
+		add_ideas = ARG_rise_tierra_infrastructure_program_6
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_la_herida_de_iapeto
+			NOT = { has_idea = ARG_rise_tierra_infrastructure_program_7 }
+			NOT = { has_completed_focus = ARG_rise_atlas_bajo_la_pampa }
+		}
+		add_ideas = ARG_rise_tierra_infrastructure_program_7
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_atlas_bajo_la_pampa
+			NOT = { has_idea = ARG_rise_tierra_infrastructure_program_8 }
+			NOT = { has_completed_focus = ARG_rise_los_caminos_de_coeo }
+		}
+		add_ideas = ARG_rise_tierra_infrastructure_program_8
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_los_caminos_de_coeo
+			NOT = { has_idea = ARG_rise_tierra_infrastructure_program_9 }
+			NOT = { has_completed_focus = ARG_rise_la_forja_de_crio }
+		}
+		add_ideas = ARG_rise_tierra_infrastructure_program_9
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_la_forja_de_crio
+			NOT = { has_idea = ARG_rise_tierra_infrastructure_program_10 }
+			NOT = { has_completed_focus = ARG_rise_urbes_de_piedra_viva }
+		}
+		add_ideas = ARG_rise_tierra_infrastructure_program_10
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_urbes_de_piedra_viva
+			NOT = { has_idea = ARG_rise_tierra_infrastructure_program_11 }
+			NOT = { has_completed_focus = ARG_rise_el_trono_de_la_materia }
+		}
+		add_ideas = ARG_rise_tierra_infrastructure_program_11
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_el_trono_de_la_materia
+			NOT = { has_idea = ARG_rise_tierra_infrastructure_program_12 }
+		}
+		add_ideas = ARG_rise_tierra_infrastructure_program_12
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_el_nuevo_triunfo
+			NOT = { has_idea = ARG_rise_new_triumph_pressure_1 }
+		}
+		add_ideas = ARG_rise_new_triumph_pressure_1
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_el_pueblo_unido
+			NOT = { has_idea = ARG_rise_new_triumph_pressure_2 }
+		}
+		add_ideas = ARG_rise_new_triumph_pressure_2
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_la_marcha_nacional
+			NOT = { has_idea = ARG_rise_new_triumph_pressure_3 }
+		}
+		add_ideas = ARG_rise_new_triumph_pressure_3
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_la_fuerza_del_orden
+			NOT = { has_idea = ARG_rise_new_triumph_pressure_4 }
+		}
+		add_ideas = ARG_rise_new_triumph_pressure_4
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_la_doctrina_del_hierro
+			NOT = { has_idea = ARG_rise_new_triumph_pressure_5 }
+		}
+		add_ideas = ARG_rise_new_triumph_pressure_5
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_el_destino_argentino
+			NOT = { has_idea = ARG_rise_new_triumph_pressure_6 }
+		}
+		add_ideas = ARG_rise_new_triumph_pressure_6
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_la_nueva_grandeza
+			NOT = { has_idea = ARG_rise_new_triumph_pressure_7 }
+		}
+		add_ideas = ARG_rise_new_triumph_pressure_7
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_la_voluntad_inquebrantable
+			NOT = { has_idea = ARG_rise_new_triumph_inquebrantable_will }
+		}
+		add_ideas = ARG_rise_new_triumph_inquebrantable_will
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_la_caridad_de_la_perseverancia
+			NOT = { has_idea = ARG_rise_state_perseverance_doctrine }
+		}
+		add_ideas = ARG_rise_state_perseverance_doctrine
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_disciplina_del_aula
+			NOT = { has_idea = ARG_rise_education_discipline_1 }
+		}
+		add_ideas = ARG_rise_education_discipline_1
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_eficiencia_educativa
+			NOT = { has_idea = ARG_rise_education_discipline_2 }
+		}
+		add_ideas = ARG_rise_education_discipline_2
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_curricula_esencial
+			NOT = { has_idea = ARG_rise_education_discipline_3 }
+		}
+		add_ideas = ARG_rise_education_discipline_3
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_escuelas_de_rendimiento
+			NOT = { has_idea = ARG_rise_education_discipline_4 }
+		}
+		add_ideas = ARG_rise_education_discipline_4
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_maestros_del_orden
+			NOT = { has_idea = ARG_rise_education_discipline_5 }
+		}
+		add_ideas = ARG_rise_education_discipline_5
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_excelencia_sin_derroche
+			NOT = { has_idea = ARG_rise_education_discipline_6 }
+		}
+		add_ideas = ARG_rise_education_discipline_6
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_medicina_funcional
+			NOT = { has_idea = ARG_rise_health_discipline_1 }
+		}
+		add_ideas = ARG_rise_health_discipline_1
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_hospitales_sobrios
+			NOT = { has_idea = ARG_rise_health_discipline_2 }
+		}
+		add_ideas = ARG_rise_health_discipline_2
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_compras_sanitarias
+			NOT = { has_idea = ARG_rise_health_discipline_3 }
+		}
+		add_ideas = ARG_rise_health_discipline_3
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_turnos_sin_demora
+			NOT = { has_idea = ARG_rise_health_discipline_4 }
+		}
+		add_ideas = ARG_rise_health_discipline_4
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_clinicas_de_rendimiento
+			NOT = { has_idea = ARG_rise_health_discipline_5 }
+		}
+		add_ideas = ARG_rise_health_discipline_5
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_salud_sin_derroche
+			NOT = { has_idea = ARG_rise_health_discipline_6 }
+		}
+		add_ideas = ARG_rise_health_discipline_6
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_trabajo_sobre_subsidio
+			NOT = { has_idea = ARG_rise_social_discipline_1 }
+		}
+		add_ideas = ARG_rise_social_discipline_1
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_censo_de_beneficios
+			NOT = { has_idea = ARG_rise_social_discipline_2 }
+		}
+		add_ideas = ARG_rise_social_discipline_2
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_asistencia_productiva
+			NOT = { has_idea = ARG_rise_social_discipline_3 }
+		}
+		add_ideas = ARG_rise_social_discipline_3
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_deber_civico
+			NOT = { has_idea = ARG_rise_social_discipline_4 }
+		}
+		add_ideas = ARG_rise_social_discipline_4
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_cultura_del_esfuerzo
+			NOT = { has_idea = ARG_rise_social_discipline_5 }
+		}
+		add_ideas = ARG_rise_social_discipline_5
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_red_social_responsable
+			NOT = { has_idea = ARG_rise_social_discipline_6 }
+		}
+		add_ideas = ARG_rise_social_discipline_6
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_archivo_unico
+			NOT = { has_idea = ARG_rise_administration_discipline_1 }
+		}
+		add_ideas = ARG_rise_administration_discipline_1
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_oficina_esbelta
+			NOT = { has_idea = ARG_rise_administration_discipline_2 }
+		}
+		add_ideas = ARG_rise_administration_discipline_2
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_firma_digital
+			NOT = { has_idea = ARG_rise_administration_discipline_3 }
+		}
+		add_ideas = ARG_rise_administration_discipline_3
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_auditoria_permanente
+			NOT = { has_idea = ARG_rise_administration_discipline_4 }
+		}
+		add_ideas = ARG_rise_administration_discipline_4
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_tecnocracia_sobria
+			NOT = { has_idea = ARG_rise_administration_discipline_5 }
+		}
+		add_ideas = ARG_rise_administration_discipline_5
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_estado_de_precision
+			NOT = { has_idea = ARG_rise_administration_discipline_6 }
+		}
+		add_ideas = ARG_rise_administration_discipline_6
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_el_nuevo_paraiso_de_las_oportunidades
+			NOT = { has_idea = ARG_rise_new_paradise_opportunities_spirit }
+		}
+		add_ideas = ARG_rise_new_paradise_opportunities_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_puertas_abiertas_al_trabajo
+			NOT = { has_idea = ARG_rise_open_doors_work_spirit }
+		}
+		add_ideas = ARG_rise_open_doors_work_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_visas_de_la_nueva_patria
+			NOT = { has_idea = ARG_rise_new_homeland_visas_spirit }
+		}
+		add_ideas = ARG_rise_new_homeland_visas_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_corredores_del_plata
+			NOT = { has_idea = ARG_rise_plata_corridors_spirit }
+		}
+		add_ideas = ARG_rise_plata_corridors_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_familias_para_la_frontera
+			NOT = { has_idea = ARG_rise_frontier_families_spirit }
+		}
+		add_ideas = ARG_rise_frontier_families_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_la_llamada_del_sur
+			NOT = { has_idea = ARG_rise_call_of_the_south_spirit }
+		}
+		add_ideas = ARG_rise_call_of_the_south_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_techos_para_millones
+			NOT = { has_idea = ARG_rise_roofs_for_millions_spirit }
+		}
+		add_ideas = ARG_rise_roofs_for_millions_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_barrios_de_porvenir
+			NOT = { has_idea = ARG_rise_neighborhoods_of_future_spirit }
+		}
+		add_ideas = ARG_rise_neighborhoods_of_future_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_ciudades_nuevas
+			NOT = { has_idea = ARG_rise_new_cities_spirit }
+		}
+		add_ideas = ARG_rise_new_cities_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_avenidas_del_crecimiento
+			NOT = { has_idea = ARG_rise_growth_avenues_spirit }
+		}
+		add_ideas = ARG_rise_growth_avenues_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_la_gran_metropoli_austral
+			NOT = { has_idea = ARG_rise_great_austral_metropolis_spirit }
+		}
+		add_ideas = ARG_rise_great_austral_metropolis_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_escritorios_del_progreso
+			NOT = { has_idea = ARG_rise_desks_of_progress_spirit }
+		}
+		add_ideas = ARG_rise_desks_of_progress_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_servicios_de_alto_valor
+			NOT = { has_idea = ARG_rise_high_value_services_spirit }
+		}
+		add_ideas = ARG_rise_high_value_services_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_oficinas_del_plata
+			NOT = { has_idea = ARG_rise_plata_offices_spirit }
+		}
+		add_ideas = ARG_rise_plata_offices_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_administradores_del_mercado
+			NOT = { has_idea = ARG_rise_market_administrators_spirit }
+		}
+		add_ideas = ARG_rise_market_administrators_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_la_clase_empleada
+			NOT = { has_idea = ARG_rise_salaried_class_spirit }
+		}
+		add_ideas = ARG_rise_salaried_class_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_manos_a_la_fabrica
+			NOT = { has_idea = ARG_rise_hands_to_factory_spirit }
+		}
+		add_ideas = ARG_rise_hands_to_factory_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_turnos_de_produccion
+			NOT = { has_idea = ARG_rise_production_shifts_spirit }
+		}
+		add_ideas = ARG_rise_production_shifts_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_parques_de_empleo
+			NOT = { has_idea = ARG_rise_employment_parks_spirit }
+		}
+		add_ideas = ARG_rise_employment_parks_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_contrato_productivo_nacional
+			NOT = { has_idea = ARG_rise_national_productive_contract_spirit }
+		}
+		add_ideas = ARG_rise_national_productive_contract_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_la_nacion_trabajadora
+			NOT = { has_idea = ARG_rise_working_nation_spirit }
+		}
+		add_ideas = ARG_rise_working_nation_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_primer_juramento_civico
+			NOT = { has_idea = ARG_rise_first_civic_oath_spirit }
+		}
+		add_ideas = ARG_rise_first_civic_oath_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_lengua_y_oficio
+			NOT = { has_idea = ARG_rise_language_and_trade_spirit }
+		}
+		add_ideas = ARG_rise_language_and_trade_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_escuelas_de_integracion
+			NOT = { has_idea = ARG_rise_integration_schools_spirit }
+		}
+		add_ideas = ARG_rise_integration_schools_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_disciplina_compartida
+			NOT = { has_idea = ARG_rise_shared_discipline_spirit }
+		}
+		add_ideas = ARG_rise_shared_discipline_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_un_solo_pueblo_productivo
+			NOT = { has_idea = ARG_rise_one_productive_people_spirit }
+		}
+		add_ideas = ARG_rise_one_productive_people_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_cultura_del_esfuerzo_final
+			NOT = { has_idea = ARG_rise_cultura_del_esfuerzo_final_spirit }
+		}
+		add_ideas = ARG_rise_cultura_del_esfuerzo_final_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_bienestar_total
+			NOT = { has_idea = ARG_rise_bienestar_total_spirit }
+		}
+		add_ideas = ARG_rise_bienestar_total_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_el_primer_dia_de_luz
+			NOT = { has_idea = ARG_rise_renewable_energy_drive_2 }
+		}
+		add_ideas = ARG_rise_renewable_energy_drive_2
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_los_vientos_del_genesis
+			NOT = { has_idea = ARG_rise_renewable_energy_drive_3 }
+		}
+		add_ideas = ARG_rise_renewable_energy_drive_3
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_corona_sobre_la_pampa
+			NOT = { has_idea = ARG_rise_renewable_energy_drive_4 }
+		}
+		add_ideas = ARG_rise_renewable_energy_drive_4
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_apolo_en_los_andes
+			NOT = { has_idea = ARG_rise_renewable_energy_drive_5 }
+		}
+		add_ideas = ARG_rise_renewable_energy_drive_5
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_el_fuego_de_prometeo
+			NOT = { has_idea = ARG_rise_nuclear_energy_program_2 }
+		}
+		add_ideas = ARG_rise_nuclear_energy_program_2
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_la_camara_del_atomo
+			NOT = { has_idea = ARG_rise_nuclear_energy_program_3 }
+		}
+		add_ideas = ARG_rise_nuclear_energy_program_3
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_el_sol_encadenado
+			NOT = { has_idea = ARG_rise_nuclear_energy_program_4 }
+		}
+		add_ideas = ARG_rise_nuclear_energy_program_4
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_liturgia_del_reactor
+			NOT = { has_idea = ARG_rise_nuclear_energy_program_5 }
+		}
+		add_ideas = ARG_rise_nuclear_energy_program_5
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_el_pacto_con_las_aguas
+			NOT = { has_idea = ARG_rise_hydroelectric_power_2 }
+		}
+		add_ideas = ARG_rise_hydroelectric_power_2
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_murallas_contra_el_diluvio
+			NOT = { has_idea = ARG_rise_hydroelectric_power_3 }
+		}
+		add_ideas = ARG_rise_hydroelectric_power_3
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_los_rios_de_atlas
+			NOT = { has_idea = ARG_rise_hydroelectric_power_4 }
+		}
+		add_ideas = ARG_rise_hydroelectric_power_4
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_el_trono_del_torrente
+			NOT = { has_idea = ARG_rise_hydroelectric_power_5 }
+		}
+		add_ideas = ARG_rise_hydroelectric_power_5
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_contratos_del_excedente_energetico
+			NOT = { has_idea = ARG_rise_energy_surplus_commercialization }
+		}
+		add_ideas = ARG_rise_energy_surplus_commercialization
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_la_gravedad_del_sur
+			NOT = { has_idea = ARG_rise_southern_gravity_spirit }
+		}
+		add_ideas = ARG_rise_southern_gravity_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_el_meridiano_de_buenos_aires
+			NOT = { has_idea = ARG_rise_buenos_aires_meridian_spirit }
+		}
+		add_ideas = ARG_rise_buenos_aires_meridian_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_embajadas_productivas
+			NOT = { has_idea = ARG_rise_productive_embassies_spirit }
+		}
+		add_ideas = ARG_rise_productive_embassies_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_la_voz_del_cono_sur
+			NOT = { has_idea = ARG_rise_southern_cone_voice_spirit }
+		}
+		add_ideas = ARG_rise_southern_cone_voice_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_prestigio_de_la_estabilidad
+			NOT = { has_idea = ARG_rise_prestige_of_stability_spirit }
+		}
+		add_ideas = ARG_rise_prestige_of_stability_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_doctrina_del_plata
+			NOT = { has_idea = ARG_rise_plata_doctrine_spirit }
+		}
+		add_ideas = ARG_rise_plata_doctrine_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_mesa_del_plata
+			NOT = { has_idea = ARG_rise_plata_table_spirit }
+		}
+		add_ideas = ARG_rise_plata_table_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_corredores_del_mercosur
+			NOT = { has_idea = ARG_rise_mercosur_corridors_spirit }
+		}
+		add_ideas = ARG_rise_mercosur_corridors_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_credito_de_estabilidad_austral
+			NOT = { has_idea = ARG_rise_austral_stability_credit_spirit }
+		}
+		add_ideas = ARG_rise_austral_stability_credit_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_puertos_bajo_nuestra_sombra
+			NOT = { has_idea = ARG_rise_ports_under_our_shadow_spirit }
+		}
+		add_ideas = ARG_rise_ports_under_our_shadow_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_cinturon_de_dependencias
+			NOT = { has_idea = ARG_rise_dependency_belt_spirit }
+		}
+		add_ideas = ARG_rise_dependency_belt_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_diplomacia_del_acero_y_la_luz
+			NOT = { has_idea = ARG_rise_steel_and_light_diplomacy_spirit }
+		}
+		add_ideas = ARG_rise_steel_and_light_diplomacy_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_vaca_muerta_mira_al_continente
+			NOT = { has_idea = ARG_rise_vaca_muerta_continental_gaze_spirit }
+		}
+		add_ideas = ARG_rise_vaca_muerta_continental_gaze_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_minerales_para_la_region
+			NOT = { has_idea = ARG_rise_minerals_for_region_spirit }
+		}
+		add_ideas = ARG_rise_minerals_for_region_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_rutas_del_petroleo_austral
+			NOT = { has_idea = ARG_rise_austral_oil_routes_spirit }
+		}
+		add_ideas = ARG_rise_austral_oil_routes_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_precio_de_la_soberania
+			NOT = { has_idea = ARG_rise_price_of_sovereignty_spirit }
+		}
+		add_ideas = ARG_rise_price_of_sovereignty_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_oficina_continental
+			NOT = { has_idea = ARG_rise_continental_office_spirit }
+		}
+		add_ideas = ARG_rise_continental_office_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_redes_de_lealtad
+			NOT = { has_idea = ARG_rise_loyalty_networks_spirit }
+		}
+		add_ideas = ARG_rise_loyalty_networks_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_prensa_del_orden
+			NOT = { has_idea = ARG_rise_press_of_order_spirit }
+		}
+		add_ideas = ARG_rise_press_of_order_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_intereses_permanentes
+			NOT = { has_idea = ARG_rise_permanent_interests_spirit }
+		}
+		add_ideas = ARG_rise_permanent_interests_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_sombra_administrativa
+			NOT = { has_idea = ARG_rise_administrative_shadow_spirit }
+		}
+		add_ideas = ARG_rise_administrative_shadow_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_atlas_del_continente
+			NOT = { has_idea = ARG_rise_continental_atlas_spirit }
+		}
+		add_ideas = ARG_rise_continental_atlas_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_frontera_de_seguridad
+			NOT = { has_idea = ARG_rise_security_frontier_spirit }
+		}
+		add_ideas = ARG_rise_security_frontier_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_preparacion_del_comando_america
+			NOT = { has_idea = ARG_rise_america_command_preparation_spirit }
+		}
+		add_ideas = ARG_rise_america_command_preparation_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_ultimatum_del_sur
+			NOT = { has_idea = ARG_rise_southern_ultimatum_spirit }
+		}
+		add_ideas = ARG_rise_southern_ultimatum_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_la_hora_americana
+			NOT = { has_idea = ARG_rise_american_hour_spirit }
+		}
+		add_ideas = ARG_rise_american_hour_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_la_justicia_del_orden_nuevo
+			NOT = { has_idea = ARG_rise_security_state_foundation }
+		}
+		add_ideas = ARG_rise_security_state_foundation
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_codigo_de_precision
+			NOT = { has_idea = ARG_rise_legal_precision_code }
+		}
+		add_ideas = ARG_rise_legal_precision_code
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_tribunales_de_integridad
+			NOT = { has_idea = ARG_rise_integrity_tribunals }
+		}
+		add_ideas = ARG_rise_integrity_tribunals
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_fiscalias_de_alto_rendimiento
+			NOT = { has_idea = ARG_rise_high_performance_prosecutors }
+		}
+		add_ideas = ARG_rise_high_performance_prosecutors
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_sentencia_del_estado
+			NOT = { has_idea = ARG_rise_state_sentence }
+		}
+		add_ideas = ARG_rise_state_sentence
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_comando_federal_de_seguridad
+			NOT = { has_idea = ARG_rise_federal_security_command }
+		}
+		add_ideas = ARG_rise_federal_security_command
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_ciudades_bajo_control
+			NOT = { has_idea = ARG_rise_controlled_cities }
+		}
+		add_ideas = ARG_rise_controlled_cities
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_fronteras_internas
+			NOT = { has_idea = ARG_rise_internal_corridor_control }
+		}
+		add_ideas = ARG_rise_internal_corridor_control
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_paz_de_acero_civil
+			NOT = { has_idea = ARG_rise_civil_steel_peace }
+		}
+		add_ideas = ARG_rise_civil_steel_peace
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_oficina_contra_el_crimen_organizado
+			NOT = { has_idea = ARG_rise_organized_crime_office }
+		}
+		add_ideas = ARG_rise_organized_crime_office
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_golpear_las_rutas_grises
+			NOT = { has_idea = ARG_rise_gray_routes_crackdown }
+		}
+		add_ideas = ARG_rise_gray_routes_crackdown
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_cierre_del_dinero_sucio
+			NOT = { has_idea = ARG_rise_dirty_money_closure }
+		}
+		add_ideas = ARG_rise_dirty_money_closure
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_extincion_de_los_carteles
+			NOT = { has_idea = ARG_rise_cartel_extinction_doctrine }
+		}
+		add_ideas = ARG_rise_cartel_extinction_doctrine
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_red_nacional_de_vigilancia
+			NOT = { has_idea = ARG_rise_national_surveillance_grid }
+		}
+		add_ideas = ARG_rise_national_surveillance_grid
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_custodia_de_infraestructuras_criticas
+			NOT = { has_idea = ARG_rise_critical_infrastructure_custody }
+		}
+		add_ideas = ARG_rise_critical_infrastructure_custody
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_contrainteligencia_interior
+			NOT = { has_idea = ARG_rise_domestic_counterintelligence }
+		}
+		add_ideas = ARG_rise_domestic_counterintelligence
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_el_estado_impermeable
+			NOT = { has_idea = ARG_rise_impermeable_state }
+		}
+		add_ideas = ARG_rise_impermeable_state
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_la_republica_inexpugnable
+			NOT = { has_idea = ARG_rise_impregnable_republic }
+		}
+		add_ideas = ARG_rise_impregnable_republic
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_pan_y_acero
+			NOT = { has_idea = ARG_rise_pan_y_acero_mobilization }
+			NOT = { has_completed_focus = ARG_rise_pax_australis }
+		}
+		add_ideas = ARG_rise_pan_y_acero_mobilization
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_cuerpo_mecanizado_san_martin
+			NOT = { has_idea = ARG_rise_ejercito_cuerpo_mecanizado }
+		}
+		add_ideas = ARG_rise_ejercito_cuerpo_mecanizado
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_logistica_de_la_profundidad
+			NOT = { has_idea = ARG_rise_ejercito_logistica_profunda }
+		}
+		add_ideas = ARG_rise_ejercito_logistica_profunda
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_comando_terrestre_austral
+			NOT = { has_idea = ARG_rise_ejercito_comando_continental }
+		}
+		add_ideas = ARG_rise_ejercito_comando_continental
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_cazas_para_la_soberania
+			NOT = { has_idea = ARG_rise_fuerza_aerea_superioridad_austral }
+		}
+		add_ideas = ARG_rise_fuerza_aerea_superioridad_austral
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_radar_sobre_la_cordillera
+			NOT = { has_idea = ARG_rise_fuerza_aerea_red_integrada }
+		}
+		add_ideas = ARG_rise_fuerza_aerea_red_integrada
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_comando_aeroespacial_argentino
+			NOT = { has_idea = ARG_rise_fuerza_aerea_comando_aeroespacial }
+		}
+		add_ideas = ARG_rise_fuerza_aerea_comando_aeroespacial
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_astilleros_de_la_soberania
+			NOT = { has_idea = ARG_rise_armada_astilleros_atlantico }
+		}
+		add_ideas = ARG_rise_armada_astilleros_atlantico
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_comando_naval_del_sur
+			NOT = { has_idea = ARG_rise_armada_muralla_azul }
+		}
+		add_ideas = ARG_rise_armada_muralla_azul
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_instituto_naval_de_innovacion_atlantica
+			NOT = { has_idea = ARG_rise_naval_innovation_facility_spirit }
+		}
+		add_ideas = ARG_rise_naval_innovation_facility_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_centro_de_guerra_terrestre_continental
+			NOT = { has_idea = ARG_rise_land_warfare_facility_spirit }
+		}
+		add_ideas = ARG_rise_land_warfare_facility_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_programa_aeroespacial_nacional
+			NOT = { has_idea = ARG_rise_aeroespacial_facility_spirit }
+		}
+		add_ideas = ARG_rise_aeroespacial_facility_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_red_nacional_de_investigacion_tecnologica
+			NOT = { has_idea = ARG_rise_civilian_rd_facility_spirit }
+		}
+		add_ideas = ARG_rise_civilian_rd_facility_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_proyecto_horizonte_austral
+			NOT = { has_idea = ARG_rise_space_horizon_austral_spirit }
+		}
+		add_ideas = ARG_rise_space_horizon_austral_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_conae_del_futuro
+			NOT = { has_idea = ARG_rise_conae_del_futuro_spirit }
+		}
+		add_ideas = ARG_rise_conae_del_futuro_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_ingenieria_aeroespacial_argentina
+			NOT = { has_idea = ARG_rise_ingenieria_aeroespacial_spirit }
+		}
+		add_ideas = ARG_rise_ingenieria_aeroespacial_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_el_cielo_tecnocratico
+			NOT = { has_idea = ARG_rise_cielo_tecnocratico_spirit }
+		}
+		add_ideas = ARG_rise_cielo_tecnocratico_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_programa_nacional_de_misiles_guiados
+			NOT = { has_idea = ARG_rise_programa_misiles_guiados_spirit }
+		}
+		add_ideas = ARG_rise_programa_misiles_guiados_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_doctrina_de_precision_austral
+			NOT = { has_idea = ARG_rise_doctrina_precision_austral_spirit }
+		}
+		add_ideas = ARG_rise_doctrina_precision_austral_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_la_lanza_del_sur
+			NOT = { has_idea = ARG_rise_lanza_del_sur_spirit }
+		}
+		add_ideas = ARG_rise_lanza_del_sur_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_pax_australis
+			NOT = { has_idea = ARG_rise_pax_australis_spirit }
+		}
+		add_ideas = ARG_rise_pax_australis_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_destino_manifiesto
+			NOT = { has_idea = ARG_rise_destino_manifiesto_spirit }
+		}
+		add_ideas = ARG_rise_destino_manifiesto_spirit
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_direccion_nacional_de_inteligencia_estrategica
+			NOT = { has_idea = ARG_rise_intelligence_strategic_directorate }
+		}
+		add_ideas = ARG_rise_intelligence_strategic_directorate
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_oficina_de_inteligencia_continental
+			NOT = { has_idea = ARG_rise_intelligence_continental_office }
+		}
+		add_ideas = ARG_rise_intelligence_continental_office
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_mapas_del_orden_regional
+			NOT = { has_idea = ARG_rise_intelligence_regional_order_maps }
+		}
+		add_ideas = ARG_rise_intelligence_regional_order_maps
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_senales_sobre_el_atlantico
+			NOT = { has_idea = ARG_rise_intelligence_atlantic_signals }
+		}
+		add_ideas = ARG_rise_intelligence_atlantic_signals
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_redes_humanas_del_cono_sur
+			NOT = { has_idea = ARG_rise_intelligence_human_networks }
+		}
+		add_ideas = ARG_rise_intelligence_human_networks
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_direccion_de_criptologia_nacional
+			NOT = { has_idea = ARG_rise_intelligence_national_cryptology }
+		}
+		add_ideas = ARG_rise_intelligence_national_cryptology
+	}
+	if = {
+		limit = {
+			has_completed_focus = ARG_rise_el_ojo_austral
+			NOT = { has_idea = ARG_rise_intelligence_austral_eye }
+		}
+		add_ideas = ARG_rise_intelligence_austral_eye
+	}
+}

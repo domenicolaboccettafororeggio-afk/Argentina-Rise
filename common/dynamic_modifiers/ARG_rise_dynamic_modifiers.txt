@@ -1,0 +1,10 @@
+
+
+ARG_rise_plan_reconstruccion_austral_state_modifier = {
+	state_production_speed_industrial_complex_factor = 0.15
+	state_production_speed_arms_factory_factor = 0.10
+	state_production_speed_infrastructure_factor = 0.20
+	state_production_speed_rail_way_factor = 0.20
+	resistance_target = -0.05
+	compliance_gain = 0.02
+}

@@ -1,0 +1,77 @@
+decision_category_energy = {
+	ARG_rise_sell_reactor_grade_material_limited = {
+		icon = GFX_decision_energy_sell_button
+
+		allowed = {
+			original_tag = ARG
+		}
+
+		visible = {
+			original_tag = ARG
+		}
+
+		available = {
+			check_variable = { var_reactor_material_stockpile > 2499 }
+		}
+
+		cost = 15
+		fire_only_once = no
+		days_remove = 15
+		days_re_enable = 7
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ARG_rise_sell_reactor_grade_material_limited"
+
+			set_temp_variable = { change_resource = -2500 }
+			change_reactor_grade_material_effect = yes
+			add_stability = -0.001
+		}
+
+		remove_effect = {
+			set_temp_variable = { treasury_change = 3.50 }
+			modify_treasury_effect = yes
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	ARG_rise_sell_reactor_grade_material_strategic = {
+		icon = GFX_decision_energy_sell_button
+
+		allowed = {
+			original_tag = ARG
+		}
+
+		visible = {
+			original_tag = ARG
+		}
+
+		available = {
+			check_variable = { var_reactor_material_stockpile > 4999 }
+		}
+
+		cost = 30
+		fire_only_once = no
+		days_remove = 20
+		days_re_enable = 7
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ARG_rise_sell_reactor_grade_material_strategic"
+
+			set_temp_variable = { change_resource = -5000 }
+			change_reactor_grade_material_effect = yes
+			add_stability = -0.002
+		}
+
+		remove_effect = {
+			set_temp_variable = { treasury_change = 8.00 }
+			modify_treasury_effect = yes
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
