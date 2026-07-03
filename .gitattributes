@@ -1,0 +1,21 @@
+﻿# Hearts of Iron IV / Paradox mod files
+
+# Script files: keep as text, normalize line endings in repository
+*.txt text eol=lf
+*.gui text eol=lf
+*.gfx text eol=lf
+*.asset text eol=lf
+*.mod text eol=lf
+
+# Localisation files: keep as text
+*.yml text eol=lf
+
+# Images and binary assets
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.dds binary
+*.tga binary
+*.mp3 binary
+*.wav binary
+*.ogg binary
