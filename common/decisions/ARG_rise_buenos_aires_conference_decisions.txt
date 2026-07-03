@@ -24,9 +24,6 @@ ARG_rise_buenos_aires_conference_decisions = {
 
 	ARG_rise_open_lesser_antilles_table = {
 		icon = GFX_decision_category_generic_arms_trade
-		allowed = {
-			original_tag = ARG
-		}
 
 		visible = {
 			has_country_flag = ARG_rise_conferencia_buenos_aires_active
@@ -34,9 +31,12 @@ ARG_rise_buenos_aires_conference_decisions = {
 		}
 
 		cost = 0
-		fire_only_once = no
+		fire_only_once = yes
 
 		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ARG_rise_open_lesser_antilles_table"
+			set_temp_variable = { treasury_change = -5 }
+			modify_treasury_effect = yes
 			set_country_flag = ARG_rise_antillas_menores_table_opened
 		}
 

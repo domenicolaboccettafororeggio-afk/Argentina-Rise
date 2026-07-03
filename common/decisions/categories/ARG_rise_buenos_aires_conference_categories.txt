@@ -4,7 +4,4 @@ ARG_rise_buenos_aires_conference_decisions = {
     allowed = {
         original_tag = ARG
     }
-    visible = {
-        has_country_flag = ARG_rise_conferencia_buenos_aires_active
-    }
 }
