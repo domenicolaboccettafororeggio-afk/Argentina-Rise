@@ -8360,6 +8360,26 @@ focus = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }
 	}
 	focus = {
+		id = ARG_rise_la_conferencia_de_buenos_aires
+		icon = focus_generic_diplomatic_treaty
+		x = 7
+		y = 39
+
+		cost = 5
+
+		prerequisite = { focus = ARG_rise_ciudadania_de_la_union_continental }
+
+		completion_reward = {
+			set_temp_variable = { treasury_change = -25.00 }
+			modify_treasury_effect = yes
+			add_political_power = -100
+			set_country_flag = ARG_rise_conferencia_buenos_aires_started
+			country_event = { id = ARG_rise.63 days = 1 }
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_DIPLOMACY }
+	}
+	focus = {
 		id = ARG_rise_la_cuestion_de_trinidad
 		icon = focus_generic_diplomatic_treaty
 		x = 10
