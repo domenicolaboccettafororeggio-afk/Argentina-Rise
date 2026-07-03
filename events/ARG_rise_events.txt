@@ -1016,3 +1016,15 @@ country_event = {
 		set_country_flag = ARG_rise_conferencia_buenos_aires_active
 	}
 }
+country_event = {
+id = ARG_rise.64
+title = ARG_rise.64.t
+desc = ARG_rise.64.d
+picture = GFX_report_event_generic_diplomacy
+is_triggered_only = yes
+
+option = {
+name = ARG_rise.64.a
+log = "[GetDateText]: [This.GetName]: ARG_rise.64.a executed - Lesser Antilles table opened"
+}
+}
