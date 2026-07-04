@@ -38,7 +38,8 @@ ARG_rise_buenos_aires_conference_decisions = {
 			set_temp_variable = { treasury_change = -5 }
 			modify_treasury_effect = yes
 			set_country_flag = ARG_rise_antillas_menores_table_opened
-			country_event = { id = ARG_rise.64 days = 1 }
+			set_country_flag = ARG_rise_guianas_table_ready
+			country_event = { id = ARG_rise.64 }
 		}
 
 		ai_will_do = {
@@ -50,7 +51,7 @@ ARG_rise_buenos_aires_conference_decisions = {
 		icon = GFX_decision_category_generic_arms_trade
 
 		visible = {
-			has_country_flag = ARG_rise_conferencia_buenos_aires_active
+			has_country_flag = ARG_rise_guianas_table_ready
 			NOT = { has_country_flag = ARG_rise_guianas_table_opened }
 		}
 
@@ -69,11 +70,11 @@ ARG_rise_buenos_aires_conference_decisions = {
 		}
 	}
 
-	ARG_rise_open_conference_table_03 = {
+	ARG_rise_conference_table_03 = {
 		icon = GFX_decision_category_generic_arms_trade
 
 		visible = {
-			has_country_flag = ARG_rise_conferencia_buenos_aires_active
+			has_country_flag = ARG_rise_guianas_table_opened
 			NOT = { has_country_flag = ARG_rise_conference_table_03_opened }
 		}
 
@@ -81,10 +82,33 @@ ARG_rise_buenos_aires_conference_decisions = {
 		fire_only_once = yes
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ARG_rise_open_conference_table_03"
+			log = "[GetDateText]: [Root.GetName]: Decision ARG_rise_conference_table_03"
 			set_temp_variable = { treasury_change = -5 }
 			modify_treasury_effect = yes
 			set_country_flag = ARG_rise_conference_table_03_opened
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	ARG_rise_conference_table_04 = {
+		icon = GFX_decision_category_generic_arms_trade
+
+		visible = {
+			has_country_flag = ARG_rise_conference_table_03_opened
+			NOT = { has_country_flag = ARG_rise_conference_table_04_opened }
+		}
+
+		cost = 0
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ARG_rise_conference_table_04"
+			set_temp_variable = { treasury_change = -5 }
+			modify_treasury_effect = yes
+			set_country_flag = ARG_rise_conference_table_04_opened
 		}
 
 		ai_will_do = {
