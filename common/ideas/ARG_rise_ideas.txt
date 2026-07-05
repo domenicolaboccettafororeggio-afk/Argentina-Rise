@@ -3323,5 +3323,35 @@ ideas = {
 					}
 
 				}
+
+				ARG_rise_american_common_market_spirit = {
+
+					name = ARG_rise_american_common_market_spirit
+
+					allowed = { always = no }
+
+					picture = economic_increase
+
+					modifier = {
+
+						trade_opinion_factor = 0.05
+
+						foreign_influence_modifier = 0.03
+
+						civilian_factories_productivity = 0.02
+
+						country_productivity_growth_modifier = 0.01
+
+						internal_investments_money_cost_modifier = -0.02
+
+						production_speed_infrastructure_factor = 0.02
+
+						production_speed_rail_way_factor = 0.02
+
+						production_speed_supply_node_factor = 0.02
+
+					}
+
+				}
 }
 }
