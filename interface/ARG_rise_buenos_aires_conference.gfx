@@ -1,4 +1,4 @@
-﻿spriteTypes = {
+spriteTypes = {
 	spriteType = {
 		name = "GFX_ARG_rise_buenos_aires_conference"
 		texturefile = "gfx/interface/decisions/decision_category_ARG_rise_buenos_aires_conference.dds"

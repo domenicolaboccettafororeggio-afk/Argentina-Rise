@@ -1264,3 +1264,152 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = ARG_rise.70
+	title = ARG_rise.70.t
+	desc = ARG_rise.70.d
+	picture = GFX_report_event_generic_diplomacy
+	is_triggered_only = yes
+
+	option = {
+		name = ARG_rise.70.a
+		log = "[GetDateText]: [This.GetName]: ARG_rise.70.a executed - Central America negotiations started"
+		set_country_flag = ARG_rise_central_america_negotiations_started
+		country_event = { id = ARG_rise.71 days = 3 }
+	}
+}
+
+country_event = {
+	id = ARG_rise.71
+	title = ARG_rise.71.t
+	desc = ARG_rise.71.d
+	picture = GFX_report_event_generic_diplomacy
+	is_triggered_only = yes
+
+	option = {
+		name = ARG_rise.71.a
+		log = "[GetDateText]: [This.GetName]: ARG_rise.71.a executed - Central America negotiated integration"
+		set_country_flag = ARG_rise_central_america_success
+		if = {
+			limit = { country_exists = PAN }
+			annex_country = { target = PAN transfer_troops = no }
+		}
+		if = {
+			limit = { country_exists = COS }
+			annex_country = { target = COS transfer_troops = no }
+		}
+		if = {
+			limit = { country_exists = NIC }
+			annex_country = { target = NIC transfer_troops = no }
+		}
+		if = {
+			limit = { country_exists = HON }
+			annex_country = { target = HON transfer_troops = no }
+		}
+		if = {
+			limit = { country_exists = GUA }
+			annex_country = { target = GUA transfer_troops = no }
+		}
+		if = {
+			limit = { country_exists = BLZ }
+			annex_country = { target = BLZ transfer_troops = no }
+		}
+		if = {
+			limit = { country_exists = ELS }
+			annex_country = { target = ELS transfer_troops = no }
+		}
+		1213 = { add_claim_by = ARG }
+		852 = { add_claim_by = ARG }
+		853 = { add_claim_by = ARG }
+		850 = { add_claim_by = ARG }
+		851 = { add_claim_by = ARG }
+		848 = { add_claim_by = ARG }
+		849 = { add_claim_by = ARG }
+		846 = { add_claim_by = ARG }
+		847 = { add_claim_by = ARG }
+		841 = { add_claim_by = ARG }
+		842 = { add_claim_by = ARG }
+		845 = { add_claim_by = ARG }
+		843 = { add_claim_by = ARG }
+		844 = { add_claim_by = ARG }
+		set_country_flag = ARG_rise_conference_table_04_ready
+	}
+
+	option = {
+		name = ARG_rise.71.b
+		log = "[GetDateText]: [This.GetName]: ARG_rise.71.b executed - Central America ultimatum"
+		set_country_flag = ARG_rise_central_america_failed
+		country_event = { id = ARG_rise.72 days = 3 }
+	}
+}
+
+country_event = {
+	id = ARG_rise.72
+	title = ARG_rise.72.t
+	desc = ARG_rise.72.d
+	picture = GFX_report_event_generic_diplomacy
+	is_triggered_only = yes
+
+	option = {
+		name = ARG_rise.72.a
+		log = "[GetDateText]: [This.GetName]: ARG_rise.72.a executed - Central America coercion"
+		if = {
+			limit = {
+				country_exists = PAN
+				NOT = { PAN = { is_subject_of = ARG } }
+				NOT = { PAN = { has_capitulated = yes } }
+			}
+			create_wargoal = { type = puppet_wargoal_focus target = PAN }
+		}
+		if = {
+			limit = {
+				country_exists = COS
+				NOT = { COS = { is_subject_of = ARG } }
+				NOT = { COS = { has_capitulated = yes } }
+			}
+			create_wargoal = { type = puppet_wargoal_focus target = COS }
+		}
+		if = {
+			limit = {
+				country_exists = NIC
+				NOT = { NIC = { is_subject_of = ARG } }
+				NOT = { NIC = { has_capitulated = yes } }
+			}
+			create_wargoal = { type = puppet_wargoal_focus target = NIC }
+		}
+		if = {
+			limit = {
+				country_exists = HON
+				NOT = { HON = { is_subject_of = ARG } }
+				NOT = { HON = { has_capitulated = yes } }
+			}
+			create_wargoal = { type = puppet_wargoal_focus target = HON }
+		}
+		if = {
+			limit = {
+				country_exists = GUA
+				NOT = { GUA = { is_subject_of = ARG } }
+				NOT = { GUA = { has_capitulated = yes } }
+			}
+			create_wargoal = { type = puppet_wargoal_focus target = GUA }
+		}
+		if = {
+			limit = {
+				country_exists = BLZ
+				NOT = { BLZ = { is_subject_of = ARG } }
+				NOT = { BLZ = { has_capitulated = yes } }
+			}
+			create_wargoal = { type = puppet_wargoal_focus target = BLZ }
+		}
+		if = {
+			limit = {
+				country_exists = ELS
+				NOT = { ELS = { is_subject_of = ARG } }
+				NOT = { ELS = { has_capitulated = yes } }
+			}
+			create_wargoal = { type = puppet_wargoal_focus target = ELS }
+		}
+		set_country_flag = ARG_rise_conference_table_04_ready
+	}
+}
+
