@@ -162,7 +162,7 @@ country_event = {
 	immediate = {
 		kill_country_leader = yes
 		create_country_leader = {
-			name = "NÃƒÆ’Ã‚Â©stor Kirchner"
+			name = "NÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©stor Kirchner"
 			picture = "nestor_kirchner.dds"
 			ideology = Conservative
 			traits = { emerging_Conservative }
@@ -1090,74 +1090,21 @@ country_event = {
 }
 
 country_event = {
-	id = ARG_rise.66
-	title = ARG_rise.66.t
-	desc = ARG_rise.66.d
-	picture = GFX_report_event_generic_diplomacy
-	is_triggered_only = yes
+    id = ARG_rise.66
+    title = ARG_rise.66.t
+    desc = ARG_rise.66.d
+    picture = GFX_report_event_generic_diplomacy
+    is_triggered_only = yes
 
-	option = {
-		name = ARG_rise.66.a
-		log = "[GetDateText]: [This.GetName]: ARG_rise.66.a executed - Lesser Antilles coercion"
-		if = {
-			limit = {
-				country_exists = GRA
-				NOT = { GRA = { is_subject_of = ARG } }
-				NOT = { GRA = { has_capitulated = yes } }
-			}
-			create_wargoal = { type = puppet_wargoal_focus target = GRA }
-		}
-		if = {
-			limit = {
-				country_exists = STV
-				NOT = { STV = { is_subject_of = ARG } }
-				NOT = { STV = { has_capitulated = yes } }
-			}
-			create_wargoal = { type = puppet_wargoal_focus target = STV }
-		}
-		if = {
-			limit = {
-				country_exists = BAR
-				NOT = { BAR = { is_subject_of = ARG } }
-				NOT = { BAR = { has_capitulated = yes } }
-			}
-			create_wargoal = { type = puppet_wargoal_focus target = BAR }
-		}
-		if = {
-			limit = {
-				country_exists = STL
-				NOT = { STL = { is_subject_of = ARG } }
-				NOT = { STL = { has_capitulated = yes } }
-			}
-			create_wargoal = { type = puppet_wargoal_focus target = STL }
-		}
-		if = {
-			limit = {
-				country_exists = DMI
-				NOT = { DMI = { is_subject_of = ARG } }
-				NOT = { DMI = { has_capitulated = yes } }
-			}
-			create_wargoal = { type = puppet_wargoal_focus target = DMI }
-		}
-		if = {
-			limit = {
-				country_exists = ANT
-				NOT = { ANT = { is_subject_of = ARG } }
-				NOT = { ANT = { has_capitulated = yes } }
-			}
-			create_wargoal = { type = puppet_wargoal_focus target = ANT }
-		}
-		if = {
-			limit = {
-				country_exists = STK
-				NOT = { STK = { is_subject_of = ARG } }
-				NOT = { STK = { has_capitulated = yes } }
-			}
-			create_wargoal = { type = puppet_wargoal_focus target = STK }
-		}
-		set_country_flag = ARG_rise_guianas_table_ready
-	}
+    option = {
+        name = ARG_rise.66.a
+        log = "[GetDateText]: [This.GetName]: ARG_rise.66.a executed - Lesser Antilles coercion"
+
+        set_country_flag = ARG_rise_lesser_antilles_coercion_pending
+        set_country_flag = ARG_rise_guianas_table_ready
+    }
 }
+
 
 country_event = {
 	id = ARG_rise.67
@@ -1214,53 +1161,22 @@ country_event = {
 		name = ARG_rise.68.b
 		log = "[GetDateText]: [This.GetName]: ARG_rise.68.b executed - Greater Caribbean ultimatum"
 		set_country_flag = ARG_rise_caribbean_major_failed
-		country_event = { id = ARG_rise.69 days = 3 }
-	}
+		country_event = {
+    id = ARG_rise.69
+    title = ARG_rise.69.t
+    desc = ARG_rise.69.d
+    picture = GFX_report_event_generic_diplomacy
+    is_triggered_only = yes
+
+    option = {
+        name = ARG_rise.69.a
+        log = "[GetDateText]: [This.GetName]: ARG_rise.69.a executed - Greater Caribbean coercion"
+
+        set_country_flag = ARG_rise_greater_caribbean_coercion_pending
+        set_country_flag = ARG_rise_conference_table_03_ready
+    }
 }
 
-country_event = {
-	id = ARG_rise.69
-	title = ARG_rise.69.t
-	desc = ARG_rise.69.d
-	picture = GFX_report_event_generic_diplomacy
-	is_triggered_only = yes
-
-	option = {
-		name = ARG_rise.69.a
-		log = "[GetDateText]: [This.GetName]: ARG_rise.69.a executed - Greater Caribbean coercion"
-		if = {
-			limit = {
-				country_exists = DOM
-				NOT = { DOM = { is_subject_of = ARG } }
-				NOT = { DOM = { has_capitulated = yes } }
-			}
-			create_wargoal = { type = puppet_wargoal_focus target = DOM }
-		}
-		if = {
-			limit = {
-				country_exists = BAH
-				NOT = { BAH = { is_subject_of = ARG } }
-				NOT = { BAH = { has_capitulated = yes } }
-			}
-			create_wargoal = { type = puppet_wargoal_focus target = BAH }
-		}
-		if = {
-			limit = {
-				country_exists = HAI
-				NOT = { HAI = { is_subject_of = ARG } }
-				NOT = { HAI = { has_capitulated = yes } }
-			}
-			create_wargoal = { type = puppet_wargoal_focus target = HAI }
-		}
-		if = {
-			limit = {
-				country_exists = JAM
-				NOT = { JAM = { is_subject_of = ARG } }
-				NOT = { JAM = { has_capitulated = yes } }
-			}
-			create_wargoal = { type = puppet_wargoal_focus target = JAM }
-		}
-		set_country_flag = ARG_rise_conference_table_03_ready
 	}
 }
 
@@ -1339,23 +1255,22 @@ country_event = {
 		name = ARG_rise.71.b
 		log = "[GetDateText]: [This.GetName]: ARG_rise.71.b executed - Central America ultimatum"
 		set_country_flag = ARG_rise_central_america_failed
-		country_event = { id = ARG_rise.72 days = 3 }
-	}
+		country_event = {
+    id = ARG_rise.72
+    title = ARG_rise.72.t
+    desc = ARG_rise.72.d
+    picture = GFX_report_event_generic_diplomacy
+    is_triggered_only = yes
+
+    option = {
+        name = ARG_rise.72.a
+        log = "[GetDateText]: [This.GetName]: ARG_rise.72.a executed - Central America coercion"
+
+        set_country_flag = ARG_rise_central_america_coercion_pending
+        set_country_flag = ARG_rise_conference_table_04_ready
+    }
 }
 
-country_event = {
-	id = ARG_rise.72
-	title = ARG_rise.72.t
-	desc = ARG_rise.72.d
-	picture = GFX_report_event_generic_diplomacy
-	is_triggered_only = yes
-
-	option = {
-		name = ARG_rise.72.a
-		log = "[GetDateText]: [This.GetName]: ARG_rise.72.a executed - Central America coercion"
-		
-		set_country_flag = ARG_rise_central_america_coercion_pending
-		set_country_flag = ARG_rise_conference_table_04_ready
 	}
 }
 
