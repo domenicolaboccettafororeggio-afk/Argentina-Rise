@@ -71,3 +71,6 @@
  ARG_rise_prepare_operation_jamaica_desc:0 "La Conferencia ha fallito. Buenos Aires autorizza la preparazione militare contro la Jamaica."
  ARG_rise_prepare_operation_dominican_republic:0 "Autorizzare Operazione Repubblica Dominicana"
  ARG_rise_prepare_operation_dominican_republic_desc:0 "La Conferencia ha fallito. Buenos Aires autorizza la preparazione militare contro la Repubblica Dominicana."
+ ARG_rise_buenos_aires_conference_decisions:0 "Conferencia de Buenos Aires"
+ ARG_rise_estado_de_la_conferencia:0 "Estado de la Conferencia"
+ ARG_rise_estado_de_la_conferencia_desc:0 "La Conferencia de Buenos Aires reúne a las delegaciones americanas bajo la mirada de Buenos Aires."
