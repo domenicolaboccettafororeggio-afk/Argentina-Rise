@@ -1285,8 +1285,8 @@ country_event = {
 
 	option = {
 		name = ARG_rise.73.a
-		log = "[GetDateText]: [This.GetName]: ARG_rise.73.a executed - Buenos Aires Pact table opened"
-		set_country_flag = ARG_rise_continental_sphere_negotiations_started
+		log = "[GetDateText]: [This.GetName]: ARG_rise.73.a executed - Constitutional Charter table opened"
+		set_country_flag = ARG_rise_constitutional_charter_started
 		country_event = { id = ARG_rise.74 days = 3 }
 	}
 }
@@ -1300,230 +1300,42 @@ country_event = {
 
 	option = {
 		name = ARG_rise.74.a
-		log = "[GetDateText]: [This.GetName]: ARG_rise.74.a executed - Buenos Aires Pact signed"
-		set_country_flag = ARG_rise_continental_sphere_success
-		if = {
-			limit = {
-				country_exists = GRA
-				NOT = { GRA = { is_subject_of = ARG } }
-				NOT = { GRA = { has_capitulated = yes } }
-			}
-			set_autonomy = {
-				target = GRA
-				autonomy_state = autonomy_associated_state
-				end_wars = no
-			}
-		}
-		if = {
-			limit = {
-				country_exists = STV
-				NOT = { STV = { is_subject_of = ARG } }
-				NOT = { STV = { has_capitulated = yes } }
-			}
-			set_autonomy = {
-				target = STV
-				autonomy_state = autonomy_associated_state
-				end_wars = no
-			}
-		}
-		if = {
-			limit = {
-				country_exists = BAR
-				NOT = { BAR = { is_subject_of = ARG } }
-				NOT = { BAR = { has_capitulated = yes } }
-			}
-			set_autonomy = {
-				target = BAR
-				autonomy_state = autonomy_associated_state
-				end_wars = no
-			}
-		}
-		if = {
-			limit = {
-				country_exists = STL
-				NOT = { STL = { is_subject_of = ARG } }
-				NOT = { STL = { has_capitulated = yes } }
-			}
-			set_autonomy = {
-				target = STL
-				autonomy_state = autonomy_associated_state
-				end_wars = no
-			}
-		}
-		if = {
-			limit = {
-				country_exists = DMI
-				NOT = { DMI = { is_subject_of = ARG } }
-				NOT = { DMI = { has_capitulated = yes } }
-			}
-			set_autonomy = {
-				target = DMI
-				autonomy_state = autonomy_associated_state
-				end_wars = no
-			}
-		}
-		if = {
-			limit = {
-				country_exists = ANT
-				NOT = { ANT = { is_subject_of = ARG } }
-				NOT = { ANT = { has_capitulated = yes } }
-			}
-			set_autonomy = {
-				target = ANT
-				autonomy_state = autonomy_associated_state
-				end_wars = no
-			}
-		}
-		if = {
-			limit = {
-				country_exists = STK
-				NOT = { STK = { is_subject_of = ARG } }
-				NOT = { STK = { has_capitulated = yes } }
-			}
-			set_autonomy = {
-				target = STK
-				autonomy_state = autonomy_associated_state
-				end_wars = no
-			}
-		}
-		if = {
-			limit = {
-				country_exists = DOM
-				NOT = { DOM = { is_subject_of = ARG } }
-				NOT = { DOM = { has_capitulated = yes } }
-			}
-			set_autonomy = {
-				target = DOM
-				autonomy_state = autonomy_associated_state
-				end_wars = no
-			}
-		}
-		if = {
-			limit = {
-				country_exists = BAH
-				NOT = { BAH = { is_subject_of = ARG } }
-				NOT = { BAH = { has_capitulated = yes } }
-			}
-			set_autonomy = {
-				target = BAH
-				autonomy_state = autonomy_associated_state
-				end_wars = no
-			}
-		}
-		if = {
-			limit = {
-				country_exists = HAI
-				NOT = { HAI = { is_subject_of = ARG } }
-				NOT = { HAI = { has_capitulated = yes } }
-			}
-			set_autonomy = {
-				target = HAI
-				autonomy_state = autonomy_associated_state
-				end_wars = no
-			}
-		}
-		if = {
-			limit = {
-				country_exists = JAM
-				NOT = { JAM = { is_subject_of = ARG } }
-				NOT = { JAM = { has_capitulated = yes } }
-			}
-			set_autonomy = {
-				target = JAM
-				autonomy_state = autonomy_associated_state
-				end_wars = no
-			}
-		}
-		if = {
-			limit = {
-				country_exists = PAN
-				NOT = { PAN = { is_subject_of = ARG } }
-				NOT = { PAN = { has_capitulated = yes } }
-			}
-			set_autonomy = {
-				target = PAN
-				autonomy_state = autonomy_associated_state
-				end_wars = no
-			}
-		}
-		if = {
-			limit = {
-				country_exists = COS
-				NOT = { COS = { is_subject_of = ARG } }
-				NOT = { COS = { has_capitulated = yes } }
-			}
-			set_autonomy = {
-				target = COS
-				autonomy_state = autonomy_associated_state
-				end_wars = no
-			}
-		}
-		if = {
-			limit = {
-				country_exists = NIC
-				NOT = { NIC = { is_subject_of = ARG } }
-				NOT = { NIC = { has_capitulated = yes } }
-			}
-			set_autonomy = {
-				target = NIC
-				autonomy_state = autonomy_associated_state
-				end_wars = no
-			}
-		}
-		if = {
-			limit = {
-				country_exists = HON
-				NOT = { HON = { is_subject_of = ARG } }
-				NOT = { HON = { has_capitulated = yes } }
-			}
-			set_autonomy = {
-				target = HON
-				autonomy_state = autonomy_associated_state
-				end_wars = no
-			}
-		}
-		if = {
-			limit = {
-				country_exists = GUA
-				NOT = { GUA = { is_subject_of = ARG } }
-				NOT = { GUA = { has_capitulated = yes } }
-			}
-			set_autonomy = {
-				target = GUA
-				autonomy_state = autonomy_associated_state
-				end_wars = no
-			}
-		}
-		if = {
-			limit = {
-				country_exists = BLZ
-				NOT = { BLZ = { is_subject_of = ARG } }
-				NOT = { BLZ = { has_capitulated = yes } }
-			}
-			set_autonomy = {
-				target = BLZ
-				autonomy_state = autonomy_associated_state
-				end_wars = no
-			}
-		}
-		if = {
-			limit = {
-				country_exists = ELS
-				NOT = { ELS = { is_subject_of = ARG } }
-				NOT = { ELS = { has_capitulated = yes } }
-			}
-			set_autonomy = {
-				target = ELS
-				autonomy_state = autonomy_associated_state
-				end_wars = no
-			}
-		}		set_country_flag = ARG_rise_conference_table_05_ready
+		log = "[GetDateText]: [This.GetName]: ARG_rise.74.a executed - American Confederation Charter approved"
+		set_country_flag = ARG_rise_constitutional_charter_approved
+		863 = { add_core_of = ARG }
+		864 = { add_core_of = ARG }
+		865 = { add_core_of = ARG }
+		866 = { add_core_of = ARG }
+		867 = { add_core_of = ARG }
+		868 = { add_core_of = ARG }
+		1210 = { add_core_of = ARG }
+		856 = { add_core_of = ARG }
+		858 = { add_core_of = ARG }
+		859 = { add_core_of = ARG }
+		860 = { add_core_of = ARG }
+		861 = { add_core_of = ARG }
+		862 = { add_core_of = ARG }
+		1213 = { add_core_of = ARG }
+		852 = { add_core_of = ARG }
+		853 = { add_core_of = ARG }
+		850 = { add_core_of = ARG }
+		851 = { add_core_of = ARG }
+		848 = { add_core_of = ARG }
+		849 = { add_core_of = ARG }
+		846 = { add_core_of = ARG }
+		847 = { add_core_of = ARG }
+		841 = { add_core_of = ARG }
+		842 = { add_core_of = ARG }
+		845 = { add_core_of = ARG }
+		843 = { add_core_of = ARG }
+		844 = { add_core_of = ARG }
+		set_country_flag = ARG_rise_conference_table_05_ready
 	}
 
 	option = {
 		name = ARG_rise.74.b
-		log = "[GetDateText]: [This.GetName]: ARG_rise.74.b executed - Buenos Aires Pact refused"
-		set_country_flag = ARG_rise_continental_sphere_coercion_pending
+		log = "[GetDateText]: [This.GetName]: ARG_rise.74.b executed - Constitutional ratification postponed"
+		set_country_flag = ARG_rise_constitution_postponed
 		set_country_flag = ARG_rise_conference_table_05_ready
 	}
 }
