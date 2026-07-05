@@ -110,7 +110,7 @@ ARG_rise_buenos_aires_conference_decisions = {
 			set_temp_variable = { treasury_change = -5 }
 			modify_treasury_effect = yes
 			set_country_flag = ARG_rise_conference_table_04_opened
-			set_country_flag = ARG_rise_conference_table_05_ready
+			country_event = { id = ARG_rise.73 }
 		}
 
 		ai_will_do = {
