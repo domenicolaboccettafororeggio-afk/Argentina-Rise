@@ -1,5 +1,5 @@
 ARG_rise_buenos_aires_conference_decisions = {
-    icon = GFX_decision_category_generic_foreign_policy
+    icon = GFX_ARG_rise_buenos_aires_conference
     priority = 50
     allowed = {
         original_tag = ARG

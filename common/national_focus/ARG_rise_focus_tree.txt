@@ -8361,7 +8361,7 @@ focus = {
 	}
 	focus = {
 		id = ARG_rise_la_conferencia_de_buenos_aires
-		icon = focus_generic_diplomatic_treaty
+		icon = ARG_rise_conferencia_de_buenos_aires
 		x = 7
 		y = 39
 
