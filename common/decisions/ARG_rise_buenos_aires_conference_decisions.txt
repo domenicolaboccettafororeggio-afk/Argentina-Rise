@@ -38,7 +38,6 @@ ARG_rise_buenos_aires_conference_decisions = {
 			set_temp_variable = { treasury_change = -5 }
 			modify_treasury_effect = yes
 			set_country_flag = ARG_rise_antillas_menores_table_opened
-			set_country_flag = ARG_rise_guianas_table_ready
 			country_event = { id = ARG_rise.64 }
 		}
 

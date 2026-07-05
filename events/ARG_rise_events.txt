@@ -141,7 +141,7 @@ country_event = {
 	option = {
 		name = ARG_rise.8.a
 	}
-}
+}
 
 country_event = {
 	id = ARG_rise.9
@@ -161,7 +161,7 @@ country_event = {
 	immediate = {
 		kill_country_leader = yes
 		create_country_leader = {
-			name = "NÃƒÂ©stor Kirchner"
+			name = "NÃƒÆ’Ã‚Â©stor Kirchner"
 			picture = "nestor_kirchner.dds"
 			ideology = Conservative
 			traits = { emerging_Conservative }
@@ -1017,14 +1017,143 @@ country_event = {
 	}
 }
 country_event = {
-id = ARG_rise.64
-title = ARG_rise.64.t
-desc = ARG_rise.64.d
-picture = GFX_report_event_generic_diplomacy
-is_triggered_only = yes
+	id = ARG_rise.64
+	title = ARG_rise.64.t
+	desc = ARG_rise.64.d
+	picture = GFX_report_event_generic_diplomacy
+	is_triggered_only = yes
 
-option = {
-name = ARG_rise.64.a
-log = "[GetDateText]: [This.GetName]: ARG_rise.64.a executed - Lesser Antilles table opened"
+	option = {
+		name = ARG_rise.64.a
+		log = "[GetDateText]: [This.GetName]: ARG_rise.64.a executed - Lesser Antilles negotiations started"
+		set_country_flag = ARG_rise_lesser_antilles_negotiations_started
+		country_event = { id = ARG_rise.65 days = 3 }
+	}
 }
+
+country_event = {
+	id = ARG_rise.65
+	title = ARG_rise.65.t
+	desc = ARG_rise.65.d
+	picture = GFX_report_event_generic_diplomacy
+	is_triggered_only = yes
+
+	option = {
+		name = ARG_rise.65.a
+		log = "[GetDateText]: [This.GetName]: ARG_rise.65.a executed - Lesser Antilles negotiated integration"
+		set_country_flag = ARG_rise_lesser_antilles_success
+		if = {
+			limit = { country_exists = GRA }
+			annex_country = { target = GRA transfer_troops = no }
+		}
+		if = {
+			limit = { country_exists = STV }
+			annex_country = { target = STV transfer_troops = no }
+		}
+		if = {
+			limit = { country_exists = BAR }
+			annex_country = { target = BAR transfer_troops = no }
+		}
+		if = {
+			limit = { country_exists = STL }
+			annex_country = { target = STL transfer_troops = no }
+		}
+		if = {
+			limit = { country_exists = DMI }
+			annex_country = { target = DMI transfer_troops = no }
+		}
+		if = {
+			limit = { country_exists = ANT }
+			annex_country = { target = ANT transfer_troops = no }
+		}
+		if = {
+			limit = { country_exists = STK }
+			annex_country = { target = STK transfer_troops = no }
+		}
+		868 = { add_claim_by = ARG }
+		866 = { add_claim_by = ARG }
+		865 = { add_claim_by = ARG }
+		864 = { add_claim_by = ARG }
+		867 = { add_claim_by = ARG }
+		1210 = { add_claim_by = ARG }
+		863 = { add_claim_by = ARG }
+		set_country_flag = ARG_rise_guianas_table_ready
+	}
+
+	option = {
+		name = ARG_rise.65.b
+		log = "[GetDateText]: [This.GetName]: ARG_rise.65.b executed - Lesser Antilles ultimatum"
+		set_country_flag = ARG_rise_lesser_antilles_failed
+		country_event = { id = ARG_rise.66 days = 3 }
+	}
+}
+
+country_event = {
+	id = ARG_rise.66
+	title = ARG_rise.66.t
+	desc = ARG_rise.66.d
+	picture = GFX_report_event_generic_diplomacy
+	is_triggered_only = yes
+
+	option = {
+		name = ARG_rise.66.a
+		log = "[GetDateText]: [This.GetName]: ARG_rise.66.a executed - Lesser Antilles coercion"
+		if = {
+			limit = {
+				country_exists = GRA
+				NOT = { GRA = { is_subject_of = ARG } }
+				NOT = { GRA = { has_capitulated = yes } }
+			}
+			create_wargoal = { type = puppet_wargoal_focus target = GRA }
+		}
+		if = {
+			limit = {
+				country_exists = STV
+				NOT = { STV = { is_subject_of = ARG } }
+				NOT = { STV = { has_capitulated = yes } }
+			}
+			create_wargoal = { type = puppet_wargoal_focus target = STV }
+		}
+		if = {
+			limit = {
+				country_exists = BAR
+				NOT = { BAR = { is_subject_of = ARG } }
+				NOT = { BAR = { has_capitulated = yes } }
+			}
+			create_wargoal = { type = puppet_wargoal_focus target = BAR }
+		}
+		if = {
+			limit = {
+				country_exists = STL
+				NOT = { STL = { is_subject_of = ARG } }
+				NOT = { STL = { has_capitulated = yes } }
+			}
+			create_wargoal = { type = puppet_wargoal_focus target = STL }
+		}
+		if = {
+			limit = {
+				country_exists = DMI
+				NOT = { DMI = { is_subject_of = ARG } }
+				NOT = { DMI = { has_capitulated = yes } }
+			}
+			create_wargoal = { type = puppet_wargoal_focus target = DMI }
+		}
+		if = {
+			limit = {
+				country_exists = ANT
+				NOT = { ANT = { is_subject_of = ARG } }
+				NOT = { ANT = { has_capitulated = yes } }
+			}
+			create_wargoal = { type = puppet_wargoal_focus target = ANT }
+		}
+		if = {
+			limit = {
+				country_exists = STK
+				NOT = { STK = { is_subject_of = ARG } }
+				NOT = { STK = { has_capitulated = yes } }
+			}
+			create_wargoal = { type = puppet_wargoal_focus target = STK }
+		}
+		set_country_flag = ARG_rise_guianas_table_ready
+	}
 }
