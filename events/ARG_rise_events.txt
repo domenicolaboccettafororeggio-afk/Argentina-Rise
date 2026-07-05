@@ -143,6 +143,7 @@ country_event = {
 	}
 }
 
+
 country_event = {
 	id = ARG_rise.9
 	hidden = yes
@@ -1157,3 +1158,109 @@ country_event = {
 		set_country_flag = ARG_rise_guianas_table_ready
 	}
 }
+
+country_event = {
+	id = ARG_rise.67
+	title = ARG_rise.67.t
+	desc = ARG_rise.67.d
+	picture = GFX_report_event_generic_diplomacy
+	is_triggered_only = yes
+
+	option = {
+		name = ARG_rise.67.a
+		log = "[GetDateText]: [This.GetName]: ARG_rise.67.a executed - Greater Caribbean negotiations started"
+		set_country_flag = ARG_rise_caribbean_major_negotiations_started
+		country_event = { id = ARG_rise.68 days = 3 }
+	}
+}
+
+country_event = {
+	id = ARG_rise.68
+	title = ARG_rise.68.t
+	desc = ARG_rise.68.d
+	picture = GFX_report_event_generic_diplomacy
+	is_triggered_only = yes
+
+	option = {
+		name = ARG_rise.68.a
+		log = "[GetDateText]: [This.GetName]: ARG_rise.68.a executed - Greater Caribbean negotiated integration"
+		set_country_flag = ARG_rise_caribbean_major_success
+		if = {
+			limit = { country_exists = DOM }
+			annex_country = { target = DOM transfer_troops = no }
+		}
+		if = {
+			limit = { country_exists = BAH }
+			annex_country = { target = BAH transfer_troops = no }
+		}
+		if = {
+			limit = { country_exists = HAI }
+			annex_country = { target = HAI transfer_troops = no }
+		}
+		if = {
+			limit = { country_exists = JAM }
+			annex_country = { target = JAM transfer_troops = no }
+		}
+		861 = { add_claim_by = ARG }
+		862 = { add_claim_by = ARG }
+		856 = { add_claim_by = ARG }
+		860 = { add_claim_by = ARG }
+		859 = { add_claim_by = ARG }
+		858 = { add_claim_by = ARG }
+		set_country_flag = ARG_rise_conference_table_03_ready
+	}
+
+	option = {
+		name = ARG_rise.68.b
+		log = "[GetDateText]: [This.GetName]: ARG_rise.68.b executed - Greater Caribbean ultimatum"
+		set_country_flag = ARG_rise_caribbean_major_failed
+		country_event = { id = ARG_rise.69 days = 3 }
+	}
+}
+
+country_event = {
+	id = ARG_rise.69
+	title = ARG_rise.69.t
+	desc = ARG_rise.69.d
+	picture = GFX_report_event_generic_diplomacy
+	is_triggered_only = yes
+
+	option = {
+		name = ARG_rise.69.a
+		log = "[GetDateText]: [This.GetName]: ARG_rise.69.a executed - Greater Caribbean coercion"
+		if = {
+			limit = {
+				country_exists = DOM
+				NOT = { DOM = { is_subject_of = ARG } }
+				NOT = { DOM = { has_capitulated = yes } }
+			}
+			create_wargoal = { type = puppet_wargoal_focus target = DOM }
+		}
+		if = {
+			limit = {
+				country_exists = BAH
+				NOT = { BAH = { is_subject_of = ARG } }
+				NOT = { BAH = { has_capitulated = yes } }
+			}
+			create_wargoal = { type = puppet_wargoal_focus target = BAH }
+		}
+		if = {
+			limit = {
+				country_exists = HAI
+				NOT = { HAI = { is_subject_of = ARG } }
+				NOT = { HAI = { has_capitulated = yes } }
+			}
+			create_wargoal = { type = puppet_wargoal_focus target = HAI }
+		}
+		if = {
+			limit = {
+				country_exists = JAM
+				NOT = { JAM = { is_subject_of = ARG } }
+				NOT = { JAM = { has_capitulated = yes } }
+			}
+			create_wargoal = { type = puppet_wargoal_focus target = JAM }
+		}
+		set_country_flag = ARG_rise_conference_table_03_ready
+	}
+}
+
