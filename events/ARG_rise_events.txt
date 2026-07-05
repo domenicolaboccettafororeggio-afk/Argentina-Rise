@@ -1353,62 +1353,8 @@ country_event = {
 	option = {
 		name = ARG_rise.72.a
 		log = "[GetDateText]: [This.GetName]: ARG_rise.72.a executed - Central America coercion"
-		if = {
-			limit = {
-				country_exists = PAN
-				NOT = { PAN = { is_subject_of = ARG } }
-				NOT = { PAN = { has_capitulated = yes } }
-			}
-			create_wargoal = { type = puppet_wargoal_focus target = PAN }
-		}
-		if = {
-			limit = {
-				country_exists = COS
-				NOT = { COS = { is_subject_of = ARG } }
-				NOT = { COS = { has_capitulated = yes } }
-			}
-			create_wargoal = { type = puppet_wargoal_focus target = COS }
-		}
-		if = {
-			limit = {
-				country_exists = NIC
-				NOT = { NIC = { is_subject_of = ARG } }
-				NOT = { NIC = { has_capitulated = yes } }
-			}
-			create_wargoal = { type = puppet_wargoal_focus target = NIC }
-		}
-		if = {
-			limit = {
-				country_exists = HON
-				NOT = { HON = { is_subject_of = ARG } }
-				NOT = { HON = { has_capitulated = yes } }
-			}
-			create_wargoal = { type = puppet_wargoal_focus target = HON }
-		}
-		if = {
-			limit = {
-				country_exists = GUA
-				NOT = { GUA = { is_subject_of = ARG } }
-				NOT = { GUA = { has_capitulated = yes } }
-			}
-			create_wargoal = { type = puppet_wargoal_focus target = GUA }
-		}
-		if = {
-			limit = {
-				country_exists = BLZ
-				NOT = { BLZ = { is_subject_of = ARG } }
-				NOT = { BLZ = { has_capitulated = yes } }
-			}
-			create_wargoal = { type = puppet_wargoal_focus target = BLZ }
-		}
-		if = {
-			limit = {
-				country_exists = ELS
-				NOT = { ELS = { is_subject_of = ARG } }
-				NOT = { ELS = { has_capitulated = yes } }
-			}
-			create_wargoal = { type = puppet_wargoal_focus target = ELS }
-		}
+		
+		set_country_flag = ARG_rise_central_america_coercion_pending
 		set_country_flag = ARG_rise_conference_table_04_ready
 	}
 }

@@ -208,4 +208,207 @@ ARG_rise_buenos_aires_conference_decisions = {
 			factor = 0
 		}
 	}
+
+	ARG_rise_prepare_operation_panama = {
+		icon = GFX_decision_category_generic_arms_trade
+
+		visible = {
+			has_country_flag = ARG_rise_central_america_coercion_pending
+			country_exists = PAN
+			NOT = { PAN = { is_subject_of = ARG } }
+			NOT = { PAN = { has_capitulated = yes } }
+			NOT = { has_country_flag = ARG_rise_wargoal_PAN_prepared }
+		}
+
+		cost = 0
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ARG_rise_prepare_operation_panama"
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = PAN
+			}
+			set_country_flag = ARG_rise_wargoal_PAN_prepared
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+
+	ARG_rise_prepare_operation_costa_rica = {
+		icon = GFX_decision_category_generic_arms_trade
+
+		visible = {
+			has_country_flag = ARG_rise_central_america_coercion_pending
+			country_exists = COS
+			NOT = { COS = { is_subject_of = ARG } }
+			NOT = { COS = { has_capitulated = yes } }
+			NOT = { has_country_flag = ARG_rise_wargoal_COS_prepared }
+		}
+
+		cost = 0
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ARG_rise_prepare_operation_costa_rica"
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = COS
+			}
+			set_country_flag = ARG_rise_wargoal_COS_prepared
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+
+	ARG_rise_prepare_operation_nicaragua = {
+		icon = GFX_decision_category_generic_arms_trade
+
+		visible = {
+			has_country_flag = ARG_rise_central_america_coercion_pending
+			country_exists = NIC
+			NOT = { NIC = { is_subject_of = ARG } }
+			NOT = { NIC = { has_capitulated = yes } }
+			NOT = { has_country_flag = ARG_rise_wargoal_NIC_prepared }
+		}
+
+		cost = 0
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ARG_rise_prepare_operation_nicaragua"
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = NIC
+			}
+			set_country_flag = ARG_rise_wargoal_NIC_prepared
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+
+	ARG_rise_prepare_operation_honduras = {
+		icon = GFX_decision_category_generic_arms_trade
+
+		visible = {
+			has_country_flag = ARG_rise_central_america_coercion_pending
+			country_exists = HON
+			NOT = { HON = { is_subject_of = ARG } }
+			NOT = { HON = { has_capitulated = yes } }
+			NOT = { has_country_flag = ARG_rise_wargoal_HON_prepared }
+		}
+
+		cost = 0
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ARG_rise_prepare_operation_honduras"
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = HON
+			}
+			set_country_flag = ARG_rise_wargoal_HON_prepared
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+
+	ARG_rise_prepare_operation_guatemala = {
+		icon = GFX_decision_category_generic_arms_trade
+
+		visible = {
+			has_country_flag = ARG_rise_central_america_coercion_pending
+			country_exists = GUA
+			NOT = { GUA = { is_subject_of = ARG } }
+			NOT = { GUA = { has_capitulated = yes } }
+			NOT = { has_country_flag = ARG_rise_wargoal_GUA_prepared }
+		}
+
+		cost = 0
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ARG_rise_prepare_operation_guatemala"
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = GUA
+			}
+			set_country_flag = ARG_rise_wargoal_GUA_prepared
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+
+	ARG_rise_prepare_operation_belize = {
+		icon = GFX_decision_category_generic_arms_trade
+
+		visible = {
+			has_country_flag = ARG_rise_central_america_coercion_pending
+			country_exists = BLZ
+			NOT = { BLZ = { is_subject_of = ARG } }
+			NOT = { BLZ = { has_capitulated = yes } }
+			NOT = { has_country_flag = ARG_rise_wargoal_BLZ_prepared }
+		}
+
+		cost = 0
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ARG_rise_prepare_operation_belize"
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = BLZ
+			}
+			set_country_flag = ARG_rise_wargoal_BLZ_prepared
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+
+	ARG_rise_prepare_operation_el_salvador = {
+		icon = GFX_decision_category_generic_arms_trade
+
+		visible = {
+			has_country_flag = ARG_rise_central_america_coercion_pending
+			country_exists = ELS
+			NOT = { ELS = { is_subject_of = ARG } }
+			NOT = { ELS = { has_capitulated = yes } }
+			NOT = { has_country_flag = ARG_rise_wargoal_ELS_prepared }
+		}
+
+		cost = 0
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ARG_rise_prepare_operation_el_salvador"
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = ELS
+			}
+			set_country_flag = ARG_rise_wargoal_ELS_prepared
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
 }
