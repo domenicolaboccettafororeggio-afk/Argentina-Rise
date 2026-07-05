@@ -162,7 +162,7 @@ country_event = {
 	immediate = {
 		kill_country_leader = yes
 		create_country_leader = {
-			name = "NÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©stor Kirchner"
+			name = "Nestor Kirchner"
 			picture = "nestor_kirchner.dds"
 			ideology = Conservative
 			traits = { emerging_Conservative }
@@ -1257,7 +1257,11 @@ country_event = {
 		name = ARG_rise.71.b
 		log = "[GetDateText]: [This.GetName]: ARG_rise.71.b executed - Central America ultimatum"
 		set_country_flag = ARG_rise_central_america_failed
-		country_event = {
+		country_event = { id = ARG_rise.72 days = 3 }
+	}
+}
+
+country_event = {
     id = ARG_rise.72
     title = ARG_rise.72.t
     desc = ARG_rise.72.d
@@ -1273,6 +1277,4 @@ country_event = {
     }
 }
 
-	}
-}
 
