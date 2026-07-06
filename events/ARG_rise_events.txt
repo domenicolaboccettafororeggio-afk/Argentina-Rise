@@ -1420,3 +1420,42 @@ country_event = {
 		set_country_flag = ARG_rise_conference_table_07_ready
 	}
 }
+country_event = {
+	id = ARG_rise.79
+	title = ARG_rise.79.t
+	desc = ARG_rise.79.d
+	picture = GFX_report_event_generic_economy
+	is_triggered_only = yes
+
+	option = {
+		name = ARG_rise.79.a
+		log = "[GetDateText]: [This.GetName]: ARG_rise.79.a executed - American Monetary Union presented"
+		country_event = { id = ARG_rise.80 days = 3 }
+	}
+}
+
+country_event = {
+	id = ARG_rise.80
+	title = ARG_rise.80.t
+	desc = ARG_rise.80.d
+	picture = GFX_report_event_generic_economy
+	is_triggered_only = yes
+
+	option = {
+		name = ARG_rise.80.a
+		log = "[GetDateText]: [This.GetName]: ARG_rise.80.a executed - American Monetary Union approved"
+		set_country_flag = ARG_rise_american_monetary_union_approved
+		add_timed_idea = {
+			idea = ARG_rise_american_monetary_union_spirit
+			days = 1095
+		}
+		set_country_flag = ARG_rise_conference_table_08_ready
+	}
+
+	option = {
+		name = ARG_rise.80.b
+		log = "[GetDateText]: [This.GetName]: ARG_rise.80.b executed - Monetary union postponed"
+		set_country_flag = ARG_rise_monetary_union_postponed
+		set_country_flag = ARG_rise_conference_table_08_ready
+	}
+}
