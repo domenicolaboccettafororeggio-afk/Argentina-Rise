@@ -1459,3 +1459,32 @@ country_event = {
 		set_country_flag = ARG_rise_conference_table_08_ready
 	}
 }
+country_event = {
+	id = ARG_rise.81
+	title = ARG_rise.81.t
+	desc = ARG_rise.81.d
+	picture = GFX_report_event_generic_diplomacy
+	is_triggered_only = yes
+
+	option = {
+		name = ARG_rise.81.a
+		log = "[GetDateText]: [This.GetName]: ARG_rise.81.a executed - final treaty signed"
+		country_event = { id = ARG_rise.82 days = 3 }
+	}
+}
+
+country_event = {
+	id = ARG_rise.82
+	title = ARG_rise.82.t
+	desc = ARG_rise.82.d
+	picture = GFX_report_event_generic_diplomacy
+	is_triggered_only = yes
+
+	option = {
+		name = ARG_rise.82.a
+		log = "[GetDateText]: [This.GetName]: ARG_rise.82.a executed - American Confederation proclaimed"
+		add_ideas = ARG_rise_american_confederation_spirit
+		set_country_flag = ARG_rise_conferencia_buenos_aires_completed
+		clr_country_flag = ARG_rise_conferencia_buenos_aires_active
+	}
+}

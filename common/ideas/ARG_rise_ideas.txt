@@ -3393,5 +3393,25 @@ ideas = {
 				trade_opinion_factor = 0.03
 			}
 		}
+		ARG_rise_american_confederation_spirit = {
+			name = ARG_rise_american_confederation_spirit
+			picture = GFX_idea_generic_national_unity
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_american_confederation_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				stability_factor = 0.05
+				foreign_influence_modifier = 0.05
+				trade_opinion_factor = 0.05
+				civilian_factories_productivity = 0.02
+				country_productivity_growth_modifier = 0.01
+				army_org_factor = 0.03
+				command_power_gain_mult = 0.05
+				tax_gain_multiplier_modifier = 0.02
+			}
+		}
 }
 }
