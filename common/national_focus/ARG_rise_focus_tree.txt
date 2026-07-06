@@ -477,12 +477,12 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus ARG_rise_la_democracia_exhausta"
 			
 			# Catena degli Eventi del Collasso Fiduciario
-			country_event = { id = ARG_rise.54 }           # Immediato: Il Silenzio di De la RÃƒÆ’Ã‚Âºa
+			country_event = { id = ARG_rise.54 }           # Immediato: Il Silenzio di De la RÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Âºa
 			country_event = { id = ARG_rise.55 days = 10 } # Fase 1: Desconfianza Bancaria
-			country_event = { id = ARG_rise.56 days = 20 } # Fase 2: El PÃƒÆ’Ã‚Â¡nico del Corralito
-			country_event = { id = ARG_rise.57 days = 30 } # Fase 3: ParÃƒÆ’Ã‚Â¡lisis Administrativa
-			country_event = { id = ARG_rise.58 days = 40 } # Fase 4: Provincias AutÃƒÆ’Ã‚Â³nomas
-			country_event = { id = ARG_rise.59 days = 50 } # Fase 5: Brazos CaÃƒÆ’Ã‚Â­dos
+			country_event = { id = ARG_rise.56 days = 20 } # Fase 2: El PÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¡nico del Corralito
+			country_event = { id = ARG_rise.57 days = 30 } # Fase 3: ParÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¡lisis Administrativa
+			country_event = { id = ARG_rise.58 days = 40 } # Fase 4: Provincias AutÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â³nomas
+			country_event = { id = ARG_rise.59 days = 50 } # Fase 5: Brazos CaÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â­dos
 			
 			add_ideas = ARG_rise_democracia_exhausta_spirit
 			set_temp_variable = { cart_strength_change = 2 }
@@ -8409,6 +8409,10 @@ focus = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ARG_rise_la_cuestion_de_cuba"
+
+			855 = { add_claim_by = ARG }
+			1121 = { add_claim_by = ARG }
+			854 = { add_claim_by = ARG }
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_DIPLOMACY }
@@ -8424,8 +8428,41 @@ focus = {
 
 		prerequisite = { focus = ARG_rise_la_cuestion_de_cuba }
 
+		available = {
+			OR = {
+				855 = { is_owned_by = ARG is_controlled_by = ARG }
+				1121 = { is_owned_by = ARG is_controlled_by = ARG }
+				854 = { is_owned_by = ARG is_controlled_by = ARG }
+			}
+		}
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ARG_rise_la_liberacion_de_cuba"
+
+			if = {
+				limit = { 855 = { is_owned_by = ARG is_controlled_by = ARG } }
+				855 = {
+					add_dynamic_modifier = { modifier = ARG_rise_plan_reconstruccion_austral_state_modifier }
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+				}
+			}
+			if = {
+				limit = { 1121 = { is_owned_by = ARG is_controlled_by = ARG } }
+				1121 = {
+					add_dynamic_modifier = { modifier = ARG_rise_plan_reconstruccion_austral_state_modifier }
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+				}
+			}
+			if = {
+				limit = { 854 = { is_owned_by = ARG is_controlled_by = ARG } }
+				854 = {
+					add_dynamic_modifier = { modifier = ARG_rise_plan_reconstruccion_austral_state_modifier }
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+				}
+			}
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_DIPLOMACY }
@@ -8441,8 +8478,46 @@ focus = {
 
 		prerequisite = { focus = ARG_rise_la_liberacion_de_cuba }
 
+		available = {
+			OR = {
+				855 = { is_owned_by = ARG is_controlled_by = ARG }
+				1121 = { is_owned_by = ARG is_controlled_by = ARG }
+				854 = { is_owned_by = ARG is_controlled_by = ARG }
+			}
+		}
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ARG_rise_la_integracion_de_cuba"
+
+			if = {
+				limit = { 855 = { is_owned_by = ARG is_controlled_by = ARG } }
+				855 = {
+					add_core_of = ARG
+					remove_claim_by = CUB
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+					add_resource = { type = aluminium amount = 2 }
+					add_resource = { type = steel amount = 2 }
+				}
+			}
+			if = {
+				limit = { 1121 = { is_owned_by = ARG is_controlled_by = ARG } }
+				1121 = {
+					add_core_of = ARG
+					remove_claim_by = CUB
+					add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+					add_resource = { type = aluminium amount = 1 }
+				}
+			}
+			if = {
+				limit = { 854 = { is_owned_by = ARG is_controlled_by = ARG } }
+				854 = {
+					add_core_of = ARG
+					remove_claim_by = CUB
+					add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+					add_resource = { type = steel amount = 1 }
+				}
+			}
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_DIPLOMACY }
