@@ -1381,3 +1381,42 @@ country_event = {
 		set_country_flag = ARG_rise_conference_table_06_ready
 	}
 }
+country_event = {
+	id = ARG_rise.77
+	title = ARG_rise.77.t
+	desc = ARG_rise.77.d
+	picture = GFX_report_event_generic_army
+	is_triggered_only = yes
+
+	option = {
+		name = ARG_rise.77.a
+		log = "[GetDateText]: [This.GetName]: ARG_rise.77.a executed - Continental Military Command presented"
+		country_event = { id = ARG_rise.78 days = 3 }
+	}
+}
+
+country_event = {
+	id = ARG_rise.78
+	title = ARG_rise.78.t
+	desc = ARG_rise.78.d
+	picture = GFX_report_event_generic_army
+	is_triggered_only = yes
+
+	option = {
+		name = ARG_rise.78.a
+		log = "[GetDateText]: [This.GetName]: ARG_rise.78.a executed - Continental Military Command approved"
+		set_country_flag = ARG_rise_continental_military_command_approved
+		add_timed_idea = {
+			idea = ARG_rise_continental_military_command_spirit
+			days = 1095
+		}
+		set_country_flag = ARG_rise_conference_table_07_ready
+	}
+
+	option = {
+		name = ARG_rise.78.b
+		log = "[GetDateText]: [This.GetName]: ARG_rise.78.b executed - Military reform postponed"
+		set_country_flag = ARG_rise_military_reform_postponed
+		set_country_flag = ARG_rise_conference_table_07_ready
+	}
+}

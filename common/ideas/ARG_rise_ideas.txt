@@ -3353,5 +3353,25 @@ ideas = {
 					}
 
 				}
+		ARG_rise_continental_military_command_spirit = {
+			name = ARG_rise_continental_military_command_spirit
+			picture = army_good_officer
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea ARG_rise_continental_military_command_spirit"
+				ingame_update_setup = yes
+			}
+
+			modifier = {
+				supply_consumption_factor = -0.03
+				out_of_supply_factor = -0.02
+				experience_gain_army = 0.03
+				army_org_factor = 0.03
+				max_planning_factor = 0.05
+				planning_speed = 0.05
+				land_reinforce_rate = 0.02
+				command_power_gain_mult = 0.05
+			}
+		}
 }
 }
