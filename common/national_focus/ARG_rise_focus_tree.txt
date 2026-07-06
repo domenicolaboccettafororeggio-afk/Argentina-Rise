@@ -8398,6 +8398,23 @@ focus = {
 	}
 
 	focus = {
+		id = ARG_rise_la_cuestion_de_cuba
+		icon = ARG_rise_la_cuestion_de_cuba
+		x = 13
+		y = 39
+
+		cost = 4
+
+		prerequisite = { focus = ARG_rise_ciudadania_de_la_union_continental }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ARG_rise_la_cuestion_de_cuba"
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_DIPLOMACY }
+	}
+
+	focus = {
 		id = ARG_rise_integracion_administrativa_del_caribe
 		icon = focus_generic_construct_civilian
 		x = 10
