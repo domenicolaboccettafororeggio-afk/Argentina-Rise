@@ -1687,14 +1687,10 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus ARG_rise_el_nuevo_sol_en_la_tierra"
 			set_temp_variable = { treasury_change = -40.00 }
 			modify_treasury_effect = yes
-			random_owned_controlled_state = {
-				limit = {
-					is_core_of = ARG
-					is_in_home_area = yes
-				}
+			450 = {
 				add_building_construction = {
 					type = nuclear_reactor
-					level = 1
+					level = 5
 					instant_build = yes
 				}
 			}
@@ -4736,14 +4732,10 @@ focus = {
 			log = "[GetDateText]: [Root.GetName]: Focus ARG_rise_el_fuego_de_prometeo"
 			set_temp_variable = { treasury_change = -40.00 }
 			modify_treasury_effect = yes
-			random_owned_controlled_state = {
-				limit = {
-					is_core_of = ARG
-					is_in_home_area = yes
-				}
+			450 = {
 				add_building_construction = {
 					type = nuclear_reactor
-					level = 1
+					level = 5
 					instant_build = yes
 				}
 			}
@@ -4767,14 +4759,10 @@ focus = {
 			log = "[GetDateText]: [Root.GetName]: Focus ARG_rise_la_camara_del_atomo"
 			set_temp_variable = { treasury_change = -40.00 }
 			modify_treasury_effect = yes
-			random_owned_controlled_state = {
-				limit = {
-					is_core_of = ARG
-					is_in_home_area = yes
-				}
+			450 = {
 				add_building_construction = {
 					type = nuclear_reactor
-					level = 1
+					level = 5
 					instant_build = yes
 				}
 			}
@@ -4798,14 +4786,10 @@ focus = {
 			log = "[GetDateText]: [Root.GetName]: Focus ARG_rise_el_sol_encadenado"
 			set_temp_variable = { treasury_change = -40.00 }
 			modify_treasury_effect = yes
-			random_owned_controlled_state = {
-				limit = {
-					is_core_of = ARG
-					is_in_home_area = yes
-				}
+			453 = {
 				add_building_construction = {
 					type = nuclear_reactor
-					level = 1
+					level = 5
 					instant_build = yes
 				}
 			}
@@ -4829,14 +4813,10 @@ focus = {
 			log = "[GetDateText]: [Root.GetName]: Focus ARG_rise_liturgia_del_reactor"
 			set_temp_variable = { treasury_change = -40.00 }
 			modify_treasury_effect = yes
-			random_owned_controlled_state = {
-				limit = {
-					is_core_of = ARG
-					is_in_home_area = yes
-				}
+			453 = {
 				add_building_construction = {
 					type = nuclear_reactor
-					level = 1
+					level = 5
 					instant_build = yes
 				}
 			}
