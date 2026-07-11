@@ -1,0 +1,231 @@
+add_namespace = ARG_rise
+
+# Post-Mexico Global Crisis. This chain deliberately uses only one-shot flags,
+# scheduled country/news events, and temporary bilateral opinion modifiers.
+country_event = {
+	id = ARG_rise.93
+	title = ARG_rise.93.t
+	desc = ARG_rise.93.d
+	picture = GFX_report_event_generic_diplomacy
+	trigger = { original_tag = ARG NOT = { has_country_flag = ARG_rise_post_mexico_crisis_started } }
+	immediate = { save_global_event_target_as = ARG_rise_crisis_argentina }
+	option = {
+		name = ARG_rise.93.a
+		set_country_flag = ARG_rise_post_mexico_crisis_started
+		set_country_flag = ARG_rise_post_mexico_multipolar
+		if = { limit = { USA = { exists = yes } } USA = { add_opinion_modifier = { target = ROOT modifier = ARG_rise_opinion_arg_multipolar_usa } } }
+		if = { limit = { SOV = { exists = yes } } SOV = { add_opinion_modifier = { target = ROOT modifier = ARG_rise_opinion_arg_multipolar_sov } reverse_add_opinion_modifier = { target = ROOT modifier = ARG_rise_opinion_arg_multipolar_sov } } }
+		if = { limit = { CHI = { exists = yes } } CHI = { add_opinion_modifier = { target = ROOT modifier = ARG_rise_opinion_arg_multipolar_chi } reverse_add_opinion_modifier = { target = ROOT modifier = ARG_rise_opinion_arg_multipolar_chi } } }
+		every_country = { limit = { has_idea = EU_member } add_opinion_modifier = { target = ROOT modifier = ARG_rise_opinion_arg_multipolar_eu } }
+		set_global_flag = ARG_rise_post_mexico_world_crisis
+		news_event = { id = ARG_rise.94 days = 1 }
+		if = {
+			limit = { USA = { exists = yes is_subject = no has_capitulated = no } }
+			USA = { country_event = { id = ARG_rise.95 days = 2 } }
+		}
+		else = {
+			set_country_flag = ARG_rise_USA_armed_prudence
+			if = { limit = { SOV = { exists = yes is_subject = no has_capitulated = no } } SOV = { country_event = { id = ARG_rise.96 days = 2 } } }
+			else = {
+				set_country_flag = ARG_rise_SOV_deferred
+				if = { limit = { CHI = { exists = yes is_subject = no has_capitulated = no } } CHI = { country_event = { id = ARG_rise.97 days = 2 } } }
+				else = { set_country_flag = ARG_rise_CHI_cautious country_event = { id = ARG_rise.98 days = 2 } }
+			}
+		}
+		log = "[GetDateText]: [This.GetName]: post-Mexico crisis posture set to multipolar"
+	}
+	option = {
+		name = ARG_rise.93.b
+		set_country_flag = ARG_rise_post_mexico_crisis_started
+		set_country_flag = ARG_rise_post_mexico_autonomy
+		if = { limit = { USA = { exists = yes } } USA = { add_opinion_modifier = { target = ROOT modifier = ARG_rise_opinion_arg_autonomy_usa } } }
+		set_global_flag = ARG_rise_post_mexico_world_crisis
+		news_event = { id = ARG_rise.94 days = 1 }
+		if = {
+			limit = { USA = { exists = yes is_subject = no has_capitulated = no } }
+			USA = { country_event = { id = ARG_rise.95 days = 2 } }
+		}
+		else = {
+			set_country_flag = ARG_rise_USA_armed_prudence
+			if = { limit = { SOV = { exists = yes is_subject = no has_capitulated = no } } SOV = { country_event = { id = ARG_rise.96 days = 2 } } }
+			else = {
+				set_country_flag = ARG_rise_SOV_deferred
+				if = { limit = { CHI = { exists = yes is_subject = no has_capitulated = no } } CHI = { country_event = { id = ARG_rise.97 days = 2 } } }
+				else = { set_country_flag = ARG_rise_CHI_cautious country_event = { id = ARG_rise.98 days = 2 } }
+			}
+		}
+		log = "[GetDateText]: [This.GetName]: post-Mexico crisis posture set to autonomy"
+	}
+	option = {
+		name = ARG_rise.93.c
+		set_country_flag = ARG_rise_post_mexico_crisis_started
+		set_country_flag = ARG_rise_post_mexico_detente
+		if = { limit = { USA = { exists = yes } } USA = { add_opinion_modifier = { target = ROOT modifier = ARG_rise_opinion_arg_detente_usa } reverse_add_opinion_modifier = { target = ROOT modifier = ARG_rise_opinion_arg_detente_usa } } }
+		if = { limit = { SOV = { exists = yes } } SOV = { add_opinion_modifier = { target = ROOT modifier = ARG_rise_opinion_arg_detente_eastern } } }
+		if = { limit = { CHI = { exists = yes } } CHI = { add_opinion_modifier = { target = ROOT modifier = ARG_rise_opinion_arg_detente_eastern } } }
+		every_country = { limit = { has_idea = EU_member } add_opinion_modifier = { target = ROOT modifier = ARG_rise_opinion_arg_detente_eu } }
+		set_global_flag = ARG_rise_post_mexico_world_crisis
+		news_event = { id = ARG_rise.94 days = 1 }
+		if = {
+			limit = { USA = { exists = yes is_subject = no has_capitulated = no } }
+			USA = { country_event = { id = ARG_rise.95 days = 2 } }
+		}
+		else = {
+			set_country_flag = ARG_rise_USA_armed_prudence
+			if = { limit = { SOV = { exists = yes is_subject = no has_capitulated = no } } SOV = { country_event = { id = ARG_rise.96 days = 2 } } }
+			else = {
+				set_country_flag = ARG_rise_SOV_deferred
+				if = { limit = { CHI = { exists = yes is_subject = no has_capitulated = no } } CHI = { country_event = { id = ARG_rise.97 days = 2 } } }
+				else = { set_country_flag = ARG_rise_CHI_cautious country_event = { id = ARG_rise.98 days = 2 } }
+			}
+		}
+		log = "[GetDateText]: [This.GetName]: post-Mexico crisis posture set to detente"
+	}
+}
+
+news_event = {
+	id = ARG_rise.94
+	title = ARG_rise.94.t
+	desc = ARG_rise.94.d
+	picture = GFX_news_event_war
+	is_triggered_only = yes
+	major = yes
+	fire_only_once = yes
+	option = {
+		name = ARG_rise.94.a
+	}
+}
+
+country_event = {
+	id = ARG_rise.95
+	title = ARG_rise.95.t
+	desc = ARG_rise.95.d
+	picture = GFX_report_event_generic_diplomacy
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = { event_target:ARG_rise_crisis_argentina = { has_country_flag = ARG_rise_post_mexico_detente } has_war = no NOT = { has_war_with = event_target:ARG_rise_crisis_argentina } has_opinion = { target = event_target:ARG_rise_crisis_argentina value > -1 } }
+			event_target:ARG_rise_crisis_argentina = { set_country_flag = ARG_rise_USA_pragmatism }
+			add_opinion_modifier = { target = event_target:ARG_rise_crisis_argentina modifier = ARG_rise_opinion_usa_pragmatism }
+			reverse_add_opinion_modifier = { target = event_target:ARG_rise_crisis_argentina modifier = ARG_rise_opinion_usa_pragmatism }
+		}
+		else_if = {
+			limit = { OR = { event_target:ARG_rise_crisis_argentina = { has_country_flag = ARG_rise_post_mexico_multipolar } has_opinion = { target = event_target:ARG_rise_crisis_argentina value < -24 } AND = { has_idea = NATO_member has_war = no } } }
+			event_target:ARG_rise_crisis_argentina = { set_country_flag = ARG_rise_USA_containment }
+			add_opinion_modifier = { target = event_target:ARG_rise_crisis_argentina modifier = ARG_rise_opinion_usa_containment }
+			reverse_add_opinion_modifier = { target = event_target:ARG_rise_crisis_argentina modifier = ARG_rise_opinion_usa_containment }
+		}
+		else = {
+			event_target:ARG_rise_crisis_argentina = { set_country_flag = ARG_rise_USA_armed_prudence }
+			add_opinion_modifier = { target = event_target:ARG_rise_crisis_argentina modifier = ARG_rise_opinion_usa_prudence }
+		}
+	}
+	option = {
+		name = ARG_rise.95.a
+		if = { limit = { SOV = { exists = yes is_subject = no has_capitulated = no } } SOV = { country_event = { id = ARG_rise.96 days = 2 } } }
+		else = {
+			event_target:ARG_rise_crisis_argentina = { set_country_flag = ARG_rise_SOV_deferred }
+			if = { limit = { CHI = { exists = yes is_subject = no has_capitulated = no } } CHI = { country_event = { id = ARG_rise.97 days = 2 } } }
+			else = { event_target:ARG_rise_crisis_argentina = { set_country_flag = ARG_rise_CHI_cautious country_event = { id = ARG_rise.98 days = 2 } } }
+		}
+		log = "[GetDateText]: Washington completed its post-Mexico review"
+	}
+}
+
+country_event = {
+	id = ARG_rise.96
+	title = ARG_rise.96.t
+	desc = ARG_rise.96.d
+	picture = GFX_report_event_generic_diplomacy
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = { event_target:ARG_rise_crisis_argentina = { has_country_flag = ARG_rise_post_mexico_multipolar } has_war = no has_civil_war = no NOT = { has_war_with = event_target:ARG_rise_crisis_argentina } NOT = { has_war_with = USA } has_opinion = { target = event_target:ARG_rise_crisis_argentina value > -1 } }
+			event_target:ARG_rise_crisis_argentina = { set_country_flag = ARG_rise_SOV_opening }
+			add_opinion_modifier = { target = event_target:ARG_rise_crisis_argentina modifier = ARG_rise_opinion_sov_opening }
+			reverse_add_opinion_modifier = { target = event_target:ARG_rise_crisis_argentina modifier = ARG_rise_opinion_sov_opening }
+		}
+		else_if = {
+			limit = { OR = { event_target:ARG_rise_crisis_argentina = { has_country_flag = ARG_rise_post_mexico_multipolar } event_target:ARG_rise_crisis_argentina = { has_country_flag = ARG_rise_post_mexico_autonomy } } NOT = { has_war_with = event_target:ARG_rise_crisis_argentina } }
+			event_target:ARG_rise_crisis_argentina = { set_country_flag = ARG_rise_SOV_cautious }
+			add_opinion_modifier = { target = event_target:ARG_rise_crisis_argentina modifier = ARG_rise_opinion_sov_caution }
+		}
+		else = {
+			event_target:ARG_rise_crisis_argentina = { set_country_flag = ARG_rise_SOV_deferred }
+			add_opinion_modifier = { target = event_target:ARG_rise_crisis_argentina modifier = ARG_rise_opinion_sov_deferral }
+		}
+	}
+	option = {
+		name = ARG_rise.96.a
+		if = { limit = { CHI = { exists = yes is_subject = no has_capitulated = no } } CHI = { country_event = { id = ARG_rise.97 days = 2 } } }
+		else = { event_target:ARG_rise_crisis_argentina = { set_country_flag = ARG_rise_CHI_cautious country_event = { id = ARG_rise.98 days = 2 } } }
+		log = "[GetDateText]: Moscow completed its post-Mexico review"
+	}
+}
+
+country_event = {
+	id = ARG_rise.97
+	title = ARG_rise.97.t
+	desc = ARG_rise.97.d
+	picture = GFX_report_event_generic_diplomacy
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = { OR = { event_target:ARG_rise_crisis_argentina = { has_country_flag = ARG_rise_post_mexico_multipolar } event_target:ARG_rise_crisis_argentina = { has_country_flag = ARG_rise_post_mexico_autonomy } } NOT = { has_war_with = event_target:ARG_rise_crisis_argentina } event_target:ARG_rise_crisis_argentina = { has_war = no } has_opinion = { target = event_target:ARG_rise_crisis_argentina value > -1 } NOT = { event_target:ARG_rise_crisis_argentina = { has_country_flag = ARG_rise_USA_containment } } }
+			event_target:ARG_rise_crisis_argentina = { set_country_flag = ARG_rise_CHI_partnership }
+			add_opinion_modifier = { target = event_target:ARG_rise_crisis_argentina modifier = ARG_rise_opinion_chi_partnership }
+			reverse_add_opinion_modifier = { target = event_target:ARG_rise_crisis_argentina modifier = ARG_rise_opinion_chi_partnership }
+		}
+		else_if = {
+			limit = { NOT = { has_war_with = event_target:ARG_rise_crisis_argentina } }
+			event_target:ARG_rise_crisis_argentina = { set_country_flag = ARG_rise_CHI_observation }
+			add_opinion_modifier = { target = event_target:ARG_rise_crisis_argentina modifier = ARG_rise_opinion_chi_observation }
+		}
+		else = {
+			event_target:ARG_rise_crisis_argentina = { set_country_flag = ARG_rise_CHI_cautious }
+			add_opinion_modifier = { target = event_target:ARG_rise_crisis_argentina modifier = ARG_rise_opinion_chi_distance }
+		}
+	}
+	option = { name = ARG_rise.97.a event_target:ARG_rise_crisis_argentina = { country_event = { id = ARG_rise.98 days = 2 } } log = "[GetDateText]: Beijing completed its post-Mexico review" }
+}
+
+country_event = {
+	id = ARG_rise.98
+	title = ARG_rise.98.t
+	desc = ARG_rise.98.d
+	picture = GFX_report_event_generic_diplomacy
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = { has_country_flag = ARG_rise_post_mexico_detente OR = { has_country_flag = ARG_rise_USA_pragmatism has_country_flag = ARG_rise_USA_armed_prudence } has_war = no }
+			set_country_flag = ARG_rise_EU_commercial_pragmatism
+		}
+		else_if = {
+			limit = { OR = { AND = { has_country_flag = ARG_rise_post_mexico_multipolar has_country_flag = ARG_rise_USA_containment } any_country = { has_idea = EU_member has_war_with = ROOT } } }
+			set_country_flag = ARG_rise_EU_atlantic_condemnation
+		}
+		else = { set_country_flag = ARG_rise_EU_diplomatic_caution }
+		every_country = {
+			limit = { has_idea = EU_member }
+			if = { limit = { ROOT = { has_country_flag = ARG_rise_EU_commercial_pragmatism } } add_opinion_modifier = { target = ROOT modifier = ARG_rise_opinion_eu_pragmatism } }
+			else_if = { limit = { ROOT = { has_country_flag = ARG_rise_EU_atlantic_condemnation } } add_opinion_modifier = { target = ROOT modifier = ARG_rise_opinion_eu_atlantic_condemnation } }
+			else = { add_opinion_modifier = { target = ROOT modifier = ARG_rise_opinion_eu_caution } }
+		}
+	}
+	option = { name = ARG_rise.98.a country_event = { id = ARG_rise.99 days = 2 } log = "[GetDateText]: Europe completed its post-Mexico review" }
+}
+
+country_event = {
+	id = ARG_rise.99
+	title = ARG_rise.99.t
+	desc = ARG_rise.99.d
+	picture = GFX_report_event_generic_diplomacy
+	is_triggered_only = yes
+	immediate = {
+		if = { limit = { NOT = { OR = { has_country_flag = ARG_rise_USA_containment has_country_flag = ARG_rise_USA_armed_prudence has_country_flag = ARG_rise_USA_pragmatism } } } set_country_flag = ARG_rise_USA_armed_prudence }
+		if = { limit = { NOT = { OR = { has_country_flag = ARG_rise_SOV_opening has_country_flag = ARG_rise_SOV_cautious has_country_flag = ARG_rise_SOV_deferred } } } set_country_flag = ARG_rise_SOV_deferred }
+		if = { limit = { NOT = { OR = { has_country_flag = ARG_rise_CHI_partnership has_country_flag = ARG_rise_CHI_observation has_country_flag = ARG_rise_CHI_cautious } } } set_country_flag = ARG_rise_CHI_cautious }
+		if = { limit = { NOT = { OR = { has_country_flag = ARG_rise_EU_atlantic_condemnation has_country_flag = ARG_rise_EU_diplomatic_caution has_country_flag = ARG_rise_EU_commercial_pragmatism } } } set_country_flag = ARG_rise_EU_diplomatic_caution }
+	}
+	option = { name = ARG_rise.99.a set_country_flag = ARG_rise_post_mexico_crisis_resolved log = "[GetDateText]: [This.GetName]: post-Mexico global crisis resolved" }
+}

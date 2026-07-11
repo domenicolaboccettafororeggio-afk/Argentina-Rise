@@ -9564,6 +9564,7 @@ focus = {
 			839 = { add_core_of = ARG remove_claim_by = MEX add_resource = { type = oil amount = 11 } }
 			840 = { add_core_of = ARG remove_claim_by = MEX }
 			country_event = { id = ARG_rise.90 }
+			country_event = { id = ARG_rise.93 }
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }

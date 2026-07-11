@@ -1,0 +1,22 @@
+opinion_modifiers = {
+	ARG_rise_opinion_arg_multipolar_usa = { value = -20 days = 730 decay = 0 }
+	ARG_rise_opinion_arg_multipolar_sov = { value = 15 days = 730 decay = 0 }
+	ARG_rise_opinion_arg_multipolar_chi = { value = 15 days = 730 decay = 0 }
+	ARG_rise_opinion_arg_multipolar_eu = { value = -5 days = 730 decay = 0 }
+	ARG_rise_opinion_arg_autonomy_usa = { value = -5 days = 730 decay = 0 }
+	ARG_rise_opinion_arg_detente_usa = { value = 5 days = 730 decay = 0 }
+	ARG_rise_opinion_arg_detente_eu = { value = 5 days = 730 decay = 0 }
+	ARG_rise_opinion_arg_detente_eastern = { value = -5 days = 730 decay = 0 }
+	ARG_rise_opinion_usa_containment = { value = -25 days = 730 decay = 0 }
+	ARG_rise_opinion_usa_prudence = { value = -10 days = 730 decay = 0 }
+	ARG_rise_opinion_usa_pragmatism = { value = 10 days = 730 decay = 0 }
+	ARG_rise_opinion_sov_opening = { value = 20 days = 730 decay = 0 }
+	ARG_rise_opinion_sov_caution = { value = 5 days = 730 decay = 0 }
+	ARG_rise_opinion_sov_deferral = { value = -5 days = 730 decay = 0 }
+	ARG_rise_opinion_chi_partnership = { value = 20 days = 730 decay = 0 }
+	ARG_rise_opinion_chi_observation = { value = 5 days = 730 decay = 0 }
+	ARG_rise_opinion_chi_distance = { value = -5 days = 730 decay = 0 }
+	ARG_rise_opinion_eu_atlantic_condemnation = { value = -15 days = 730 decay = 0 }
+	ARG_rise_opinion_eu_caution = { value = -5 days = 730 decay = 0 }
+	ARG_rise_opinion_eu_pragmatism = { value = 5 days = 730 decay = 0 }
+}
