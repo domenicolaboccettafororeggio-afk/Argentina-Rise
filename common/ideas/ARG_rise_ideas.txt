@@ -313,6 +313,14 @@ ideas = {
 				political_power_gain = 0.35
 			}
 		}
+		ARG_rise_nuevo_sol_levante_renewable_spirit = {
+			name = ARG_rise_nuevo_sol_levante_renewable_spirit
+			picture = construction
+
+			modifier = {
+				renewable_energy_gain_multiplier = 4.00
+			}
+		}
 		ARG_rise_renewable_energy_drive_1 = {
 			name = ARG_rise_renewable_energy_drive_1
 			picture = construction

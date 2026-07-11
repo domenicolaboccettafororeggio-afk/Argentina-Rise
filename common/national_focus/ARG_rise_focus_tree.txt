@@ -1670,6 +1670,7 @@ focus_tree = {
 			}
 			add_ideas = ARG_rise_renewable_energy_drive_1
 			ingame_update_setup = yes
+			country_event = { id = ARG_rise.92 }
 		}
 	}
 
