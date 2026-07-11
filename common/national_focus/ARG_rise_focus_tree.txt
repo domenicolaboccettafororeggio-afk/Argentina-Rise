@@ -9432,4 +9432,138 @@ focus = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
 	}
+
+	focus = {
+		id = ARG_rise_el_camino_del_norte
+		icon = focus_generic_diplomatic_treaty
+		x = 4
+		y = 39
+
+		cost = 4
+
+		prerequisite = { focus = ARG_rise_ciudadania_de_la_union_continental }
+
+		bypass = {
+			OR = {
+				NOT = { country_exists = MEX }
+				MEX = { is_subject_of = ARG }
+				MEX = { has_capitulated = yes }
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ARG_rise_el_camino_del_norte"
+			828 = { add_claim_by = ARG }
+			829 = { add_claim_by = ARG }
+			830 = { add_claim_by = ARG }
+			831 = { add_claim_by = ARG }
+			832 = { add_claim_by = ARG }
+			833 = { add_claim_by = ARG }
+			834 = { add_claim_by = ARG }
+			835 = { add_claim_by = ARG }
+			836 = { add_claim_by = ARG }
+			837 = { add_claim_by = ARG }
+			838 = { add_claim_by = ARG }
+			839 = { add_claim_by = ARG }
+			840 = { add_claim_by = ARG }
+			set_country_flag = ARG_rise_mexico_campaign_authorized
+			country_event = { id = ARG_rise.83 }
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+	}
+
+	focus = {
+		id = ARG_rise_la_reconstruccion_de_mexico
+		icon = focus_generic_construct_civilian
+		x = 4
+		y = 40
+
+		cost = 4
+
+		prerequisite = { focus = ARG_rise_el_camino_del_norte }
+
+		available = {
+			828 = { is_owned_by = ARG is_controlled_by = ARG }
+			829 = { is_owned_by = ARG is_controlled_by = ARG }
+			830 = { is_owned_by = ARG is_controlled_by = ARG }
+			831 = { is_owned_by = ARG is_controlled_by = ARG }
+			832 = { is_owned_by = ARG is_controlled_by = ARG }
+			833 = { is_owned_by = ARG is_controlled_by = ARG }
+			834 = { is_owned_by = ARG is_controlled_by = ARG }
+			835 = { is_owned_by = ARG is_controlled_by = ARG }
+			836 = { is_owned_by = ARG is_controlled_by = ARG }
+			837 = { is_owned_by = ARG is_controlled_by = ARG }
+			838 = { is_owned_by = ARG is_controlled_by = ARG }
+			839 = { is_owned_by = ARG is_controlled_by = ARG }
+			840 = { is_owned_by = ARG is_controlled_by = ARG }
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ARG_rise_la_reconstruccion_de_mexico"
+			828 = { add_dynamic_modifier = { modifier = ARG_rise_plan_reconstruccion_austral_state_modifier days = 1825 } add_extra_state_shared_building_slots = 1 add_building_construction = { type = infrastructure level = 1 instant_build = yes } add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+			829 = { add_dynamic_modifier = { modifier = ARG_rise_plan_reconstruccion_austral_state_modifier days = 1825 } add_extra_state_shared_building_slots = 1 add_building_construction = { type = infrastructure level = 1 instant_build = yes } add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+			830 = { add_dynamic_modifier = { modifier = ARG_rise_plan_reconstruccion_austral_state_modifier days = 1825 } add_extra_state_shared_building_slots = 1 add_building_construction = { type = infrastructure level = 1 instant_build = yes } add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+			831 = { add_dynamic_modifier = { modifier = ARG_rise_plan_reconstruccion_austral_state_modifier days = 1825 } add_extra_state_shared_building_slots = 1 add_building_construction = { type = infrastructure level = 1 instant_build = yes } add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+			832 = { add_dynamic_modifier = { modifier = ARG_rise_plan_reconstruccion_austral_state_modifier days = 1825 } add_extra_state_shared_building_slots = 1 add_building_construction = { type = infrastructure level = 1 instant_build = yes } add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+			833 = { add_dynamic_modifier = { modifier = ARG_rise_plan_reconstruccion_austral_state_modifier days = 1825 } add_extra_state_shared_building_slots = 1 add_building_construction = { type = infrastructure level = 1 instant_build = yes } add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+			834 = { add_dynamic_modifier = { modifier = ARG_rise_plan_reconstruccion_austral_state_modifier days = 1825 } add_extra_state_shared_building_slots = 1 add_building_construction = { type = infrastructure level = 1 instant_build = yes } add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+			835 = { add_dynamic_modifier = { modifier = ARG_rise_plan_reconstruccion_austral_state_modifier days = 1825 } add_extra_state_shared_building_slots = 1 add_building_construction = { type = infrastructure level = 1 instant_build = yes } add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+			836 = { add_dynamic_modifier = { modifier = ARG_rise_plan_reconstruccion_austral_state_modifier days = 1825 } add_extra_state_shared_building_slots = 1 add_building_construction = { type = infrastructure level = 1 instant_build = yes } add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+			837 = { add_dynamic_modifier = { modifier = ARG_rise_plan_reconstruccion_austral_state_modifier days = 1825 } add_extra_state_shared_building_slots = 1 add_building_construction = { type = infrastructure level = 1 instant_build = yes } add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+			838 = { add_dynamic_modifier = { modifier = ARG_rise_plan_reconstruccion_austral_state_modifier days = 1825 } add_extra_state_shared_building_slots = 1 add_building_construction = { type = infrastructure level = 1 instant_build = yes } add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+			839 = { add_dynamic_modifier = { modifier = ARG_rise_plan_reconstruccion_austral_state_modifier days = 1825 } add_extra_state_shared_building_slots = 1 add_building_construction = { type = infrastructure level = 1 instant_build = yes } add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+			840 = { add_dynamic_modifier = { modifier = ARG_rise_plan_reconstruccion_austral_state_modifier days = 1825 } add_extra_state_shared_building_slots = 1 add_building_construction = { type = infrastructure level = 1 instant_build = yes } add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+			country_event = { id = ARG_rise.89 }
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = ARG_rise_una_nacion_dos_pueblos
+		icon = focus_generic_support_the_left_right
+		x = 4
+		y = 41
+
+		cost = 4
+
+		prerequisite = { focus = ARG_rise_la_reconstruccion_de_mexico }
+
+		available = {
+			828 = { is_owned_by = ARG is_controlled_by = ARG }
+			829 = { is_owned_by = ARG is_controlled_by = ARG }
+			830 = { is_owned_by = ARG is_controlled_by = ARG }
+			831 = { is_owned_by = ARG is_controlled_by = ARG }
+			832 = { is_owned_by = ARG is_controlled_by = ARG }
+			833 = { is_owned_by = ARG is_controlled_by = ARG }
+			834 = { is_owned_by = ARG is_controlled_by = ARG }
+			835 = { is_owned_by = ARG is_controlled_by = ARG }
+			836 = { is_owned_by = ARG is_controlled_by = ARG }
+			837 = { is_owned_by = ARG is_controlled_by = ARG }
+			838 = { is_owned_by = ARG is_controlled_by = ARG }
+			839 = { is_owned_by = ARG is_controlled_by = ARG }
+			840 = { is_owned_by = ARG is_controlled_by = ARG }
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ARG_rise_una_nacion_dos_pueblos"
+			828 = { add_core_of = ARG remove_claim_by = MEX }
+			829 = { add_core_of = ARG remove_claim_by = MEX }
+			830 = { add_core_of = ARG remove_claim_by = MEX }
+			831 = { add_core_of = ARG remove_claim_by = MEX }
+			832 = { add_core_of = ARG remove_claim_by = MEX add_resource = { type = oil amount = 50 } add_resource = { type = steel amount = 19 } }
+			833 = { add_core_of = ARG remove_claim_by = MEX }
+			834 = { add_core_of = ARG remove_claim_by = MEX add_resource = { type = aluminium amount = 20 } add_resource = { type = steel amount = 2 } }
+			835 = { add_core_of = ARG remove_claim_by = MEX add_resource = { type = aluminium amount = 35 } add_resource = { type = steel amount = 69 } }
+			836 = { add_core_of = ARG remove_claim_by = MEX add_resource = { type = aluminium amount = 25 } add_resource = { type = steel amount = 60 } }
+			837 = { add_core_of = ARG remove_claim_by = MEX }
+			838 = { add_core_of = ARG remove_claim_by = MEX add_resource = { type = oil amount = 59 } }
+			839 = { add_core_of = ARG remove_claim_by = MEX add_resource = { type = oil amount = 11 } }
+			840 = { add_core_of = ARG remove_claim_by = MEX }
+			country_event = { id = ARG_rise.90 }
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }
+	}
 }

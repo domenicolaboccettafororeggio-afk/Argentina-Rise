@@ -1488,3 +1488,120 @@ country_event = {
 		clr_country_flag = ARG_rise_conferencia_buenos_aires_active
 	}
 }
+
+country_event = {
+	id = ARG_rise.83
+	title = ARG_rise.83.t
+	desc = ARG_rise.83.d
+	picture = GFX_report_event_generic_diplomacy
+	is_triggered_only = yes
+
+	option = {
+		name = ARG_rise.83.a
+		log = "[GetDateText]: [This.GetName]: ARG_rise.83.a executed - northern mandate proclaimed"
+	}
+}
+
+country_event = {
+	id = ARG_rise.84
+	title = ARG_rise.84.t
+	desc = ARG_rise.84.d
+	picture = GFX_report_event_generic_diplomacy
+	is_triggered_only = yes
+
+	option = {
+		name = ARG_rise.84.a
+		log = "[GetDateText]: [This.GetName]: ARG_rise.84.a executed - ultimatum sent to Mexico"
+		MEX = {
+			country_event = { id = ARG_rise.85 }
+		}
+	}
+}
+
+country_event = {
+	id = ARG_rise.85
+	title = ARG_rise.85.t
+	desc = ARG_rise.85.d
+	picture = GFX_report_event_generic_diplomacy
+	is_triggered_only = yes
+
+	option = {
+		name = ARG_rise.85.a
+		log = "[GetDateText]: [This.GetName]: ARG_rise.85.a executed - Mexican ultimatum refused"
+		ARG = {
+			country_event = { id = ARG_rise.86 }
+		}
+	}
+}
+
+country_event = {
+	id = ARG_rise.86
+	title = ARG_rise.86.t
+	desc = ARG_rise.86.d
+	picture = GFX_report_event_generic_diplomacy
+	is_triggered_only = yes
+
+	option = {
+		name = ARG_rise.86.a
+		log = "[GetDateText]: [This.GetName]: ARG_rise.86.a executed - Mexican war goal granted"
+		create_wargoal = {
+			target = MEX
+			type = annex_everything
+		}
+		set_country_flag = ARG_rise_mexico_wargoal_granted
+	}
+}
+
+news_event = {
+	id = ARG_rise.87
+	title = ARG_rise.87.t
+	desc = ARG_rise.87.d
+	picture = GFX_news_event_war
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = ARG_rise.87.a
+		log = "[GetDateText]: [This.GetName]: ARG_rise.87.a executed - Argentina and Mexico at war"
+	}
+}
+
+news_event = {
+	id = ARG_rise.88
+	title = ARG_rise.88.t
+	desc = ARG_rise.88.d
+	picture = GFX_news_event_war
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = ARG_rise.88.a
+		log = "[GetDateText]: [This.GetName]: ARG_rise.88.a executed - Mexico City falls"
+	}
+}
+
+country_event = {
+	id = ARG_rise.89
+	title = ARG_rise.89.t
+	desc = ARG_rise.89.d
+	picture = GFX_report_event_generic_diplomacy
+	is_triggered_only = yes
+
+	option = {
+		name = ARG_rise.89.a
+		log = "[GetDateText]: [This.GetName]: ARG_rise.89.a executed - Mexican reconstruction begins"
+	}
+}
+
+country_event = {
+	id = ARG_rise.90
+	title = ARG_rise.90.t
+	desc = ARG_rise.90.d
+	picture = GFX_report_event_generic_diplomacy
+	is_triggered_only = yes
+
+	option = {
+		name = ARG_rise.90.a
+		log = "[GetDateText]: [This.GetName]: ARG_rise.90.a executed - Mexico fully integrated"
+	}
+}

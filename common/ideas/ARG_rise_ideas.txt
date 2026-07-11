@@ -1,5 +1,13 @@
 ideas = {
 	country = {
+		ARG_rise_nuclear_generation_baseline = {
+			name = ARG_rise_nuclear_generation_baseline
+			picture = nuclear_energy
+
+			modifier = {
+				nuclear_energy_generation_modifier = 1.00
+			}
+		}
 		ARG_rise_montana_meat = {
 			name = ARG_rise_montana_meat
 			picture = agriculture

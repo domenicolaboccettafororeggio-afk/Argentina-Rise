@@ -1,0 +1,8 @@
+ARG_rise_mexico_campaign_decisions = {
+    icon = GFX_decision_category_generic_arms_trade
+    priority = 50
+
+    allowed = {
+        original_tag = ARG
+    }
+}

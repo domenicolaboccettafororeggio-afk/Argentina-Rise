@@ -5,6 +5,13 @@ on_actions = {
 				if = {
 					limit = {
 						original_tag = ARG
+						NOT = { has_idea = ARG_rise_nuclear_generation_baseline }
+					}
+					add_ideas = ARG_rise_nuclear_generation_baseline
+				}
+				if = {
+					limit = {
+						original_tag = ARG
 						NOT = { has_country_flag = ARG_rise_intro_seen }
 					}
 					country_event = { id = ARG_rise.3 days = 1 }
@@ -51,6 +58,41 @@ on_actions = {
 					original_tag = ARG
 				}
 				ARG_rise_restore_completed_focus_ideas_effect = yes
+			}
+		}
+	}
+
+	on_war = {
+		effect = {
+			if = {
+				limit = {
+					original_tag = ARG
+					has_country_flag = ARG_rise_mexico_wargoal_granted
+					has_war_with = MEX
+					NOT = { has_country_flag = ARG_rise_mexico_war_news_fired }
+				}
+				ARG = {
+					set_country_flag = ARG_rise_mexico_war_news_fired
+					news_event = { id = ARG_rise.87 hours = 6 }
+				}
+			}
+		}
+	}
+
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					original_tag = ARG
+					has_country_flag = ARG_rise_mexico_wargoal_granted
+					ARG = { has_war_with = MEX }
+					NOT = { has_country_flag = ARG_rise_mexico_city_fallen }
+					835 = { is_fully_controlled_by = ARG }
+				}
+				ARG = {
+					set_country_flag = ARG_rise_mexico_city_fallen
+					news_event = { id = ARG_rise.88 hours = 6 }
+				}
 			}
 		}
 	}

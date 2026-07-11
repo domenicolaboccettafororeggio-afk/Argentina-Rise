@@ -1,0 +1,32 @@
+ARG_rise_mexico_campaign_decisions = {
+	ARG_rise_send_ultimatum_to_mexico = {
+		icon = GFX_decision_generic_operation
+
+		visible = {
+			original_tag = ARG
+			has_country_flag = ARG_rise_mexico_campaign_authorized
+			NOT = { has_country_flag = ARG_rise_mexico_ultimatum_sent }
+		}
+
+		available = {
+			country_exists = MEX
+			MEX = {
+				NOT = { is_subject_of = ARG }
+				NOT = { has_capitulated = yes }
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ARG_rise_send_ultimatum_to_mexico"
+			set_country_flag = ARG_rise_mexico_ultimatum_sent
+			country_event = { id = ARG_rise.84 }
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
