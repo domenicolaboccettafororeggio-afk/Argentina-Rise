@@ -1,5 +1,10 @@
 ﻿l_english:
  ARG_rise_nuclear_generation_baseline:0 "Argentine Nuclear Generation Baseline"
+ ARG_rise_aliento_primordial_nuclear_spirit:0 "The Primordial Breath"
+ ARG_rise_aliento_primordial_nuclear_spirit_desc:0 "Argentina's national nuclear program radically expands the capacity of its nuclear complexes, delivering an additional four gigawatts of generation from every reactor."
+ ARG_rise.91.t:0 "The Primordial Breath"
+ ARG_rise.91.d:0 "A new generation of Argentine nuclear complexes enters service. From the Plata to the interior, the nation now commands an energy system built to secure its independence, affirm its technological mastery and carry its national renewal into a new age."
+ ARG_rise.91.a:0 "Let a new energy era begin."
  ARG_rise_the_pampas_engine:0 "The Pampas Engine"
  ARG_rise_the_pampas_engine_desc:0 "The fertile plains of the Pampas can drive a modern export economy if livestock, grain, cold storage, canning, and transport are organized as one industrial chain. By backing the meatpackers, ranchers, and agricultural exporters that keep Argentina fed and connected to global markets, we can turn rural production into national revenue."
  ARG_rise_the_soy_revolution:0 "The Soy Revolution"

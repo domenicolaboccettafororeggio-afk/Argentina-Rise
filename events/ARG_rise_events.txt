@@ -1605,3 +1605,24 @@ country_event = {
 		log = "[GetDateText]: [This.GetName]: ARG_rise.90.a executed - Mexico fully integrated"
 	}
 }
+
+country_event = {
+	id = ARG_rise.91
+	title = ARG_rise.91.t
+	desc = ARG_rise.91.d
+	picture = GFX_report_event_generic_diplomacy
+	is_triggered_only = yes
+
+	option = {
+		name = ARG_rise.91.a
+		log = "[GetDateText]: [This.GetName]: ARG_rise.91.a executed - primordial nuclear era inaugurated"
+		if = {
+			limit = { has_idea = ARG_rise_nuclear_generation_baseline }
+			remove_ideas = ARG_rise_nuclear_generation_baseline
+		}
+		if = {
+			limit = { NOT = { has_idea = ARG_rise_aliento_primordial_nuclear_spirit } }
+			add_ideas = ARG_rise_aliento_primordial_nuclear_spirit
+		}
+	}
+}

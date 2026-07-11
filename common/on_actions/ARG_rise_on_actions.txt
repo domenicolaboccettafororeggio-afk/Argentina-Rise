@@ -5,13 +5,6 @@ on_actions = {
 				if = {
 					limit = {
 						original_tag = ARG
-						NOT = { has_idea = ARG_rise_nuclear_generation_baseline }
-					}
-					add_ideas = ARG_rise_nuclear_generation_baseline
-				}
-				if = {
-					limit = {
-						original_tag = ARG
 						NOT = { has_country_flag = ARG_rise_intro_seen }
 					}
 					country_event = { id = ARG_rise.3 days = 1 }
