@@ -1,6 +1,6 @@
 add_namespace = ARG_rise
 
-# Event 201: ARG proposal prepared
+# Event 201: ARG chooses the type of offer
 country_event = {
 	id = ARG_rise.201
 	title = ARG_rise.201.t
@@ -8,14 +8,47 @@ country_event = {
 	picture = GFX_report_event_generic_diplomacy
 	is_triggered_only = yes
 
+	# Option A: Economic Offer (Cost: 5B)
 	option = {
 		name = ARG_rise.201.a
-		log = "[GetDateText]: [This.GetName]: ARG_rise.201.a executed"
+		trigger = {
+			check_variable = { treasury > 4.99 }
+		}
+		log = "[GetDateText]: [This.GetName]: Chosen Economic Offer for Angola"
+		set_country_flag = ARG_rise_african_offer_economic
+		clr_country_flag = ARG_rise_african_offer_strategic
+		clr_country_flag = ARG_rise_african_offer_coercive
+		AGL = { country_event = { id = ARG_rise.202 days = 1 } }
+	}
+
+	# Option B: Strategic Agreement (Cost: 3B)
+	option = {
+		name = ARG_rise.201.b
+		trigger = {
+			check_variable = { treasury > 2.99 }
+		}
+		log = "[GetDateText]: [This.GetName]: Chosen Strategic Agreement for Angola"
+		set_country_flag = ARG_rise_african_offer_strategic
+		clr_country_flag = ARG_rise_african_offer_economic
+		clr_country_flag = ARG_rise_african_offer_coercive
+		AGL = { country_event = { id = ARG_rise.202 days = 1 } }
+	}
+
+	# Option C: Coercive Pressure (Cost: 1B)
+	option = {
+		name = ARG_rise.201.c
+		trigger = {
+			check_variable = { treasury > 0.99 }
+		}
+		log = "[GetDateText]: [This.GetName]: Chosen Coercive Pressure for Angola"
+		set_country_flag = ARG_rise_african_offer_coercive
+		clr_country_flag = ARG_rise_african_offer_economic
+		clr_country_flag = ARG_rise_african_offer_strategic
 		AGL = { country_event = { id = ARG_rise.202 days = 1 } }
 	}
 }
 
-# Event 202: AGL receives proposal
+# Event 202: AGL receives and evaluates the proposal
 country_event = {
 	id = ARG_rise.202
 	title = ARG_rise.202.t
@@ -23,11 +56,50 @@ country_event = {
 	picture = GFX_report_event_generic_diplomacy
 	is_triggered_only = yes
 
+	# Option A: Accept Offer
 	option = {
 		name = ARG_rise.202.a
 		ai_chance = {
-			factor = 95
+			factor = 30
+
+			# Test Overrides
+			modifier = {
+				factor = 10000
+				event_target:ARG_rise_acquisitions_argentina = { has_country_flag = ARG_rise_test_force_angola_accept }
+			}
+			modifier = {
+				factor = 0
+				event_target:ARG_rise_acquisitions_argentina = {
+					OR = {
+						has_country_flag = ARG_rise_test_force_angola_counteroffer
+						has_country_flag = ARG_rise_test_force_angola_reject
+					}
+				}
+			}
+
+			# Economic Offer Bonus
+			modifier = {
+				factor = 2.0
+				event_target:ARG_rise_acquisitions_argentina = { has_country_flag = ARG_rise_african_offer_economic }
+			}
+			# Coercive bonus on weak/isolated targets
+			modifier = {
+				factor = 1.5
+				event_target:ARG_rise_acquisitions_argentina = { has_country_flag = ARG_rise_african_offer_coercive }
+				strength_ratio = { tag = event_target:ARG_rise_acquisitions_argentina ratio < 0.4 }
+			}
+			# Friendly relations modifier
+			modifier = {
+				factor = 1.5
+				has_opinion = { target = event_target:ARG_rise_acquisitions_argentina value > 50 }
+			}
+			# Low stability modifier
+			modifier = {
+				factor = 1.3
+				has_stability < 0.45
+			}
 		}
+
 		if = {
 			limit = {
 				is_subject = no
@@ -36,45 +108,88 @@ country_event = {
 				299 = { is_owned_by = AGL }
 				event_target:ARG_rise_acquisitions_argentina = {
 					exists = yes
-					check_variable = { treasury > 4.99 }
+					OR = {
+						AND = {
+							has_country_flag = ARG_rise_african_offer_economic
+							check_variable = { treasury > 4.99 }
+						}
+						AND = {
+							has_country_flag = ARG_rise_african_offer_strategic
+							check_variable = { treasury > 2.99 }
+						}
+						AND = {
+							has_country_flag = ARG_rise_african_offer_coercive
+							check_variable = { treasury > 0.99 }
+						}
+					}
 				}
 			}
-			# Deduct treasury from ARG
-			event_target:ARG_rise_acquisitions_argentina = {
-				set_temp_variable = { treasury_change = -5.00 }
-				modify_treasury_effect = yes
+			# Deduct treasury based on offer type
+			if = {
+				limit = {
+					event_target:ARG_rise_acquisitions_argentina = { has_country_flag = ARG_rise_african_offer_economic }
+				}
+				event_target:ARG_rise_acquisitions_argentina = {
+					set_temp_variable = { treasury_change = -5.00 }
+					modify_treasury_effect = yes
+				}
 			}
+			if = {
+				limit = {
+					event_target:ARG_rise_acquisitions_argentina = { has_country_flag = ARG_rise_african_offer_strategic }
+				}
+				event_target:ARG_rise_acquisitions_argentina = {
+					set_temp_variable = { treasury_change = -3.00 }
+					modify_treasury_effect = yes
+				}
+			}
+			if = {
+				limit = {
+					event_target:ARG_rise_acquisitions_argentina = { has_country_flag = ARG_rise_african_offer_coercive }
+				}
+				event_target:ARG_rise_acquisitions_argentina = {
+					set_temp_variable = { treasury_change = -1.00 }
+					modify_treasury_effect = yes
+				}
+			}
+
 			# Transfer state 299 to ARG
 			event_target:ARG_rise_acquisitions_argentina = {
 				transfer_state = 299
 			}
-			# Puppet AGL
+			# Puppet AGL & Autonomy setup
 			event_target:ARG_rise_acquisitions_argentina = {
 				puppet = AGL
-			}
-			# Autonomy setup
-			if = {
-				limit = {
-					has_global_flag = GAME_RULE_allow_colored_puppets
+				if = {
+					limit = {
+						has_global_flag = GAME_RULE_allow_colored_puppets
+					}
+					set_autonomy = {
+						target = AGL
+						autonomy_state = autonomy_satellite_state_colored
+						end_wars = no
+						end_civil_wars = no
+					}
 				}
-				set_autonomy = {
-					target = AGL
-					autonomy_state = autonomy_satellite_state_colored
-					end_wars = no
-					end_civil_wars = no
+				else = {
+					set_autonomy = {
+						target = AGL
+						autonomy_state = autonomy_satellite_state
+						end_wars = no
+						end_civil_wars = no
+					}
 				}
 			}
-			else = {
-				set_autonomy = {
-					target = AGL
-					autonomy_state = autonomy_satellite_state
-					end_wars = no
-					end_civil_wars = no
-				}
-			}
+
 			# Clean up flags
 			event_target:ARG_rise_acquisitions_argentina = {
 				clr_country_flag = ARG_rise_african_negotiation_in_progress
+				clr_country_flag = ARG_rise_african_offer_economic
+				clr_country_flag = ARG_rise_african_offer_strategic
+				clr_country_flag = ARG_rise_african_offer_coercive
+				clr_country_flag = ARG_rise_test_force_angola_accept
+				clr_country_flag = ARG_rise_test_force_angola_counteroffer
+				clr_country_flag = ARG_rise_test_force_angola_reject
 				set_country_flag = ARG_rise_angola_acquisition_completed
 				country_event = { id = ARG_rise.203 days = 1 }
 			}
@@ -83,18 +198,105 @@ country_event = {
 			# Cancel deal if requirements are invalid
 			event_target:ARG_rise_acquisitions_argentina = {
 				clr_country_flag = ARG_rise_african_negotiation_in_progress
+				clr_country_flag = ARG_rise_african_offer_economic
+				clr_country_flag = ARG_rise_african_offer_strategic
+				clr_country_flag = ARG_rise_african_offer_coercive
+				clr_country_flag = ARG_rise_test_force_angola_accept
+				clr_country_flag = ARG_rise_test_force_angola_counteroffer
+				clr_country_flag = ARG_rise_test_force_angola_reject
 				country_event = { id = ARG_rise.205 days = 1 }
 			}
 		}
 	}
 
+	# Option B: Counteroffer (Requires +2B treasury)
+	option = {
+		name = ARG_rise.202.c
+		ai_chance = {
+			factor = 30
+
+			# Test Overrides
+			modifier = {
+				factor = 10000
+				event_target:ARG_rise_acquisitions_argentina = { has_country_flag = ARG_rise_test_force_angola_counteroffer }
+			}
+			modifier = {
+				factor = 0
+				event_target:ARG_rise_acquisitions_argentina = {
+					OR = {
+						has_country_flag = ARG_rise_test_force_angola_accept
+						has_country_flag = ARG_rise_test_force_angola_reject
+					}
+				}
+			}
+
+			# Strategic Offer Bonus for Counteroffer
+			modifier = {
+				factor = 2.0
+				event_target:ARG_rise_acquisitions_argentina = { has_country_flag = ARG_rise_african_offer_strategic }
+			}
+			# Neutral relations modifier
+			modifier = {
+				factor = 1.3
+				has_opinion = { target = event_target:ARG_rise_acquisitions_argentina value > 0 }
+				has_opinion = { target = event_target:ARG_rise_acquisitions_argentina value < 50 }
+			}
+		}
+		event_target:ARG_rise_acquisitions_argentina = {
+			country_event = { id = ARG_rise.206 days = 1 }
+		}
+	}
+
+	# Option C: Reject Offer
 	option = {
 		name = ARG_rise.202.b
 		ai_chance = {
-			factor = 5
+			factor = 40
+
+			# Test Overrides
+			modifier = {
+				factor = 10000
+				event_target:ARG_rise_acquisitions_argentina = { has_country_flag = ARG_rise_test_force_angola_reject }
+			}
+			modifier = {
+				factor = 0
+				event_target:ARG_rise_acquisitions_argentina = {
+					OR = {
+						has_country_flag = ARG_rise_test_force_angola_accept
+						has_country_flag = ARG_rise_test_force_angola_counteroffer
+					}
+				}
+			}
+
+			# Coercive offer against stable/strong/hostile targets increases rejection chance
+			modifier = {
+				factor = 2.0
+				event_target:ARG_rise_acquisitions_argentina = { has_country_flag = ARG_rise_african_offer_coercive }
+				OR = {
+					has_stability > 0.70
+					strength_ratio = { tag = event_target:ARG_rise_acquisitions_argentina ratio > 0.8 }
+					has_opinion = { target = event_target:ARG_rise_acquisitions_argentina value < -50 }
+				}
+			}
+			# Hostile relations modifier
+			modifier = {
+				factor = 1.5
+				has_opinion = { target = event_target:ARG_rise_acquisitions_argentina value < -30 }
+			}
+			# High stability modifier
+			modifier = {
+				factor = 1.3
+				has_stability > 0.70
+			}
 		}
 		event_target:ARG_rise_acquisitions_argentina = {
 			clr_country_flag = ARG_rise_african_negotiation_in_progress
+			clr_country_flag = ARG_rise_african_offer_economic
+			clr_country_flag = ARG_rise_african_offer_strategic
+			clr_country_flag = ARG_rise_african_offer_coercive
+			clr_country_flag = ARG_rise_test_force_angola_accept
+			clr_country_flag = ARG_rise_test_force_angola_counteroffer
+			clr_country_flag = ARG_rise_test_force_angola_reject
 			country_event = { id = ARG_rise.204 days = 1 }
 		}
 	}
@@ -139,5 +341,124 @@ country_event = {
 	option = {
 		name = ARG_rise.205.a
 		log = "[GetDateText]: [This.GetName]: ARG_rise.205.a executed"
+	}
+}
+
+# Event 206: ARG receives AGL Counteroffer
+country_event = {
+	id = ARG_rise.206
+	title = ARG_rise.206.t
+	desc = ARG_rise.206.d
+	picture = GFX_report_event_generic_diplomacy
+	is_triggered_only = yes
+
+	# Option A: Accept Counteroffer (+2B treasury)
+	option = {
+		name = ARG_rise.206.a
+		trigger = {
+			OR = {
+				AND = {
+					has_country_flag = ARG_rise_african_offer_economic
+					check_variable = { treasury > 6.99 }
+				}
+				AND = {
+					has_country_flag = ARG_rise_african_offer_strategic
+					check_variable = { treasury > 4.99 }
+				}
+				AND = {
+					has_country_flag = ARG_rise_african_offer_coercive
+					check_variable = { treasury > 2.99 }
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				AGL = {
+					exists = yes
+					is_subject = no
+					is_in_faction = no
+					has_war = no
+					299 = { is_owned_by = AGL }
+				}
+			}
+			# Deduct cost (original + 2B)
+			if = {
+				limit = { has_country_flag = ARG_rise_african_offer_economic }
+				set_temp_variable = { treasury_change = -7.00 }
+			}
+			if = {
+				limit = { has_country_flag = ARG_rise_african_offer_strategic }
+				set_temp_variable = { treasury_change = -5.00 }
+			}
+			if = {
+				limit = { has_country_flag = ARG_rise_african_offer_coercive }
+				set_temp_variable = { treasury_change = -3.00 }
+			}
+			modify_treasury_effect = yes
+
+			# Transfer state 299 to ARG
+			transfer_state = 299
+
+			# Puppet AGL
+			puppet = AGL
+
+			# Autonomy setup
+			if = {
+				limit = {
+					has_global_flag = GAME_RULE_allow_colored_puppets
+				}
+				set_autonomy = {
+					target = AGL
+					autonomy_state = autonomy_satellite_state_colored
+					end_wars = no
+					end_civil_wars = no
+				}
+			}
+			else = {
+				set_autonomy = {
+					target = AGL
+					autonomy_state = autonomy_satellite_state
+					end_wars = no
+					end_civil_wars = no
+				}
+			}
+
+			# Clean up flags
+			clr_country_flag = ARG_rise_african_negotiation_in_progress
+			clr_country_flag = ARG_rise_african_offer_economic
+			clr_country_flag = ARG_rise_african_offer_strategic
+			clr_country_flag = ARG_rise_african_offer_coercive
+			clr_country_flag = ARG_rise_test_force_angola_accept
+			clr_country_flag = ARG_rise_test_force_angola_counteroffer
+			clr_country_flag = ARG_rise_test_force_angola_reject
+			set_country_flag = ARG_rise_angola_acquisition_completed
+			country_event = { id = ARG_rise.203 days = 1 }
+		}
+		else = {
+			# Cancel deal if requirements are invalid
+			clr_country_flag = ARG_rise_african_negotiation_in_progress
+			clr_country_flag = ARG_rise_african_offer_economic
+			clr_country_flag = ARG_rise_african_offer_strategic
+			clr_country_flag = ARG_rise_african_offer_coercive
+			clr_country_flag = ARG_rise_test_force_angola_accept
+			clr_country_flag = ARG_rise_test_force_angola_counteroffer
+			clr_country_flag = ARG_rise_test_force_angola_reject
+			country_event = { id = ARG_rise.205 days = 1 }
+		}
+	}
+
+	# Option B: Reject Counteroffer
+	option = {
+		name = ARG_rise.206.b
+		log = "[GetDateText]: [This.GetName]: Rejected AGL Counteroffer"
+		clr_country_flag = ARG_rise_african_negotiation_in_progress
+		clr_country_flag = ARG_rise_african_offer_economic
+		clr_country_flag = ARG_rise_african_offer_strategic
+		clr_country_flag = ARG_rise_african_offer_coercive
+		clr_country_flag = ARG_rise_test_force_angola_accept
+		clr_country_flag = ARG_rise_test_force_angola_counteroffer
+		clr_country_flag = ARG_rise_test_force_angola_reject
+		country_event = { id = ARG_rise.204 days = 1 }
 	}
 }

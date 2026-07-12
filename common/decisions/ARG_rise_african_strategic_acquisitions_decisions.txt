@@ -17,13 +17,13 @@ ARG_rise_african_strategic_acquisitions = {
 				299 = { is_owned_by = AGL }
 			}
 			NOT = { 299 = { is_owned_by = ARG } }
-			check_variable = { treasury > 4.99 }
+			check_variable = { treasury > 0.99 }
 			NOT = { has_country_flag = ARG_rise_african_negotiation_in_progress }
 		}
 
 		cost = 10
 		fire_only_once = no
-		days_re_enable = 14
+		days_re_enable = 7
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision ARG_rise_negotiate_with_angola"
@@ -34,6 +34,69 @@ ARG_rise_african_strategic_acquisitions = {
 
 		ai_will_do = {
 			factor = 0
+		}
+	}
+
+	ARG_rise_test_force_angola_accept = {
+		icon = GFX_decision_generic_operation
+		visible = {
+			original_tag = ARG
+			has_country_flag = ARG_rise_african_acquisitions_unlocked
+			NOT = { has_country_flag = ARG_rise_test_force_angola_accept }
+		}
+		available = {
+			NOT = { has_country_flag = ARG_rise_african_negotiation_in_progress }
+		}
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 1
+
+		complete_effect = {
+			set_country_flag = ARG_rise_test_force_angola_accept
+			clr_country_flag = ARG_rise_test_force_angola_counteroffer
+			clr_country_flag = ARG_rise_test_force_angola_reject
+		}
+	}
+
+	ARG_rise_test_force_angola_counteroffer = {
+		icon = GFX_decision_generic_operation
+		visible = {
+			original_tag = ARG
+			has_country_flag = ARG_rise_african_acquisitions_unlocked
+			NOT = { has_country_flag = ARG_rise_test_force_angola_counteroffer }
+		}
+		available = {
+			NOT = { has_country_flag = ARG_rise_african_negotiation_in_progress }
+		}
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 1
+
+		complete_effect = {
+			set_country_flag = ARG_rise_test_force_angola_counteroffer
+			clr_country_flag = ARG_rise_test_force_angola_accept
+			clr_country_flag = ARG_rise_test_force_angola_reject
+		}
+	}
+
+	ARG_rise_test_force_angola_reject = {
+		icon = GFX_decision_generic_operation
+		visible = {
+			original_tag = ARG
+			has_country_flag = ARG_rise_african_acquisitions_unlocked
+			NOT = { has_country_flag = ARG_rise_test_force_angola_reject }
+		}
+		available = {
+			NOT = { has_country_flag = ARG_rise_african_negotiation_in_progress }
+		}
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 1
+
+		complete_effect = {
+			set_country_flag = ARG_rise_test_force_angola_reject
+			clr_country_flag = ARG_rise_test_force_angola_accept
+			clr_country_flag = ARG_rise_test_force_angola_counteroffer
 		}
 	}
 }
