@@ -1,0 +1,39 @@
+ARG_rise_african_strategic_acquisitions = {
+	ARG_rise_negotiate_with_angola = {
+		icon = GFX_decision_generic_operation
+
+		visible = {
+			original_tag = ARG
+			has_country_flag = ARG_rise_african_acquisitions_unlocked
+			NOT = { has_country_flag = ARG_rise_angola_acquisition_completed }
+		}
+
+		available = {
+			country_exists = AGL
+			AGL = {
+				is_subject = no
+				is_in_faction = no
+				has_war = no
+				299 = { is_owned_by = AGL }
+			}
+			NOT = { 299 = { is_owned_by = ARG } }
+			check_variable = { treasury > 4.99 }
+			NOT = { has_country_flag = ARG_rise_african_negotiation_in_progress }
+		}
+
+		cost = 10
+		fire_only_once = no
+		days_re_enable = 14
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ARG_rise_negotiate_with_angola"
+			set_country_flag = ARG_rise_african_negotiation_in_progress
+			save_global_event_target_as = ARG_rise_acquisitions_argentina
+			country_event = { id = ARG_rise.201 days = 1 }
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

@@ -1,0 +1,12 @@
+ARG_rise_african_strategic_acquisitions = {
+	icon = GFX_decision_category_generic_foreign_policy
+	priority = 45
+
+	allowed = {
+		original_tag = ARG
+	}
+
+	visible = {
+		has_country_flag = ARG_rise_african_acquisitions_unlocked
+	}
+}

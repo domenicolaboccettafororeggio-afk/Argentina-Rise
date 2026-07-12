@@ -8506,6 +8506,22 @@ focus = {
 	}
 
 	focus = {
+		id = ARG_rise_proyeccion_transatlantica
+		icon = focus_generic_diplomatic_treaty
+		x = 16
+		y = 39
+
+		cost = 0.15
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ARG_rise_proyeccion_transatlantica"
+			set_country_flag = ARG_rise_african_acquisitions_unlocked
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_DIPLOMACY }
+	}
+
+	focus = {
 		id = ARG_rise_integracion_administrativa_del_caribe
 		icon = focus_generic_construct_civilian
 		x = 10
@@ -9568,5 +9584,175 @@ focus = {
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }
+	}
+
+	focus = {
+		id = ARG_rise_la_escala_de_la_republica
+		icon = focus_generic_political_reform
+		x = 4
+		y = 43
+		cost = 4
+		prerequisite = { focus = ARG_rise_una_nacion_dos_pueblos }
+		available = { has_country_flag = ARG_rise_post_mexico_crisis_resolved }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ARG_rise_la_escala_de_la_republica"
+			add_political_power = 50
+			add_stability = 0.01
+			set_country_flag = ARG_rise_act_i_operational
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = ARG_rise_administrar_dos_pueblos
+		icon = focus_generic_support_the_left_right
+		x = 1
+		y = 44
+		cost = 4
+		prerequisite = { focus = ARG_rise_la_escala_de_la_republica }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ARG_rise_administrar_dos_pueblos"
+			add_stability = 0.02
+			set_temp_variable = { treasury_change = 2.00 }
+			modify_treasury_effect = yes
+			set_country_flag = ARG_rise_continental_administration_ready
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = ARG_rise_la_red_continental
+		icon = focus_generic_build_infrastructure
+		x = 3
+		y = 44
+		cost = 4
+		prerequisite = { focus = ARG_rise_la_escala_de_la_republica }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ARG_rise_la_red_continental"
+			450 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			835 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = ARG_rise_continental_network_ready
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = ARG_rise_la_energia_de_la_union
+		icon = nuclear_energy
+		x = 5
+		y = 44
+		cost = 4
+		prerequisite = { focus = ARG_rise_la_escala_de_la_republica }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ARG_rise_la_energia_de_la_union"
+			453 = {
+				add_building_construction = {
+					type = fossil_powerplant
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_fuel = 1000
+			set_country_flag = ARG_rise_continental_energy_ready
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = ARG_rise_fronteras_responsables
+		icon = intelligence_exchange
+		x = 7
+		y = 44
+		cost = 4
+		prerequisite = { focus = ARG_rise_la_escala_de_la_republica }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ARG_rise_fronteras_responsables"
+			add_political_power = 25
+			add_stability = 0.01
+			set_country_flag = ARG_rise_continental_security_ready
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = ARG_rise_la_palabra_cumplida
+		icon = focus_generic_diplomatic_treaty
+		x = 4
+		y = 45
+		cost = 4
+		prerequisite = { focus = ARG_rise_la_escala_de_la_republica }
+		available = {
+			OR = {
+				AND = { has_country_flag = ARG_rise_continental_administration_ready has_country_flag = ARG_rise_continental_network_ready has_country_flag = ARG_rise_continental_energy_ready }
+				AND = { has_country_flag = ARG_rise_continental_administration_ready has_country_flag = ARG_rise_continental_network_ready has_country_flag = ARG_rise_continental_security_ready }
+				AND = { has_country_flag = ARG_rise_continental_administration_ready has_country_flag = ARG_rise_continental_energy_ready has_country_flag = ARG_rise_continental_security_ready }
+				AND = { has_country_flag = ARG_rise_continental_network_ready has_country_flag = ARG_rise_continental_energy_ready has_country_flag = ARG_rise_continental_security_ready }
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ARG_rise_la_palabra_cumplida"
+			if = {
+				limit = { NOT = { has_country_flag = ARG_rise_continental_administration_ready } }
+				set_country_flag = ARG_rise_continental_administration_weak
+			}
+			if = {
+				limit = { NOT = { has_country_flag = ARG_rise_continental_network_ready } }
+				set_country_flag = ARG_rise_continental_network_weak
+			}
+			if = {
+				limit = { NOT = { has_country_flag = ARG_rise_continental_energy_ready } }
+				set_country_flag = ARG_rise_continental_energy_weak
+			}
+			if = {
+				limit = { NOT = { has_country_flag = ARG_rise_continental_security_ready } }
+				set_country_flag = ARG_rise_continental_security_weak
+			}
+			set_country_flag = ARG_rise_summit_unlocked
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = ARG_rise_cumbre_de_la_responsabilidad_continental
+		icon = focus_generic_diplomatic_treaty
+		x = 4
+		y = 46
+		cost = 4
+		prerequisite = { focus = ARG_rise_la_palabra_cumplida }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ARG_rise_cumbre_de_la_responsabilidad_continental"
+			add_political_power = -25
+			set_temp_variable = { treasury_change = -3.00 }
+			modify_treasury_effect = yes
+			set_country_flag = ARG_rise_continental_summit_open
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = ARG_rise_el_compromiso_de_buenos_aires
+		icon = focus_generic_conference
+		x = 4
+		y = 47
+		cost = 4
+		prerequisite = { focus = ARG_rise_cumbre_de_la_responsabilidad_continental }
+		available = { has_country_flag = ARG_rise_continental_compact_selected }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ARG_rise_el_compromiso_de_buenos_aires"
+			set_country_flag = ARG_rise_continental_commitment_authorized
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 	}
 }

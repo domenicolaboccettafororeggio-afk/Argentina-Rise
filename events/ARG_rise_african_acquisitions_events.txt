@@ -1,0 +1,143 @@
+add_namespace = ARG_rise
+
+# Event 201: ARG proposal prepared
+country_event = {
+	id = ARG_rise.201
+	title = ARG_rise.201.t
+	desc = ARG_rise.201.d
+	picture = GFX_report_event_generic_diplomacy
+	is_triggered_only = yes
+
+	option = {
+		name = ARG_rise.201.a
+		log = "[GetDateText]: [This.GetName]: ARG_rise.201.a executed"
+		AGL = { country_event = { id = ARG_rise.202 days = 1 } }
+	}
+}
+
+# Event 202: AGL receives proposal
+country_event = {
+	id = ARG_rise.202
+	title = ARG_rise.202.t
+	desc = ARG_rise.202.d
+	picture = GFX_report_event_generic_diplomacy
+	is_triggered_only = yes
+
+	option = {
+		name = ARG_rise.202.a
+		ai_chance = {
+			factor = 95
+		}
+		if = {
+			limit = {
+				is_subject = no
+				is_in_faction = no
+				has_war = no
+				299 = { is_owned_by = AGL }
+				event_target:ARG_rise_acquisitions_argentina = {
+					exists = yes
+					check_variable = { treasury > 4.99 }
+				}
+			}
+			# Deduct treasury from ARG
+			event_target:ARG_rise_acquisitions_argentina = {
+				set_temp_variable = { treasury_change = -5.00 }
+				modify_treasury_effect = yes
+			}
+			# Transfer state 299 to ARG
+			event_target:ARG_rise_acquisitions_argentina = {
+				transfer_state = 299
+			}
+			# Puppet AGL
+			event_target:ARG_rise_acquisitions_argentina = {
+				puppet = AGL
+			}
+			# Autonomy setup
+			if = {
+				limit = {
+					has_global_flag = GAME_RULE_allow_colored_puppets
+				}
+				set_autonomy = {
+					target = AGL
+					autonomy_state = autonomy_satellite_state_colored
+					end_wars = no
+					end_civil_wars = no
+				}
+			}
+			else = {
+				set_autonomy = {
+					target = AGL
+					autonomy_state = autonomy_satellite_state
+					end_wars = no
+					end_civil_wars = no
+				}
+			}
+			# Clean up flags
+			event_target:ARG_rise_acquisitions_argentina = {
+				clr_country_flag = ARG_rise_african_negotiation_in_progress
+				set_country_flag = ARG_rise_angola_acquisition_completed
+				country_event = { id = ARG_rise.203 days = 1 }
+			}
+		}
+		else = {
+			# Cancel deal if requirements are invalid
+			event_target:ARG_rise_acquisitions_argentina = {
+				clr_country_flag = ARG_rise_african_negotiation_in_progress
+				country_event = { id = ARG_rise.205 days = 1 }
+			}
+		}
+	}
+
+	option = {
+		name = ARG_rise.202.b
+		ai_chance = {
+			factor = 5
+		}
+		event_target:ARG_rise_acquisitions_argentina = {
+			clr_country_flag = ARG_rise_african_negotiation_in_progress
+			country_event = { id = ARG_rise.204 days = 1 }
+		}
+	}
+}
+
+# Event 203: ARG success confirmation
+country_event = {
+	id = ARG_rise.203
+	title = ARG_rise.203.t
+	desc = ARG_rise.203.d
+	picture = GFX_report_event_generic_diplomacy
+	is_triggered_only = yes
+
+	option = {
+		name = ARG_rise.203.a
+		log = "[GetDateText]: [This.GetName]: ARG_rise.203.a executed"
+	}
+}
+
+# Event 204: ARG rejection
+country_event = {
+	id = ARG_rise.204
+	title = ARG_rise.204.t
+	desc = ARG_rise.204.d
+	picture = GFX_report_event_generic_diplomacy
+	is_triggered_only = yes
+
+	option = {
+		name = ARG_rise.204.a
+		log = "[GetDateText]: [This.GetName]: ARG_rise.204.a executed"
+	}
+}
+
+# Event 205: ARG failed deal (invalid requirements)
+country_event = {
+	id = ARG_rise.205
+	title = ARG_rise.205.t
+	desc = ARG_rise.205.d
+	picture = GFX_report_event_generic_diplomacy
+	is_triggered_only = yes
+
+	option = {
+		name = ARG_rise.205.a
+		log = "[GetDateText]: [This.GetName]: ARG_rise.205.a executed"
+	}
+}
