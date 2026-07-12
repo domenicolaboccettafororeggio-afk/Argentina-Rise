@@ -1,24 +1,274 @@
 ARG_rise_african_strategic_acquisitions = {
-	ARG_rise_negotiate_with_angola = {
+	ARG_rise_search_african_candidate = {
 		icon = GFX_decision_generic_operation
 
 		visible = {
 			original_tag = ARG
 			has_country_flag = ARG_rise_african_acquisitions_unlocked
-			NOT = { has_country_flag = ARG_rise_angola_acquisition_completed }
+			NOT = { has_country_flag = ARG_rise_african_negotiation_in_progress }
+			NOT = { has_country_flag = ARG_rise_african_candidate_selected }
 		}
 
 		available = {
-			country_exists = AGL
-			AGL = {
-				is_subject = no
-				is_in_faction = no
-				has_war = no
-				299 = { is_owned_by = AGL }
+			OR = {
+				AND = {
+					country_exists = AGL
+					AGL = {
+						is_subject = no
+						is_in_faction = no
+						has_war = no
+						299 = { is_owned_by = AGL }
+					}
+					NOT = { has_country_flag = ARG_rise_angola_acquisition_completed }
+					NOT = { has_country_flag = ARG_rise_angola_acquisition_refused }
+				}
+				AND = {
+					country_exists = KEN
+					KEN = {
+						is_subject = no
+						is_in_faction = no
+						has_war = no
+						241 = { is_owned_by = KEN }
+					}
+					NOT = { has_country_flag = ARG_rise_kenya_acquisition_completed }
+					NOT = { has_country_flag = ARG_rise_kenya_acquisition_refused }
+				}
+				AND = {
+					country_exists = TNZ
+					TNZ = {
+						is_subject = no
+						is_in_faction = no
+						has_war = no
+						257 = { is_owned_by = TNZ }
+					}
+					NOT = { has_country_flag = ARG_rise_tanzania_acquisition_completed }
+					NOT = { has_country_flag = ARG_rise_tanzania_acquisition_refused }
+				}
+				AND = {
+					country_exists = CAM
+					CAM = {
+						is_subject = no
+						is_in_faction = no
+						has_war = no
+						322 = { is_owned_by = CAM }
+					}
+					NOT = { has_country_flag = ARG_rise_cameroon_acquisition_completed }
+					NOT = { has_country_flag = ARG_rise_cameroon_acquisition_refused }
+				}
 			}
-			NOT = { 299 = { is_owned_by = ARG } }
-			check_variable = { treasury > 0.99 }
-			NOT = { has_country_flag = ARG_rise_african_negotiation_in_progress }
+		}
+
+		cost = 5
+		fire_only_once = no
+		days_re_enable = 1
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ARG_rise_search_african_candidate"
+
+			random_list = {
+				25 = {
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { country_exists = AGL }
+							AGL = {
+								OR = {
+									is_subject = yes
+									is_in_faction = yes
+									has_war = yes
+									NOT = { 299 = { is_owned_by = AGL } }
+								}
+							}
+							has_country_flag = ARG_rise_angola_acquisition_completed
+							has_country_flag = ARG_rise_angola_acquisition_refused
+						}
+					}
+					AGL = { save_global_event_target_as = ARG_rise_african_candidate_country }
+					set_country_flag = ARG_rise_candidate_is_angola
+					clr_country_flag = ARG_rise_candidate_is_kenya
+					clr_country_flag = ARG_rise_candidate_is_tanzania
+					clr_country_flag = ARG_rise_candidate_is_cameroon
+				}
+				25 = {
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { country_exists = KEN }
+							KEN = {
+								OR = {
+									is_subject = yes
+									is_in_faction = yes
+									has_war = yes
+									NOT = { 241 = { is_owned_by = KEN } }
+								}
+							}
+							has_country_flag = ARG_rise_kenya_acquisition_completed
+							has_country_flag = ARG_rise_kenya_acquisition_refused
+						}
+					}
+					KEN = { save_global_event_target_as = ARG_rise_african_candidate_country }
+					set_country_flag = ARG_rise_candidate_is_kenya
+					clr_country_flag = ARG_rise_candidate_is_angola
+					clr_country_flag = ARG_rise_candidate_is_tanzania
+					clr_country_flag = ARG_rise_candidate_is_cameroon
+				}
+				25 = {
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { country_exists = TNZ }
+							TNZ = {
+								OR = {
+									is_subject = yes
+									is_in_faction = yes
+									has_war = yes
+									NOT = { 257 = { is_owned_by = TNZ } }
+								}
+							}
+							has_country_flag = ARG_rise_tanzania_acquisition_completed
+							has_country_flag = ARG_rise_tanzania_acquisition_refused
+						}
+					}
+					TNZ = { save_global_event_target_as = ARG_rise_african_candidate_country }
+					set_country_flag = ARG_rise_candidate_is_tanzania
+					clr_country_flag = ARG_rise_candidate_is_angola
+					clr_country_flag = ARG_rise_candidate_is_kenya
+					clr_country_flag = ARG_rise_candidate_is_cameroon
+				}
+				25 = {
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { country_exists = CAM }
+							CAM = {
+								OR = {
+									is_subject = yes
+									is_in_faction = yes
+									has_war = yes
+									NOT = { 322 = { is_owned_by = CAM } }
+								}
+							}
+							has_country_flag = ARG_rise_cameroon_acquisition_completed
+							has_country_flag = ARG_rise_cameroon_acquisition_refused
+						}
+					}
+					CAM = { save_global_event_target_as = ARG_rise_african_candidate_country }
+					set_country_flag = ARG_rise_candidate_is_cameroon
+					clr_country_flag = ARG_rise_candidate_is_angola
+					clr_country_flag = ARG_rise_candidate_is_kenya
+					clr_country_flag = ARG_rise_candidate_is_tanzania
+				}
+			}
+
+			set_country_flag = ARG_rise_african_candidate_selected
+			country_event = { id = ARG_rise.207 days = 1 }
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	ARG_rise_negotiate_with_candidate = {
+		icon = GFX_decision_generic_operation
+
+		visible = {
+			original_tag = ARG
+			has_country_flag = ARG_rise_african_acquisitions_unlocked
+			has_country_flag = ARG_rise_african_candidate_selected
+			has_country_flag = ARG_rise_african_candidate_approved
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = ARG_rise_african_negotiation_in_progress
+			}
+
+			OR = {
+				AND = {
+					has_country_flag = ARG_rise_candidate_is_angola
+
+					AGL = {
+						exists = yes
+						is_subject = no
+						is_in_faction = no
+						has_war = no
+					}
+
+					299 = {
+						is_owned_by = AGL
+					}
+
+					NOT = {
+						299 = {
+							is_owned_by = ARG
+						}
+					}
+				}
+
+				AND = {
+					has_country_flag = ARG_rise_candidate_is_kenya
+
+					KEN = {
+						exists = yes
+						is_subject = no
+						is_in_faction = no
+						has_war = no
+					}
+
+					241 = {
+						is_owned_by = KEN
+					}
+
+					NOT = {
+						241 = {
+							is_owned_by = ARG
+						}
+					}
+				}
+
+				AND = {
+					has_country_flag = ARG_rise_candidate_is_tanzania
+
+					TNZ = {
+						exists = yes
+						is_subject = no
+						is_in_faction = no
+						has_war = no
+					}
+
+					257 = {
+						is_owned_by = TNZ
+					}
+
+					NOT = {
+						257 = {
+							is_owned_by = ARG
+						}
+					}
+				}
+
+				AND = {
+					has_country_flag = ARG_rise_candidate_is_cameroon
+
+					CAM = {
+						exists = yes
+						is_subject = no
+						is_in_faction = no
+						has_war = no
+					}
+
+					322 = {
+						is_owned_by = CAM
+					}
+
+					NOT = {
+						322 = {
+							is_owned_by = ARG
+						}
+					}
+				}
+			}
 		}
 
 		cost = 10
@@ -26,7 +276,7 @@ ARG_rise_african_strategic_acquisitions = {
 		days_re_enable = 7
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ARG_rise_negotiate_with_angola"
+			log = "[GetDateText]: [Root.GetName]: Decision ARG_rise_negotiate_with_candidate"
 			set_country_flag = ARG_rise_african_negotiation_in_progress
 			save_global_event_target_as = ARG_rise_acquisitions_argentina
 			country_event = { id = ARG_rise.201 days = 1 }
@@ -37,12 +287,12 @@ ARG_rise_african_strategic_acquisitions = {
 		}
 	}
 
-	ARG_rise_test_force_angola_accept = {
+	ARG_rise_test_force_candidate_accept = {
 		icon = GFX_decision_generic_operation
 		visible = {
 			original_tag = ARG
 			has_country_flag = ARG_rise_african_acquisitions_unlocked
-			NOT = { has_country_flag = ARG_rise_test_force_angola_accept }
+			NOT = { has_country_flag = ARG_rise_test_force_candidate_accept }
 		}
 		available = {
 			NOT = { has_country_flag = ARG_rise_african_negotiation_in_progress }
@@ -52,18 +302,18 @@ ARG_rise_african_strategic_acquisitions = {
 		days_re_enable = 1
 
 		complete_effect = {
-			set_country_flag = ARG_rise_test_force_angola_accept
-			clr_country_flag = ARG_rise_test_force_angola_counteroffer
-			clr_country_flag = ARG_rise_test_force_angola_reject
+			set_country_flag = ARG_rise_test_force_candidate_accept
+			clr_country_flag = ARG_rise_test_force_candidate_counteroffer
+			clr_country_flag = ARG_rise_test_force_candidate_reject
 		}
 	}
 
-	ARG_rise_test_force_angola_counteroffer = {
+	ARG_rise_test_force_candidate_counteroffer = {
 		icon = GFX_decision_generic_operation
 		visible = {
 			original_tag = ARG
 			has_country_flag = ARG_rise_african_acquisitions_unlocked
-			NOT = { has_country_flag = ARG_rise_test_force_angola_counteroffer }
+			NOT = { has_country_flag = ARG_rise_test_force_candidate_counteroffer }
 		}
 		available = {
 			NOT = { has_country_flag = ARG_rise_african_negotiation_in_progress }
@@ -73,18 +323,18 @@ ARG_rise_african_strategic_acquisitions = {
 		days_re_enable = 1
 
 		complete_effect = {
-			set_country_flag = ARG_rise_test_force_angola_counteroffer
-			clr_country_flag = ARG_rise_test_force_angola_accept
-			clr_country_flag = ARG_rise_test_force_angola_reject
+			set_country_flag = ARG_rise_test_force_candidate_counteroffer
+			clr_country_flag = ARG_rise_test_force_candidate_accept
+			clr_country_flag = ARG_rise_test_force_candidate_reject
 		}
 	}
 
-	ARG_rise_test_force_angola_reject = {
+	ARG_rise_test_force_candidate_reject = {
 		icon = GFX_decision_generic_operation
 		visible = {
 			original_tag = ARG
 			has_country_flag = ARG_rise_african_acquisitions_unlocked
-			NOT = { has_country_flag = ARG_rise_test_force_angola_reject }
+			NOT = { has_country_flag = ARG_rise_test_force_candidate_reject }
 		}
 		available = {
 			NOT = { has_country_flag = ARG_rise_african_negotiation_in_progress }
@@ -94,9 +344,38 @@ ARG_rise_african_strategic_acquisitions = {
 		days_re_enable = 1
 
 		complete_effect = {
-			set_country_flag = ARG_rise_test_force_angola_reject
-			clr_country_flag = ARG_rise_test_force_angola_accept
-			clr_country_flag = ARG_rise_test_force_angola_counteroffer
+			set_country_flag = ARG_rise_test_force_candidate_reject
+			clr_country_flag = ARG_rise_test_force_candidate_accept
+			clr_country_flag = ARG_rise_test_force_candidate_counteroffer
+		}
+	}
+
+	ARG_rise_test_reset_candidate = {
+		icon = GFX_decision_generic_operation
+		visible = {
+			original_tag = ARG
+			has_country_flag = ARG_rise_african_acquisitions_unlocked
+		}
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 1
+
+		complete_effect = {
+			clr_country_flag = ARG_rise_african_candidate_selected
+			clr_country_flag = ARG_rise_african_candidate_approved
+			clr_country_flag = ARG_rise_african_negotiation_in_progress
+			clr_country_flag = ARG_rise_candidate_is_angola
+			clr_country_flag = ARG_rise_candidate_is_kenya
+			clr_country_flag = ARG_rise_candidate_is_tanzania
+			clr_country_flag = ARG_rise_candidate_is_cameroon
+			clr_country_flag = ARG_rise_angola_acquisition_refused
+			clr_country_flag = ARG_rise_kenya_acquisition_refused
+			clr_country_flag = ARG_rise_tanzania_acquisition_refused
+			clr_country_flag = ARG_rise_cameroon_acquisition_refused
+			clr_country_flag = ARG_rise_test_force_candidate_accept
+			clr_country_flag = ARG_rise_test_force_candidate_counteroffer
+			clr_country_flag = ARG_rise_test_force_candidate_reject
+			clear_global_event_target = ARG_rise_african_candidate_country
 		}
 	}
 }
